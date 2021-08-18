@@ -1,0 +1,49 @@
+module("java4 frontend") {
+	javaVersion "Java SE 1.4"
+
+	java {
+		basedir "../src"
+		include "frontend/**/*.java"
+		include "gen/**/*.java"
+	}
+
+	jastadd {
+		include "grammar/*.ast"
+		include "frontend/*.jadd", [-1]
+		include "frontend/*.jrag"
+	}
+
+	scanner {
+		include "scanner/Preamble.flex", [-3]
+		include "scanner/Macros.flex", [-2]
+		include "scanner/RulesPreamble.flex", [-1]
+		include "scanner/WhiteSpace.flex"
+		include "scanner/Comments.flex"
+		include "scanner/Keywords.flex"
+		include "scanner/Literals.flex"
+		include "scanner/Operators.flex"
+		include "scanner/Separators.flex"
+		include "scanner/Identifiers.flex", [1]
+		include "scanner/Postamble.flex", [2]
+	}
+
+	parser {
+		include "parser/Preamble.parser", [-1]
+		include "parser/Java1.4.parser"
+	}
+}
+
+module("java4 backend") {
+	imports "java4 frontend"
+
+	java {
+		basedir "../src"
+		include "backend/**/*.java"
+	}
+
+	jastadd {
+		include "backend/*.jadd", [-1]
+		include "backend/*.jrag"
+	}
+}
+

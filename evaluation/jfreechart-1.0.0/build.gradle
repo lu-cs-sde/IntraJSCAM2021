@@ -1,0 +1,17 @@
+plugins {
+  id 'java'
+  id "org.sonarqube" version "3.0"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'source'
+            
+        }
+    }    
+  dependencies {
+    compile fileTree(dir: 'lib', include: ['*.jar'])
+}
+  
+}

@@ -1,0 +1,24 @@
+rootProject.name = getProjectName()
+
+
+def getProjectName() {
+    def res = "intraj"
+    if(hasProperty("className")){
+        switch(getProperty("className")) {
+            case "org.extendj.IntraJ_CFG":
+                res += "_cfg";
+            break;
+            case "org.extendj.IntraJ_CFGDAA":
+                res += "_cfgdaa";
+            break;
+            case "org.extendj.IntraJ_DAA":
+                res += "_daa";
+            break;
+              case "org.extendj.IntraJ_BL":
+                res += "_bl";
+            break;
+        }
+    }
+    
+    return res;
+}

@@ -1,0 +1,207 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../Results.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\,";
+	mso-displayed-thousand-separator:" ";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(0);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../Results.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link="#0563C1" vlink="#954F72">
+
+<table border=0 cellpadding=0 cellspacing=0 width=1386 style='border-collapse:
+ collapse;table-layout:fixed;width:1039pt'>
+ <col width=295 style='mso-width-source:userset;mso-width-alt:9429;width:221pt'>
+ <col width=265 style='mso-width-source:userset;mso-width-alt:8490;width:199pt'>
+ <col width=333 style='mso-width-source:userset;mso-width-alt:10666;width:250pt'>
+ <col width=139 style='mso-width-source:userset;mso-width-alt:4437;width:104pt'>
+ <col width=104 style='mso-width-source:userset;mso-width-alt:3328;width:78pt'>
+ <col width=163 style='mso-width-source:userset;mso-width-alt:5205;width:122pt'>
+ <col width=87 style='width:65pt'>
+ <tr height=28 style='height:21.0pt'>
+  <td colspan=3 height=28 class=xl159 width=893 style='height:21.0pt;
+  width:670pt'>DEAD ASSIGNMENT EVALUATION:</td>
+  <td width=139 style='width:104pt'></td>
+  <td class=xl138 width=104 style='width:78pt'>Last change:</td>
+  <td class=xl138 width=163 style='border-left:none;width:122pt'>07/06/2021</td>
+  <td width=87 style='width:65pt'></td>
+ </tr>
+ <tr height=27 style='mso-height-source:userset;height:20.0pt'>
+  <td height=27 class=xl132 style='height:20.0pt'>STATIC ANALYZERS:</td>
+  <td class=xl132 style='border-left:none'>NAME</td>
+  <td class=xl132 style='border-left:none'>Description</td>
+  <td class=xl132 style='border-left:none'>How to run it<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl139 style='border-top:none'>Author:</td>
+  <td class=xl139 style='border-top:none;border-left:none'>Idriss Riouak</td>
+  <td></td>
+ </tr>
+ <tr height=28 style='height:21.0pt'>
+  <td height=28 class=xl133 style='height:21.0pt'></td>
+  <td class=xl134>INTRAJ-NO-HEURISTIC</td>
+  <td class=xl135></td>
+  <td></td>
+  <td class=xl138 style='border-top:none'>Email:</td>
+  <td class=xl138 style='border-top:none;border-left:none'><a
+  href="mailto:idriss.rioauk@cs.lth.se" target="_parent"><span
+  style='color:#7F7F7F;font-style:italic;text-decoration:none'>idriss.rioauk@cs.lth.se</span></a></td>
+  <td></td>
+ </tr>
+ <tr height=147 style='height:110.0pt'>
+  <td height=147 class=xl133 style='height:110.0pt'></td>
+  <td class=xl134>INTRAJ-HEURISTIC</td>
+  <td class=xl137 width=333 style='width:250pt'>it is run with the option <font
+  class="font19">-exludelit</font><font class="font17">. Emulates the Sonarqube
+  heuristic, i.e., default assignment are not considered as dead assignments,
+  e.g., </font><font class="font20">Integer I = 0</font><font class="font19">;</font></td>
+  <td colspan=4 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=288 style='mso-height-source:userset;height:216.0pt'>
+  <td height=288 class=xl133 style='height:216.0pt'></td>
+  <td class=xl134>JASTADDJ-INTRAFLOW</td>
+  <td class=xl140 width=333 style='width:250pt'>JastaddJ commit: aedcfa4.
+  JastaddJ-Intraflow commit: b0b7c00. Nota bene: the last JastaddJ-Intraflow
+  version has some major bug. It reports many false positives. Compile it with
+  ANT 1.9.15 and Java 7. Personally, I'm using sdkman and the java version is 7.0.292-zulu.</td>
+  <td colspan=4 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=28 style='height:21.0pt'>
+  <td height=28 class=xl133 style='height:21.0pt'></td>
+  <td class=xl136>SONARQUBE</td>
+  <td class=xl133>(version 8.9.0.43852)</td>
+  <td colspan=4 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=63 style='height:48.0pt;mso-xlrowspan:3'>
+  <td height=63 colspan=7 style='height:48.0pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td colspan=3 height=21 class=xl161 style='height:16.0pt'>Evaluation (TRUE
+  and FALSE Postives)</td>
+  <td colspan=4 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=193 style='mso-height-source:userset;height:145.0pt'>
+  <td colspan=3 height=193 class=xl160 width=893 style='height:145.0pt;
+  width:670pt'>For each project considerted the 20% of the reports reported by
+  each static initializer were inspected.<br>
+    The inspected reports are highlighted in <font class="font25">yellow</font><font
+  class="font17"> and are determined by the </font><font class="font21">&quot;Randomly
+  Selected&quot; </font><font class="font17">column.<br>
+    In the same excel sheet, the accuracy of each static analyzer is
+  summarized. In the true / false-positive report, only reports labeled &quot;</font><font
+  class="font22">ok</font><font class="font17">&quot; or &quot;</font><font
+  class="font23">bad</font><font class="font17">&quot; are considered. Reports
+  highlighted in </font><font class="font24">green</font><font class="font17">
+  or </font><font class="font23">red</font><font class="font17">, unlabeled,
+  are not within the 20% overall but have been inspected.</font></td>
+  <td colspan=4 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=42 style='height:32.0pt;mso-xlrowspan:2'>
+  <td height=42 colspan=7 style='height:32.0pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl142 style='height:16.0pt'>VENN DIAGRAM GENERATED USING:</td>
+  <td colspan=6 class=xl162>Heberle, H.; Meirelles, G. V.; da Silva, F. R.;
+  Telles, G. P.; Minghim, R. InteractiVenn: a web-based tool for the analysis
+  of sets through Venn diagrams. BMC Bioinformatics 16:169 (2015).</td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 style='height:16.0pt'></td>
+  <td class=xl105>http://www.interactivenn.net</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=63 style='height:48.0pt;mso-xlrowspan:3'>
+  <td height=63 colspan=7 style='height:48.0pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl148 style='height:16.0pt'>SET INTERSECTIONS</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=68 style='height:51.0pt'>
+  <td height=68 class=xl146 width=295 style='height:51.0pt;width:221pt'>For
+  each set intersection, i.e., INTRAJ-NH \intersect JASTADDJ-INTRAFLOW, we
+  inspected the report in this way:</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=45 style='height:34.0pt'>
+  <td height=45 class=xl146 width=295 style='height:34.0pt;width:221pt'>if
+  #REPORT &lt;=10 then we inspected all the reports</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=45 style='height:34.0pt'>
+  <td height=45 class=xl146 width=295 style='height:34.0pt;width:221pt'>else we
+  inspected the 20% of all the reports</td>
+  <td colspan=6 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=63 style='height:48.0pt;mso-xlrowspan:3'>
+  <td height=63 colspan=7 style='height:48.0pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl148 style='height:16.0pt'>PROJECT ANALYSED</td>
+  <td class=xl153 style='border-left:none'>VERSION</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl152 style='height:16.0pt;border-top:none'>ANTLR</td>
+  <td class=xl67>2.7.2</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl152 style='height:16.0pt;border-top:none'>FOP</td>
+  <td class=xl67 style='border-top:none'>0.95</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl152 style='height:16.0pt;border-top:none'>PMD</td>
+  <td class=xl67 style='border-top:none'>4.2.5</td>
+  <td colspan=5 style='mso-ignore:colspan'></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=295 style='width:221pt'></td>
+  <td width=265 style='width:199pt'></td>
+  <td width=333 style='width:250pt'></td>
+  <td width=139 style='width:104pt'></td>
+  <td width=104 style='width:78pt'></td>
+  <td width=163 style='width:122pt'></td>
+  <td width=87 style='width:65pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>
