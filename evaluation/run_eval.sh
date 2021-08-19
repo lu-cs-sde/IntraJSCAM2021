@@ -7,6 +7,9 @@
 ### Setting the environment
 # . ~/.sdkman/bin/sdkman-init.sh
 # sdk use java 7.0.292-zulu
+if [[ `uname` != "Darwin" ]]; then
+    alias gdate="date"
+fi
 set -e
 
 TIMEFMT=$'U'
@@ -272,7 +275,3 @@ cd ..
 INTRAJ $FILES -WDAA -statistics > $CURRDIR"/INTRAJ_NH_DAA"
 INTRAJ $FILES -WDAA -statistics -excludelit > $CURRDIR"/INTRAJ_H_DAA"
 INTRAJ $FILES -WNPA -statistics > $CURRDIR"/INTRAJ_NPA"
-
-
-
-
