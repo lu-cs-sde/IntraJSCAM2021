@@ -1,0 +1,63 @@
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2021.08.25 07:01:44 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/temp
+2021.08.25 07:01:44 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on [HTTP: 127.0.0.1:9001, TCP: 127.0.0.1:49892]
+2021.08.25 07:01:44 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/elasticsearch]: /Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/elasticsearch/bin/elasticsearch
+warning: usage of JAVA_HOME is deprecated, use ES_JAVA_HOME
+2021.08.25 07:01:44 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+warning: no-jdk distributions that do not bundle a JDK are deprecated and will be removed in a future release
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2021.08.25 07:01:59 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2021.08.25 07:01:59 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda]: /Users/idrissr/.sdkman/candidates/java/11.0.9.fx-zulu/zulu-11.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-8.9.0.43852.jar:/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/temp/sq-process5217415853106666541properties
+2021.08.25 07:02:12 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2021.08.25 07:02:12 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='ce', ipcIndex=3, logFilenamePrefix=ce]] from [/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda]: /Users/idrissr/.sdkman/candidates/java/11.0.9.fx-zulu/zulu-11.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-8.9.0.43852.jar:/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/lib/jdbc/h2/h2-1.4.199.jar org.sonar.ce.app.CeServer /Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/temp/sq-process10046577626578189861properties
+2021.08.25 07:02:15 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2021.08.25 07:02:15 INFO  app[][o.s.a.SchedulerImpl] SonarQube is up
+2021.08.25 08:49:13 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ce]: 143
+2021.08.25 08:49:13 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2021.08.25 08:49:14 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2021.08.25 08:49:15 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2021.08.25 08:49:15 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2021.08.25 08:49:15 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2021.08.25 08:54:44 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/temp
+2021.08.25 08:54:44 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on [HTTP: 127.0.0.1:9001, TCP: 127.0.0.1:51056]
+2021.08.25 08:54:44 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/elasticsearch]: /Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/elasticsearch/bin/elasticsearch
+warning: usage of JAVA_HOME is deprecated, use ES_JAVA_HOME
+2021.08.25 08:54:44 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+warning: no-jdk distributions that do not bundle a JDK are deprecated and will be removed in a future release
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2021.08.25 08:54:44 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2021.08.25 08:54:44 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda]: /Users/idrissr/.sdkman/candidates/java/11.0.9.fx-zulu/zulu-11.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-8.9.0.43852.jar:/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/temp/sq-process5910434465609606999properties
+2021.08.25 08:54:45 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2021.08.25 08:54:45 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2021.08.25 08:54:45 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2021.08.25 08:54:45 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
+--> Wrapper Started as Console
+Launching a JVM...
+Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+  Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+
+2021.08.25 09:46:58 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/temp
+2021.08.25 09:46:58 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on [HTTP: 127.0.0.1:9001, TCP: 127.0.0.1:51488]
+2021.08.25 09:46:58 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='es', ipcIndex=1, logFilenamePrefix=es]] from [/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/elasticsearch]: /Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/elasticsearch/bin/elasticsearch
+warning: usage of JAVA_HOME is deprecated, use ES_JAVA_HOME
+2021.08.25 09:46:58 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+warning: no-jdk distributions that do not bundle a JDK are deprecated and will be removed in a future release
+OpenJDK 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+2021.08.25 09:46:59 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2021.08.25 09:46:59 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[[key='web', ipcIndex=2, logFilenamePrefix=web]] from [/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda]: /Users/idrissr/.sdkman/candidates/java/11.0.9.fx-zulu/zulu-11.jdk/Contents/Home/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-8.9.0.43852.jar:/Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/lib/jdbc/h2/h2-1.4.199.jar org.sonar.server.app.WebServer /Users/idrissr/git/lund/research/artifacts/lu-cs-sde/IntraJSCAM2021/evaluation/sonarqube_dda/temp/sq-process16414049622146013046properties
+2021.08.25 09:47:00 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2021.08.25 09:47:00 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2021.08.25 09:47:00 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 143
+2021.08.25 09:47:00 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped

@@ -1,0 +1,1262 @@
+2021.08.25 07:07:28 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 07:07:28 INFO  web[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2021.08.25 08:41:18 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 08:41:18 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 08:41:18 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 08:41:18 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 08:41:18 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 08:44:08 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 08:44:08 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 08:44:08 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 08:44:08 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 08:44:08 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 08:56:12 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 08:56:12 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 08:56:12 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 08:56:12 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 08:56:12 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 08:57:25 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 08:57:26 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 08:57:26 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 08:57:26 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 08:57:26 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 09:47:54 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 09:47:55 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 09:47:55 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 09:47:55 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 09:47:55 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 09:48:43 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 09:48:44 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 09:48:44 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 09:48:44 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 09:48:44 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 11:08:03 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 11:08:04 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 11:08:04 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 11:08:04 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 11:08:04 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 11:08:35 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 11:08:36 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 11:08:36 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 11:08:36 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 11:08:36 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 11:09:04 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 11:09:05 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 11:09:05 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 11:09:05 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 11:09:05 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 12:15:19 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 12:15:20 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 12:15:20 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 12:15:20 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 12:15:20 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 12:15:34 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 12:15:35 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 12:15:35 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 12:15:35 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 12:15:35 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 12:15:51 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 12:15:51 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 12:15:51 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 12:15:51 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 12:15:51 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 12:18:56 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 12:18:57 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 12:18:57 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 12:18:57 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 12:18:57 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 12:19:11 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 12:19:12 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 12:19:12 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 12:19:12 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 12:19:12 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 12:19:31 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 12:19:32 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 12:19:32 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 12:19:32 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 12:19:32 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 12:55:19 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 12:55:20 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 12:55:20 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 12:55:20 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 12:55:20 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 12:55:34 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 12:55:34 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 12:55:34 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 12:55:34 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 12:55:34 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 12:55:50 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 12:55:50 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 12:55:50 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 12:55:50 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 12:55:50 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 13:00:56 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 13:00:57 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 13:00:57 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 13:00:57 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 13:00:57 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 13:02:24 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 13:02:25 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 13:02:25 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 13:02:25 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 13:02:25 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.25 13:04:11 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.25 13:04:12 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.25 13:04:12 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.25 13:04:12 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.25 13:04:12 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process

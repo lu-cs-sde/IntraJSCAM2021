@@ -1,0 +1,1062 @@
+2021.08.20 09:32:30 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 09:32:30 INFO  web[][o.a.t.u.n.NioSelectorPool] Using a shared selector for servlet write/read
+2021.08.20 09:32:30 INFO  web[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [http://localhost:9001]
+2021.08.20 09:32:31 INFO  web[][o.s.s.p.LogServerVersion] SonarQube Server / 8.9.0.43852 / 681d1975f698b70fc4e981593f7bed298ff2f60d
+2021.08.20 09:32:31 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://127.0.0.1:9092/sonar
+2021.08.20 09:32:31 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database started. Data stored in: /Users/idrissr/Desktop/sonarqube-8.9.0.43852/data
+2021.08.20 09:32:31 INFO  web[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2021.08.20 09:32:31 WARN  web[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /Users/idrissr/Desktop/sonarqube-8.9.0.43852
+2021.08.20 09:32:32 INFO  web[][o.s.s.u.SystemPasscodeImpl] System authentication by passcode is disabled
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin C# Code Quality and Security / 8.22.0.31243 / e3cee7838d992e31dcdd90cf4f7406bb20535e8e
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin CSS Code Quality and Security / 1.4.2.2002 / faa7d4f1407df67df7ada53caf677ab783721173
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Flex Code Quality and Security / 2.6.1.2564 / bb723840701bda72510b7a47742811d20daad331
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Go Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin HTML Code Quality and Security / 3.4.0.2754 / 38f7ff864ae15152c9f1efc3014594f7e7ca7b6e
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin JaCoCo / 1.1.1.1157 / 83478572b9f23efac29de15e30c7758bbb0c0e47
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Java Code Quality and Security / 6.15.1.26025 / 1b1e96715bfa9f6a4ae24e95cc5b91f0edce609f
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin JavaScript/TypeScript Code Quality and Security / 7.4.2.15501 / 288a72ff137745d1d1054c704a03c2344ada0ea3
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Kotlin Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin PHP Code Quality and Security / 3.17.0.7439 / 44c7760147080c157fa0ff579772f92d3c8e1ebf
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Python Code Quality and Security / 3.4.1.8066 / 22139ec73fb2f32044f66477ea52734415683668
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Ruby Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Scala Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin VB.NET Code Quality and Security / 8.22.0.31243 / e3cee7838d992e31dcdd90cf4f7406bb20535e8e
+2021.08.20 09:32:32 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin XML Code Quality and Security / 2.2.0.2973 / 16002945f0725643a7b42f090572795dd8b72a0f
+2021.08.20 09:32:33 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@3f5d4e67 [pattern=UrlPattern{inclusions=[/api/system/migrate_db.*, ...], exclusions=[/api/components/update_key, ...]}]
+2021.08.20 09:32:33 INFO  web[][o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 9000
+2021.08.20 09:32:34 INFO  web[][o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties (no proxy)
+2021.08.20 09:32:35 INFO  web[][o.s.s.s.LogServerId] Server ID: BF41A1F2-AXnMpu1wUrQJXuZTUIGl
+2021.08.20 09:32:35 WARN  web[][o.s.s.a.LogOAuthWarning] For security reasons, OAuth authentication should use HTTPS. You should set the property 'Administration > Configuration > Server base URL' to a HTTPS URL.
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/plugins/download
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/permissions/search_templates
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_bitbucketserver_projects
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/check_pat
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_azure_projects
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/search_bitbucketserver_repos
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/search_azure_repos
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_github_organizations
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_github_repositories
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/get_github_client_id
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/get_binding
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/list
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/list_definitions
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/count_binding
+2021.08.20 09:32:35 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/validate
+2021.08.20 09:32:35 INFO  web[][o.s.s.t.TelemetryDaemon] Sharing of SonarQube statistics is enabled.
+2021.08.20 09:32:35 INFO  web[][o.s.s.n.NotificationDaemon] Notification service started (delay 60 sec.)
+2021.08.20 09:32:35 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired session tokens has removed 1 elements
+2021.08.20 09:32:35 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired SAML message ids has removed 0 elements
+2021.08.20 09:32:35 INFO  web[][o.s.s.s.GeneratePluginIndex] Generate scanner plugin index
+2021.08.20 09:32:35 INFO  web[][o.s.s.s.RegisterPlugins] Register plugins
+2021.08.20 09:32:35 INFO  web[][o.s.s.s.RegisterMetrics] Register metrics
+2021.08.20 09:32:35 INFO  web[][o.s.s.r.RegisterRules] Register rules
+2021.08.20 09:32:39 INFO  web[][o.s.s.q.BuiltInQProfileRepositoryImpl] Load quality profiles
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register quality profiles
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile css/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile scala/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile jsp/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile go/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile kotlin/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile js/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile py/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile ruby/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile cs/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile java/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile web/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile xml/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile flex/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/Sonar way
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/PSR-2
+2021.08.20 09:32:40 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/Drupal
+2021.08.20 09:32:41 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile vbnet/Sonar way
+2021.08.20 09:32:41 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile ts/Sonar way
+2021.08.20 09:32:41 INFO  web[][o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2021.08.20 09:32:41 INFO  web[][o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.SonarLintConnectionFilter@2bbc9f0e [pattern=UrlPattern{inclusions=[/api/*], exclusions=[]}]
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@7aa00d3a [pattern=UrlPattern{inclusions=[/api/issues/delete_comment.*, ...], exclusions=[/api/authentication/login.*, ...]}]
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceReroutingFilter@7cacc087 [pattern=UrlPattern{inclusions=[/api/components/bulk_update_key, ...], exclusions=[]}]
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.plugins.PluginsRiskConsentFilter@42a8f0a [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.DefaultAdminCredentialsVerifierFilter@57adf8cb [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@454b6446 [pattern=UrlPattern{inclusions=[/sessions/init/*], exclusions=[]}]
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@7bdfd92b [pattern=UrlPattern{inclusions=[/oauth2/callback/*], exclusions=[]}]
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ResetPasswordFilter@7013420d [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LoginAction@329f2384 [pattern=UrlPattern{inclusions=[/api/authentication/login], exclusions=[]}]
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LogoutAction@2480ad3a [pattern=UrlPattern{inclusions=[/api/authentication/logout], exclusions=[]}]
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.ValidateAction@4007dd61 [pattern=UrlPattern{inclusions=[/api/authentication/validate], exclusions=[]}]
+2021.08.20 09:32:41 INFO  web[][o.s.s.q.ProjectsInWarningDaemon] Counting number of projects in warning is not started as there are no projects in this situation.
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.p.PlatformLevelStartup] Running Community Edition
+2021.08.20 09:32:41 INFO  web[][o.s.s.p.Platform] WebServer is operational
+2021.08.20 10:35:06 ERROR web[][o.s.s.p.w.RootFilter] Processing of request / failed
+java.lang.IllegalStateException: Fail to load file /index.html
+	at org.sonar.server.platform.web.WebPagesCache.loadHtmlFile(WebPagesCache.java:110)
+	at org.sonar.server.platform.web.WebPagesCache.provide(WebPagesCache.java:98)
+	at org.sonar.server.platform.web.WebPagesCache.lambda$generate$0(WebPagesCache.java:91)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.sonar.server.platform.web.WebPagesCache.generate(WebPagesCache.java:91)
+	at org.sonar.server.platform.web.WebPagesCache.getContent(WebPagesCache.java:84)
+	at org.sonar.server.platform.web.WebPagesFilter.doFilter(WebPagesFilter.java:85)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:141)
+	at org.sonar.server.authentication.ResetPasswordFilter.doFilter(ResetPasswordFilter.java:74)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:139)
+	at org.sonar.server.authentication.DefaultAdminCredentialsVerifierFilter.doFilter(DefaultAdminCredentialsVerifierFilter.java:89)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:139)
+	at org.sonar.server.plugins.PluginsRiskConsentFilter.doFilter(PluginsRiskConsentFilter.java:77)
+	at org.sonar.server.platform.web.MasterServletFilter$GodFilterChain.doFilter(MasterServletFilter.java:139)
+	at org.sonar.server.platform.web.MasterServletFilter.doFilter(MasterServletFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:81)
+	at org.sonar.server.platform.web.UserSessionFilter.doFilter(UserSessionFilter.java:68)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.sonar.server.platform.web.CacheControlFilter.doFilter(CacheControlFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.sonar.server.platform.web.SecurityServletFilter.doHttpFilter(SecurityServletFilter.java:76)
+	at org.sonar.server.platform.web.SecurityServletFilter.doFilter(SecurityServletFilter.java:48)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.sonar.server.platform.web.RedirectFilter.doFilter(RedirectFilter.java:58)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.sonar.server.platform.web.RequestIdFilter.doFilter(RequestIdFilter.java:66)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.sonar.server.platform.web.RootFilter.doFilter(RootFilter.java:62)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:544)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at ch.qos.logback.access.tomcat.LogbackValve.invoke(LogbackValve.java:256)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:353)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:616)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1629)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.lang.NullPointerException: null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+	at org.sonar.server.platform.web.WebPagesCache.loadHtmlFile(WebPagesCache.java:103)
+	... 58 common frames omitted
+2021.08.20 10:36:03 INFO  web[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2021.08.20 10:36:03 INFO  web[][o.s.s.n.NotificationDaemon] Notification service stopped
+2021.08.20 10:36:03 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database stopped
+2021.08.20 10:36:03 INFO  web[][o.s.s.app.WebServer] WebServer stopped
+2021.08.20 10:36:23 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 10:36:23 INFO  web[][o.a.t.u.n.NioSelectorPool] Using a shared selector for servlet write/read
+2021.08.20 10:36:24 INFO  web[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [http://localhost:9001]
+2021.08.20 10:36:24 INFO  web[][o.s.s.p.LogServerVersion] SonarQube Server / 8.9.0.43852 / 681d1975f698b70fc4e981593f7bed298ff2f60d
+2021.08.20 10:36:26 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://127.0.0.1:9092/sonar
+2021.08.20 10:36:26 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database started. Data stored in: /Users/idrissr/Desktop/sonarqube_dda/data
+2021.08.20 10:36:26 INFO  web[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2021.08.20 10:36:27 WARN  web[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2021.08.20 10:36:27 INFO  web[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /Users/idrissr/Desktop/sonarqube_dda
+2021.08.20 10:36:27 INFO  web[][o.s.s.u.SystemPasscodeImpl] System authentication by passcode is disabled
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin C# Code Quality and Security / 8.22.0.31243 / e3cee7838d992e31dcdd90cf4f7406bb20535e8e
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin CSS Code Quality and Security / 1.4.2.2002 / faa7d4f1407df67df7ada53caf677ab783721173
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Flex Code Quality and Security / 2.6.1.2564 / bb723840701bda72510b7a47742811d20daad331
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Go Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin HTML Code Quality and Security / 3.4.0.2754 / 38f7ff864ae15152c9f1efc3014594f7e7ca7b6e
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin JaCoCo / 1.1.1.1157 / 83478572b9f23efac29de15e30c7758bbb0c0e47
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Java Code Quality and Security / 6.15.1.26025 / 1b1e96715bfa9f6a4ae24e95cc5b91f0edce609f
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin JavaScript/TypeScript Code Quality and Security / 7.4.2.15501 / 288a72ff137745d1d1054c704a03c2344ada0ea3
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Kotlin Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin PHP Code Quality and Security / 3.17.0.7439 / 44c7760147080c157fa0ff579772f92d3c8e1ebf
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Python Code Quality and Security / 3.4.1.8066 / 22139ec73fb2f32044f66477ea52734415683668
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Ruby Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Scala Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin VB.NET Code Quality and Security / 8.22.0.31243 / e3cee7838d992e31dcdd90cf4f7406bb20535e8e
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin XML Code Quality and Security / 2.2.0.2973 / 16002945f0725643a7b42f090572795dd8b72a0f
+2021.08.20 10:36:28 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@e3185f3 [pattern=UrlPattern{inclusions=[/api/system/migrate_db.*, ...], exclusions=[/api/components/update_key, ...]}]
+2021.08.20 10:36:29 INFO  web[][o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 9000
+2021.08.20 10:36:29 INFO  web[][o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties (no proxy)
+2021.08.20 10:36:30 INFO  web[][o.s.s.s.LogServerId] Server ID: BF41A1F2-AXnMpu1wUrQJXuZTUIGl
+2021.08.20 10:36:30 WARN  web[][o.s.s.a.LogOAuthWarning] For security reasons, OAuth authentication should use HTTPS. You should set the property 'Administration > Configuration > Server base URL' to a HTTPS URL.
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/plugins/download
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/permissions/search_templates
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_bitbucketserver_projects
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/check_pat
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_azure_projects
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/search_bitbucketserver_repos
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/search_azure_repos
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_github_organizations
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_github_repositories
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/get_github_client_id
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/get_binding
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/list
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/list_definitions
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/count_binding
+2021.08.20 10:36:31 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/validate
+2021.08.20 10:36:31 INFO  web[][o.s.s.t.TelemetryDaemon] Sharing of SonarQube statistics is enabled.
+2021.08.20 10:36:31 INFO  web[][o.s.s.n.NotificationDaemon] Notification service started (delay 60 sec.)
+2021.08.20 10:36:31 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired session tokens has removed 0 elements
+2021.08.20 10:36:31 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired SAML message ids has removed 0 elements
+2021.08.20 10:36:31 INFO  web[][o.s.s.s.GeneratePluginIndex] Generate scanner plugin index
+2021.08.20 10:36:31 INFO  web[][o.s.s.s.RegisterPlugins] Register plugins
+2021.08.20 10:36:31 INFO  web[][o.s.s.s.RegisterMetrics] Register metrics
+2021.08.20 10:36:31 INFO  web[][o.s.s.r.RegisterRules] Register rules
+2021.08.20 10:36:35 INFO  web[][o.s.s.q.BuiltInQProfileRepositoryImpl] Load quality profiles
+2021.08.20 10:36:36 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register quality profiles
+2021.08.20 10:36:36 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile css/Sonar way
+2021.08.20 10:36:36 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile scala/Sonar way
+2021.08.20 10:36:36 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile jsp/Sonar way
+2021.08.20 10:36:36 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile go/Sonar way
+2021.08.20 10:36:36 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile kotlin/Sonar way
+2021.08.20 10:36:36 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile js/Sonar way
+2021.08.20 10:36:36 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile py/Sonar way
+2021.08.20 10:36:36 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile ruby/Sonar way
+2021.08.20 10:36:36 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile cs/Sonar way
+2021.08.20 10:36:36 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile java/Sonar way
+2021.08.20 10:36:37 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile web/Sonar way
+2021.08.20 10:36:37 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile xml/Sonar way
+2021.08.20 10:36:37 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile flex/Sonar way
+2021.08.20 10:36:37 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/Sonar way
+2021.08.20 10:36:37 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/PSR-2
+2021.08.20 10:36:37 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/Drupal
+2021.08.20 10:36:37 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile vbnet/Sonar way
+2021.08.20 10:36:37 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile ts/Sonar way
+2021.08.20 10:36:37 INFO  web[][o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2021.08.20 10:36:37 INFO  web[][o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.SonarLintConnectionFilter@40927097 [pattern=UrlPattern{inclusions=[/api/*], exclusions=[]}]
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@7a70e3f3 [pattern=UrlPattern{inclusions=[/api/issues/delete_comment.*, ...], exclusions=[/api/authentication/login.*, ...]}]
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceReroutingFilter@7a50bd0d [pattern=UrlPattern{inclusions=[/api/components/bulk_update_key, ...], exclusions=[]}]
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.plugins.PluginsRiskConsentFilter@6bc71bf [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.DefaultAdminCredentialsVerifierFilter@316ef68e [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@289ea79b [pattern=UrlPattern{inclusions=[/sessions/init/*], exclusions=[]}]
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@108a9fbd [pattern=UrlPattern{inclusions=[/oauth2/callback/*], exclusions=[]}]
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ResetPasswordFilter@2e3f52bd [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LoginAction@7d446011 [pattern=UrlPattern{inclusions=[/api/authentication/login], exclusions=[]}]
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LogoutAction@3390517 [pattern=UrlPattern{inclusions=[/api/authentication/logout], exclusions=[]}]
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.ValidateAction@462d136e [pattern=UrlPattern{inclusions=[/api/authentication/validate], exclusions=[]}]
+2021.08.20 10:36:37 INFO  web[][o.s.s.q.ProjectsInWarningDaemon] Counting number of projects in warning is not started as there are no projects in this situation.
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.p.PlatformLevelStartup] Running Community Edition
+2021.08.20 10:36:37 INFO  web[][o.s.s.p.Platform] WebServer is operational
+2021.08.20 10:40:10 INFO  web[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2021.08.20 10:40:10 INFO  web[][o.s.s.n.NotificationDaemon] Notification service stopped
+2021.08.20 10:40:10 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database stopped
+2021.08.20 10:40:10 INFO  web[][o.s.s.app.WebServer] WebServer stopped
+2021.08.20 10:41:51 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 10:41:51 INFO  web[][o.a.t.u.n.NioSelectorPool] Using a shared selector for servlet write/read
+2021.08.20 10:41:51 INFO  web[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [http://localhost:9001]
+2021.08.20 10:41:52 INFO  web[][o.s.s.p.LogServerVersion] SonarQube Server / 8.9.0.43852 / 681d1975f698b70fc4e981593f7bed298ff2f60d
+2021.08.20 10:41:53 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://127.0.0.1:9092/sonar
+2021.08.20 10:41:53 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database started. Data stored in: /Users/idrissr/Desktop/sonarqube-8.9.0.43852/data
+2021.08.20 10:41:53 INFO  web[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar
+2021.08.20 10:41:53 WARN  web[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /Users/idrissr/Desktop/sonarqube-8.9.0.43852
+2021.08.20 10:41:54 INFO  web[][o.s.s.u.SystemPasscodeImpl] System authentication by passcode is disabled
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin C# Code Quality and Security / 8.22.0.31243 / e3cee7838d992e31dcdd90cf4f7406bb20535e8e
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin CSS Code Quality and Security / 1.4.2.2002 / faa7d4f1407df67df7ada53caf677ab783721173
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Flex Code Quality and Security / 2.6.1.2564 / bb723840701bda72510b7a47742811d20daad331
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Go Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin HTML Code Quality and Security / 3.4.0.2754 / 38f7ff864ae15152c9f1efc3014594f7e7ca7b6e
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin JaCoCo / 1.1.1.1157 / 83478572b9f23efac29de15e30c7758bbb0c0e47
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Java Code Quality and Security / 6.15.1.26025 / 1b1e96715bfa9f6a4ae24e95cc5b91f0edce609f
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin JavaScript/TypeScript Code Quality and Security / 7.4.2.15501 / 288a72ff137745d1d1054c704a03c2344ada0ea3
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Kotlin Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin PHP Code Quality and Security / 3.17.0.7439 / 44c7760147080c157fa0ff579772f92d3c8e1ebf
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Python Code Quality and Security / 3.4.1.8066 / 22139ec73fb2f32044f66477ea52734415683668
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Ruby Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin Scala Code Quality and Security / 1.8.3.2219 / d6ad7a5a47fc4785d2e80918fb7424be46e38a7f
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin VB.NET Code Quality and Security / 8.22.0.31243 / e3cee7838d992e31dcdd90cf4f7406bb20535e8e
+2021.08.20 10:41:54 INFO  web[][o.s.s.p.ServerPluginManager] Deploy plugin XML Code Quality and Security / 2.2.0.2973 / 16002945f0725643a7b42f090572795dd8b72a0f
+2021.08.20 10:41:55 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@ee67330 [pattern=UrlPattern{inclusions=[/api/system/migrate_db.*, ...], exclusions=[/api/components/update_key, ...]}]
+2021.08.20 10:41:55 INFO  web[][o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 9000
+2021.08.20 10:41:56 INFO  web[][o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties (no proxy)
+2021.08.20 10:41:56 INFO  web[][o.s.s.s.LogServerId] Server ID: BF41A1F2-AXnMpu1wUrQJXuZTUIGl
+2021.08.20 10:41:56 WARN  web[][o.s.s.a.LogOAuthWarning] For security reasons, OAuth authentication should use HTTPS. You should set the property 'Administration > Configuration > Server base URL' to a HTTPS URL.
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/plugins/download
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/permissions/search_templates
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_bitbucketserver_projects
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/check_pat
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_azure_projects
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/search_bitbucketserver_repos
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/search_azure_repos
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_github_organizations
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/list_github_repositories
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/get_github_client_id
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/get_binding
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/list
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/list_definitions
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/count_binding
+2021.08.20 10:41:57 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_settings/validate
+2021.08.20 10:41:57 INFO  web[][o.s.s.t.TelemetryDaemon] Sharing of SonarQube statistics is enabled.
+2021.08.20 10:41:57 INFO  web[][o.s.s.n.NotificationDaemon] Notification service started (delay 60 sec.)
+2021.08.20 10:41:57 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired session tokens has removed 0 elements
+2021.08.20 10:41:57 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired SAML message ids has removed 0 elements
+2021.08.20 10:41:57 INFO  web[][o.s.s.s.GeneratePluginIndex] Generate scanner plugin index
+2021.08.20 10:41:57 INFO  web[][o.s.s.s.RegisterPlugins] Register plugins
+2021.08.20 10:41:57 INFO  web[][o.s.s.s.RegisterMetrics] Register metrics
+2021.08.20 10:41:57 INFO  web[][o.s.s.r.RegisterRules] Register rules
+2021.08.20 10:42:01 INFO  web[][o.s.s.q.BuiltInQProfileRepositoryImpl] Load quality profiles
+2021.08.20 10:42:01 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register quality profiles
+2021.08.20 10:42:01 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile css/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile scala/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile jsp/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile go/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile kotlin/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile js/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile py/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile ruby/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile cs/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile java/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile web/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile xml/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile flex/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/PSR-2
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile php/Drupal
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile vbnet/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.RegisterQualityProfiles] Update profile ts/Sonar way
+2021.08.20 10:42:02 INFO  web[][o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2021.08.20 10:42:02 INFO  web[][o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.SonarLintConnectionFilter@75f79d6c [pattern=UrlPattern{inclusions=[/api/*], exclusions=[]}]
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@3b8ed8f [pattern=UrlPattern{inclusions=[/api/issues/delete_comment.*, ...], exclusions=[/api/authentication/login.*, ...]}]
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceReroutingFilter@72aa5d81 [pattern=UrlPattern{inclusions=[/api/components/bulk_update_key, ...], exclusions=[]}]
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.plugins.PluginsRiskConsentFilter@320e91e8 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.DefaultAdminCredentialsVerifierFilter@49b4c05a [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@57dbe2b6 [pattern=UrlPattern{inclusions=[/sessions/init/*], exclusions=[]}]
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@4f4965fd [pattern=UrlPattern{inclusions=[/oauth2/callback/*], exclusions=[]}]
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ResetPasswordFilter@6f046009 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LoginAction@3ab14a1 [pattern=UrlPattern{inclusions=[/api/authentication/login], exclusions=[]}]
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LogoutAction@7c8a649f [pattern=UrlPattern{inclusions=[/api/authentication/logout], exclusions=[]}]
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.ValidateAction@8451f28 [pattern=UrlPattern{inclusions=[/api/authentication/validate], exclusions=[]}]
+2021.08.20 10:42:02 INFO  web[][o.s.s.q.ProjectsInWarningDaemon] Counting number of projects in warning is not started as there are no projects in this situation.
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.p.PlatformLevelStartup] Running Community Edition
+2021.08.20 10:42:02 INFO  web[][o.s.s.p.Platform] WebServer is operational
+2021.08.20 15:57:31 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 15:57:32 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 15:57:32 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 15:57:32 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 15:57:32 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.20 16:00:45 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 16:00:45 INFO  web[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2021.08.20 16:03:07 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 16:03:08 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 16:03:08 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 16:03:08 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 16:03:08 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.20 16:07:29 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 16:07:30 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 16:07:30 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 16:07:30 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 16:07:30 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.20 16:11:56 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 16:11:57 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 16:11:57 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 16:11:57 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 16:11:57 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.20 16:14:00 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 16:14:01 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 16:14:01 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 16:14:01 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 16:14:01 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.20 16:19:13 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 16:19:14 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 16:19:14 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 16:19:14 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 16:19:14 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.20 16:41:01 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 16:41:02 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 16:41:02 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 16:41:02 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 16:41:02 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.20 16:47:03 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 16:47:04 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 16:47:04 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 16:47:04 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 16:47:04 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.20 17:02:19 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 17:02:19 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 17:02:19 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 17:02:19 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 17:02:19 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.20 17:08:12 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 17:08:13 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 17:08:13 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 17:08:13 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 17:08:13 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.20 17:18:48 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 17:18:48 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 17:18:48 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 17:18:48 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 17:18:48 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process
+2021.08.20 17:26:13 INFO  web[][o.s.p.ProcessEntryPoint] Starting web
+2021.08.20 17:26:14 ERROR web[][o.a.c.c.StandardService] Failed to initialize connector [Connector[HTTP/1.1-9000]]
+org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1077)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:552)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: java.net.BindException: Address already in use
+	at java.base/sun.nio.ch.Net.bind0(Native Method)
+	at java.base/sun.nio.ch.Net.bind(Net.java:455)
+	at java.base/sun.nio.ch.Net.bind(Net.java:447)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:227)
+	at java.base/sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:80)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:222)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:1143)
+	at org.apache.tomcat.util.net.AbstractJsseEndpoint.init(AbstractJsseEndpoint.java:222)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:599)
+	at org.apache.coyote.http11.AbstractHttp11Protocol.init(AbstractHttp11Protocol.java:80)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:1075)
+	... 12 common frames omitted
+2021.08.20 17:26:14 ERROR web[][o.s.s.a.EmbeddedTomcat] Fail to start web server
+org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+2021.08.20 17:26:14 WARN  web[][o.s.p.ProcessEntryPoint] Fail to start web
+java.lang.RuntimeException: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at com.google.common.base.Throwables.propagate(Throwables.java:241)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:77)
+	at org.sonar.server.app.WebServer.start(WebServer.java:52)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:97)
+	at org.sonar.process.ProcessEntryPoint.launch(ProcessEntryPoint.java:81)
+	at org.sonar.server.app.WebServer.main(WebServer.java:99)
+Caused by: org.apache.catalina.LifecycleException: Failed to initialize connector [Connector[HTTP/1.1-9000]]
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:559)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:846)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:136)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:173)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:440)
+	at org.sonar.server.app.EmbeddedTomcat.start(EmbeddedTomcat.java:72)
+	... 4 common frames omitted
+2021.08.20 17:26:14 INFO  web[][o.s.p.ProcessEntryPoint] Hard stopping process

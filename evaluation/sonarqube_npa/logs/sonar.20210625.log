@@ -1,0 +1,8 @@
+2021.06.25 20:03:47 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ce]: 129
+2021.06.25 20:03:47 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is stopped
+2021.06.25 20:03:48 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [es]: 129
+2021.06.25 20:03:48 INFO  app[][o.s.a.SchedulerImpl] Process[es] is stopped
+2021.06.25 20:03:48 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [web]: 129
+2021.06.25 20:03:48 INFO  app[][o.s.a.SchedulerImpl] Process[web] is stopped
+2021.06.25 20:03:48 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+<-- Wrapper Stopped
