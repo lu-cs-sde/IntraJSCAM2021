@@ -34,7 +34,7 @@ docker build -t intraj:scam21 .
 If you don't want to compile the docker container, you can download the image from here:
 <a href="https://lu.box.com/s/it8x9vno6yqc1ueu8fipbh5sk2li8xvh" download>
 <p align="center">
-  <img width="300"  src="resources/downloadimage.png">
+  <img width="300"  src="resources/DownloadImage.png">
 </p>
 </a>
 Then, anywhere in you workspace run
@@ -45,7 +45,7 @@ docker load << PATH/TO/intraj_scam21.tar.gz
 
 ---
 
-then run the image using:
+Run the image using:
 
 ```
 docker run -it intraj:scam21
@@ -220,6 +220,7 @@ Available analysis (`ID`):
 ---
 
 # Example 
+
 Let us consider the `Example.java` file located in your workspace:
 ```
 public  class  Example {
@@ -271,6 +272,7 @@ And the following PDF is generated:
 
 All the results are stored in `evaluation/YYYYMMDD_HHMM`
 
+_Note_: All these steps can be performed inside the Docker container. Follow the steps in the ["Docker" section](https://github.com/lu-cs-sde/IntraJSCAM2021#docker).
 ---
 # Related repository repositories/links 🔗
  - 🗄 **[IntraJ](https://github.com/lu-cs-sde/IntraJ)**: updated repository
