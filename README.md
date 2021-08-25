@@ -1,3 +1,4 @@
+
 <p align="center">
   <img width="300"  src="resources/logo.png">
 </p>
@@ -19,11 +20,46 @@ With **IntraJ** you can:
 - 🔎 (*NPA*) detect occurences of **NullPointerException**.
 
 
-**IntraJ** supports Java versions from 4 up to 7. 
-
-🚧 Support for Java 8 is a work in progress 🚧
+**IntraJ** supports Java 4 to 7.
 
 ---
+# Docker 
+
+We provide a [Docker](https://www.docker.com) image that contains *IntraJ* and evaluation scripts, packaged together with all the necessary dependencies.
+```
+cd Docker
+docker build -t intraj:scam21 .
+```
+---
+If you don't want to compile the docker container, you can download the image from here:
+<a href="https://lu.box.com/s/it8x9vno6yqc1ueu8fipbh5sk2li8xvh" download>
+<p align="center">
+  <img width="300"  src="resources/downloadimage.png">
+</p>
+</a>
+Then, anywhere in you workspace run
+
+```
+docker load << PATH/TO/intraj_scam21.tar.gz
+```
+
+---
+
+then run the image using:
+
+```
+docker run -it intraj:scam21
+
+cd workspace/intraj/
+zsh eval.sh 50 50
+
+```
+
+The results are saved in: `~/workspace/intraj/evaluation/YYYYMMDD_HHMMSS`
+
+_Note_: calling `eval.sh 50 50` will run IntraJ 2500 times for each analysis. Therefore, computing the evaluation can take several hours.
+
+
 
 ### Repository overview
 The top-level structure of the repository:
@@ -50,7 +86,7 @@ The top-level structure of the repository:
     └── README.md
 
 The _entry point_ of **IntraJ** (main) is defined in:
-`extendj/src/fronted-main/org/extendj/IntarJ.java`.
+`extendj/src/fronted-main/org/extendj/IntraJ.java`.
 
 
 ### The _evaluation_ folder
@@ -93,6 +129,7 @@ The directory is structured as follow:
                └── NullAnalysis.jrag          # NPE sepc                        (Paper §4.a)
 ---
 
+_Note_: the features introduced in Java 6 do not affect the construction of the CFG.
 
 
 
@@ -248,8 +285,9 @@ All the results are stored in `evaluation/YYYYMMDD_HHMM`
 
 ---
  # Known issues
-  - 🐞 Depending on the OS, JastAdd might behave differently and this would cause some tests to fail. (Trubleshooting: use container)
+  - 🐞 Depending on the OS, JastAdd might behave differently and this would cause some tests to fail: [Issue1](https://github.com/lu-cs-sde/IntraJ/issues/1) 🔗.
   - The script `eval.sh` uses `sdkman`. If you don't have sdkman installed but have a java SDK 7 installed, you can comment all the lines starting with `sdk`. Trubleshooting, install `sdkman` by running the following commands:
+  
   ```
   curl -s "https://get.sdkman.io" | bash
   source "$HOME/.sdkman/bin/sdkman-init.sh"

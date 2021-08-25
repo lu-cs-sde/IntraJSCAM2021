@@ -130,8 +130,28 @@ task intrajcfg(type: Jar) {
   destinationDir=projectDir
 }
 
+task intrajnpa(type: Jar) {
+  from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+  from sourceSets.main.output
+  manifest {
+      attributes 'Main-Class': 'org.extendj.IntraJ_NPA'
+  }
+  baseName = 'intraj_npa'
+  destinationDir=projectDir
+}
+
+task intrajcfgnpa(type: Jar) {
+  from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+  from sourceSets.main.output
+  manifest {
+      attributes 'Main-Class': 'org.extendj.IntraJ_CFGNPA'
+  }
+  baseName = 'intraj_cfgnpa'
+  destinationDir=projectDir
+}
+
 artifacts {
-    archives intraj, intrajbl, intrajdaa, intrajcfgdaa, intrajcfg
+    archives intraj, intrajbl, intrajdaa, intrajcfgdaa, intrajcfg, intrajnpa, intrajcfgnpa
 
 }
 

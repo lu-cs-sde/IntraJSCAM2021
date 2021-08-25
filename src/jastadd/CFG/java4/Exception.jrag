@@ -115,6 +115,8 @@ aspect ExceptionJava4 {
   syn SmallSet<CFGNode> MethodAccess.exceptionsJumps() {
     SmallSet<CFGNode> res = new SmallSet<CFGNode>();
     for (Map.Entry<TypeDecl, SmallSet<CFGNode>> e : exceptions().entrySet()) {
+      if (!e.getValue().iterator().hasNext())
+        continue;
       CFGNode node = e.getValue().iterator().next();
       if (node == exit()) {
         res.add(exit().firstNodes());

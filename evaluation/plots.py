@@ -14,13 +14,16 @@ n = int(sys.argv[1])
 project = sys.argv[2]
 # print(os.getcwd())
 directory = "./"
-offset = 3
+offset = 4
 k = 0
 intraj_daa = np.array(sys.argv[(k*n+offset):((k+1)*n+offset)])
 intraj_daa = intraj_daa.astype(float)
 k += 1
 jji_dda = np.array(sys.argv[(k*n+offset):((k+1)*n+offset)])
 jji_dda = jji_dda.astype(float)
+k += 1
+sq_dda = np.array(sys.argv[(k*n+offset):((k+1)*n+offset)])
+sq_dda = sq_dda.astype(float)
 k += 1
 intraj_cfg = np.array(sys.argv[(k*n+offset):((k+1)*n+offset)])
 intraj_cfg = intraj_cfg.astype(float)
@@ -57,6 +60,25 @@ intraj_bl = intraj_bl.astype(float)
 k += 1
 jji_bl = np.array(sys.argv[(k*n+offset):((k+1)*n+offset)])
 jji_bl = jji_bl.astype(float)
+k += 1
+sq_bl = np.array(sys.argv[(k*n+offset):((k+1)*n+offset)])
+sq_bl = sq_bl.astype(float)
+k += 1
+intraj_npa = np.array(sys.argv[(k*n+offset):((k+1)*n+offset)])
+intraj_npa = intraj_npa.astype(float)
+k += 1
+intraj_npa_ss = np.array(sys.argv[(k*n+offset):((k+1)*n+offset)])
+intraj_npa_ss = intraj_npa_ss.astype(float)
+k += 1
+intraj_cfgnpa = np.array(sys.argv[(k*n+offset):((k+1)*n+offset)])
+intraj_cfgnpa = intraj_cfgnpa.astype(float)
+k += 1
+intraj_cfgnpa_ss = np.array(sys.argv[(k*n+offset):((k+1)*n+offset)])
+intraj_cfgnpa_ss = intraj_cfgnpa_ss.astype(float)
+k += 1
+sq_npa = np.array(sys.argv[(k*n+offset):((k+1)*n+offset)])
+sq_npa = sq_npa.astype(float)
+
 
 
 def setCategories(categories, lines):
@@ -80,7 +102,9 @@ fig = plt.figure(figsize=(15, 15))
 data1 = pd.DataFrame(intraj_daa, columns=['IntraJ']).assign(Location=1)
 data2 = pd.DataFrame(
     jji_dda, columns=['JastaddJ-Intraflow']).assign(Location=2)
-cdf = pd.concat([data1, data2])
+data3 = pd.DataFrame(
+    sq_dda, columns=['SQ']).assign(Location=3)
+cdf = pd.concat([data1, data2, data3])
 mdf = pd.melt(cdf, id_vars=['Location'], var_name=['Framework'])
 ax = sns.boxplot(x="Framework", y="value",  data=mdf)
 ax = sns.swarmplot(x="Framework", y="value", data=mdf, color=".25")
@@ -208,7 +232,8 @@ plt.close(fig)
 fig = plt.figure(figsize=(15, 15))
 data1 = pd.DataFrame(intraj_bl, columns=['IntraJ']).assign(Location=1)
 data2 = pd.DataFrame(jji_bl, columns=['JastaddJ-Intraflow']).assign(Location=2)
-cdf = pd.concat([data1, data2])
+data3 = pd.DataFrame(sq_bl, columns=['SQ']).assign(Location=3)
+cdf = pd.concat([data1, data2, data3])
 mdf = pd.melt(cdf, id_vars=['Location'], var_name=['Framework'])
 ax = sns.boxplot(x="Framework", y="value",  data=mdf)
 ax = sns.swarmplot(x="Framework", y="value", data=mdf, color=".25")
@@ -217,4 +242,59 @@ ax.set(xlabel='Framework', ylabel='Seconds')
 setCategories(ax.get_xticks(), ax.get_lines())
 plt.title(project+' - BASELINE')
 fig.savefig(directory+'/'+project+'_BASELINE.png')
+plt.close(fig)
+
+"${intraj_cfgnpa[@]}" "${intraj_cfgnpa_ss[@]}"
+
+fig = plt.figure(figsize=(15, 15))
+data1 = pd.DataFrame(intraj_npa, columns=['IntraJ']).assign(Location=1)
+data2 = pd.DataFrame(sq_npa, columns=['SQ']).assign(Location=1)
+cdf = pd.concat([data1, data2])
+mdf = pd.melt(cdf, id_vars=['Location'], var_name=['Framework'])
+ax = sns.boxplot(x="Framework", y="value",  data=mdf)
+ax = sns.swarmplot(x="Framework", y="value", data=mdf, color=".25")
+ax = ax.axes
+ax.set(xlabel='Framework', ylabel='Seconds')
+setCategories(ax.get_xticks(), ax.get_lines())
+plt.title(project+' - NPA - Start Up')
+fig.savefig(directory+'/'+project+'_NPA.png')
+plt.close(fig)
+
+fig = plt.figure(figsize=(15, 15))
+data1 = pd.DataFrame(intraj_npa_ss, columns=['IntraJ']).assign(Location=1)
+cdf = pd.concat([data1])
+mdf = pd.melt(cdf, id_vars=['Location'], var_name=['Framework'])
+ax = sns.boxplot(x="Framework", y="value",  data=mdf)
+ax = sns.swarmplot(x="Framework", y="value", data=mdf, color=".25")
+ax = ax.axes
+ax.set(xlabel='Framework', ylabel='Seconds')
+setCategories(ax.get_xticks(), ax.get_lines())
+plt.title(project+' - NPA - Stady State')
+fig.savefig(directory+'/'+project+'_NPA_StadyState.png')
+plt.close(fig)
+
+fig = plt.figure(figsize=(15, 15))
+data1 = pd.DataFrame(intraj_cfgnpa, columns=['IntraJ']).assign(Location=1)
+cdf = pd.concat([data1])
+mdf = pd.melt(cdf, id_vars=['Location'], var_name=['Framework'])
+ax = sns.boxplot(x="Framework", y="value",  data=mdf)
+ax = sns.swarmplot(x="Framework", y="value", data=mdf, color=".25")
+ax = ax.axes
+ax.set(xlabel='Framework', ylabel='Seconds')
+setCategories(ax.get_xticks(), ax.get_lines())
+plt.title(project+' - CFGs Traversing and NPA - Start Up')
+fig.savefig(directory+'/'+project+'_CFGNPA.png')
+plt.close(fig)
+
+fig = plt.figure(figsize=(15, 15))
+data1 = pd.DataFrame(intraj_cfgnpa_ss, columns=['IntraJ']).assign(Location=1)
+cdf = pd.concat([data1])
+mdf = pd.melt(cdf, id_vars=['Location'], var_name=['Framework'])
+ax = sns.boxplot(x="Framework", y="value",  data=mdf)
+ax = sns.swarmplot(x="Framework", y="value", data=mdf, color=".25")
+ax = ax.axes
+ax.set(xlabel='Framework', ylabel='Seconds')
+setCategories(ax.get_xticks(), ax.get_lines())
+plt.title(project+' - CFGs Traversing and NPA - Stady State')
+fig.savefig(directory+'/'+project+'_CFGNPA_StadyState.png')
 plt.close(fig)

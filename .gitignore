@@ -24,6 +24,7 @@
 .vscode/
 .VSCodeCounter/
 
+.gradle
 
 
 .ipynb_checkpoints
