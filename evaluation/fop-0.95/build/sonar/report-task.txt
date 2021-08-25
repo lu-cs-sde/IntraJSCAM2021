@@ -1,6 +1,6 @@
-projectKey=FOP
+projectKey=ANTLR
 serverUrl=http://localhost:9000
 serverVersion=8.9.0.43852
-dashboardUrl=http://localhost:9000/dashboard?id=FOP
-ceTaskId=AXnMqpGVUrQJXuZTUM3m
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXnMqpGVUrQJXuZTUM3m
+dashboardUrl=http://localhost:9000/dashboard?id=ANTLR
+ceTaskId=AXt8_DBJ15Qs4uu-rYFS
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXt8_DBJ15Qs4uu-rYFS
