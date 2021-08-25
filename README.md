@@ -152,6 +152,18 @@ To generate the CFGs PDF you need
     * 🧪 **ipython v7.26.0** - _Evaluation and Plots geneartion_
 
 
+The evaluation script uses `sdkman`. 
+To run the evaluation you need:
+1) - The scripts `eval.sh` and `evaluation/run_eval.sh` uses `sdkman`. If you don't have `sdkman` installed but have Java SDK 7 installed, you can comment all the lines starting with `sdk` in `eval.sh` and in `evaluation/run_eval.sh`. To install `sdkman` by running the following commands:
+
+  ```
+  curl -s "https://get.sdkman.io" | bash
+  source "$HOME/.sdkman/bin/sdkman-init.sh"
+  sdk install java 7.0.292-zulu
+  sdk use java 7.0.292-zulu
+  ```
+
+
 
 
 
@@ -273,6 +285,8 @@ And the following PDF is generated:
 All the results are stored in `evaluation/YYYYMMDD_HHMM`
 
 _Note_: All these steps can be performed inside the Docker container. Follow the steps in the ["Docker" section](https://github.com/lu-cs-sde/IntraJSCAM2021#docker).
+
+
 ---
 # Related repository repositories/links 🔗
  - 🗄 **[IntraJ](https://github.com/lu-cs-sde/IntraJ)**: updated repository
@@ -288,13 +302,6 @@ _Note_: All these steps can be performed inside the Docker container. Follow the
 ---
  # Known issues
   - 🐞 Depending on the OS, JastAdd might behave differently and this would cause some tests to fail: [Issue1](https://github.com/lu-cs-sde/IntraJ/issues/1) 🔗.
-  - The script `eval.sh` uses `sdkman`. If you don't have sdkman installed but have a java SDK 7 installed, you can comment all the lines starting with `sdk`. Trubleshooting, install `sdkman` by running the following commands:
-  
-  ```
-  curl -s "https://get.sdkman.io" | bash
-  source "$HOME/.sdkman/bin/sdkman-init.sh"
-  sdk install java 7.0.292-zulu
-  sdk use java 7.0.292-zulu
-  ```
+
   
 
