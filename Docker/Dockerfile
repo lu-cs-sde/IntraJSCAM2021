@@ -20,6 +20,12 @@ RUN apt-get update && apt-get -y install \
     python3-pip\
     bc
 
+RUN apt-get install -y locales locales-all
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+
+
 RUN zsh
 
 RUN ln -s /usr/bin/pip3 /usr/bin/pip
