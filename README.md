@@ -49,7 +49,7 @@ If you don't want to compile the docker container, you can download the image fr
   <img width="300"  src="resources/DownloadImage.png">
 </p>
 </a>
-Then, anywhere in you workspace run
+Then, anywhere in your workspace run
 
 ```
 docker load << PATH/TO/intraj_scam21.tar.gz
@@ -62,7 +62,7 @@ Run the image using:
 ```
 docker run  -it --network="host" --expose 9000 --expose 9001 --memory="10g" --memory-swap="10g" intraj:scam21
 ```
-_Note_: SonarQube requires a high amount of memory. We tested the container with 10GByte of memory and 10GBute of swap memory. If you are running the container from Windows or Mac, please set these two parameters from the GUI.
+_Note_: SonarQube requires a high amount of memory. We tested the container with 10GByte of memory and 10GByte of swap memory. If you are running the container from Windows or Mac, please set these two parameters from the GUI.
 
 You will be logged in with the user _SCAM21_. Once logged in, run the following compands to launch the evaluation:
 
