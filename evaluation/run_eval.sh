@@ -25,7 +25,7 @@ PRJECTDIR=$5
 CLASSPATH=$6
 CURRDIR=$7
 
-
+echo '\u001b[33;1m[INFO] STARTING ANALYSING PROJECT '$PROJECT' \u001b[0m'
 
 alias INTRAJ="java  -jar  ../intraj.jar -classpath "$CLASSPATH
 alias INTRAJ_BL="java  -jar  ../intraj_bl.jar -classpath "$CLASSPATH
@@ -374,7 +374,7 @@ done < "$input"
 
 cd ..
 pkill wrapper
-sleep 5s
+sleep 20s
 
 echo '\u001b[33;1m[INFO] Starting Sonarqube Server. The log is printed on std input \u001b[0m'
 echo '\u001b[33;1m[INFO] The warnings detected by SQ on the different projects are printed on the std input \u001b[0m'
@@ -400,7 +400,7 @@ do
 done < "$input"
 cd ..
 pkill wrapper
-sleep 5s
+sleep 20s
 
 echo '\u001b[33;1m[INFO] Starting Sonarqube Server. The log is printed on std input \u001b[0m'
 echo '\u001b[33;1m[INFO] The warnings detected by SQ on the different projects are printed on the std input \u001b[0m'
@@ -426,7 +426,7 @@ do
 done < "$input"
 cd ..
 pkill wrapper
-sleep 5s
+sleep 20s
 
 cd $PROJECT_DIR
 
@@ -434,7 +434,7 @@ cd $PROJECT_DIR
 python3 ../../plots.py $N_ITER $PROJECT $CURRDIR "${intraj_daa[@]}" "${jji_dda[@]}" "${sq_dda[@]}"   "${intraj_cfg[@]}" "${jji_cfg[@]}" "${intraj_cfgdaa[@]}" "${jji_cfgdda[@]}" "${intraj_daa_ss[@]}" "${jji_dda_ss[@]}"  "${intraj_cfg_ss[@]}" "${jji_cfg_ss[@]}" "${intraj_cfgdaa_ss[@]}" "${jji_cfgdda_ss[@]}"  "${intraj_bl[@]}" "${jji_bl[@]}" "${sq_bl[@]}" "${intraj_npa[@]}" "${intraj_npa_ss[@]}" "${intraj_cfgnpa[@]}" "${intraj_cfgnpa_ss[@]}" "${sq_npa[@]}" 
 cd ../..
 
-echo '\u001b[33;1m[INFO] SAVING RAW DATA in /raw '$N_ITER_SS' iters \u001b[0m'
+echo '\u001b[33;1m[INFO] SAVING RAW DATA in /raw \u001b[0m'
 mkdir "$PROJECT_DIR/raw"
 cd "$PROJECT_DIR/raw"
 echo "${intraj_daa[@]}" > intraj_dda.txt
