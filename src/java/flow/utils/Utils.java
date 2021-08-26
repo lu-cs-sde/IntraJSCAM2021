@@ -31,6 +31,7 @@
 package org.extendj.flow.utils;
 
 import java.io.PrintStream;
+import org.extendj.IntraJ;
 
 public class Utils {
   private static final String RESET = "\033[0m";          // Text Reset
@@ -41,11 +42,21 @@ public class Utils {
   private static final String WHITE_BOLD = "\033[1;37m";  // WHITE
   public static void printWarning(PrintStream out, String location,
                                   String msg) {
-    out.print(RED_BOLD);
+    if (IntraJ.toTxt) {
+      printNoColors(out, location, msg);
+    } else {
+      out.print(RED_BOLD);
+      out.print("[" + location + "]: ");
+      out.print(WHITE_BOLD);
+      out.println(msg);
+      out.print(RESET);
+    }
+  }
+
+  public static void printNoColors(PrintStream out, String location,
+                                   String msg) {
     out.print("[" + location + "]: ");
-    out.print(WHITE_BOLD);
     out.println(msg);
-    out.print(RESET);
   }
 
   public static void printTest(PrintStream out, String location, String msg) {
@@ -54,19 +65,27 @@ public class Utils {
   }
 
   public static void printInfo(PrintStream out, String msg) {
-    out.print(GREEN_BOLD);
-    out.print("[INFO]: ");
-    out.print(WHITE_BOLD);
-    out.println(msg);
-    out.print(RESET);
+    if (IntraJ.toTxt) {
+      printNoColors(out, location, msg);
+    } else {
+      out.print(GREEN_BOLD);
+      out.print("[INFO]: ");
+      out.print(WHITE_BOLD);
+      out.println(msg);
+      out.print(RESET);
+    }
   }
 
   public static void printStatistics(PrintStream out, String msg) {
-    out.print(YELLOW_BOLD);
-    out.print("[STATISTIC]: ");
-    out.print(WHITE_BOLD);
-    out.println(msg);
-    out.print(RESET);
+    if (IntraJ.toTxt) {
+      printNoColors(out, location, msg);
+    } else {
+      out.print(YELLOW_BOLD);
+      out.print("[STATISTIC]: ");
+      out.print(WHITE_BOLD);
+      out.println(msg);
+      out.print(RESET);
+    }
   }
 
   public static String[] removeElement(String[] arr, int index) {
