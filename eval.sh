@@ -1,5 +1,29 @@
 #!/bin/zsh
 
+if [ "$#" -ne 2 ]
+then
+  echo "No arguments supplied"
+  echo "Please enter the number of iteration of the outer and inner loops."
+  echo "e.g., eval.sh 20 10"
+  exit 1
+fi
+
+if [ "$1" -le 0 ]
+then
+  echo "Please supply a positive number"
+  echo "e.g., eval.sh 20 10"
+  exit 1
+fi
+
+
+if [ "$2" -le 0 ]
+then
+  echo "Please supply a positive number"
+  echo "e.g., eval.sh 20 10"
+  exit 1
+fi
+
+
 echo "\u001b[33;1m[INFO] SETTING ENVIRONMENT \u001b[0m"
 . ~/.sdkman/bin/sdkman-init.sh
 sdk use java 7.0.292-zulu
@@ -7,6 +31,11 @@ set -e
 
 N_ITER=$1
 N_ITER_SS=$2
+
+
+
+
+
 CLASSPATH_ANTLR=":"
 CLASSPATH_FOP="fop-0.95/lib/fop-all.jar:fop-0.95/lib/aspectjrt.jar:fop-0.95/lib/xmlgraphics-commons-1.3.1.jar:fop-0.95/lib/xml-resolver-1.2.jar:fop-0.95/lib/commons-cli-1.2.jar:fop-0.95/lib/fop-0.20.5.jar:fop-0.95/lib/jai_core-1.1.3.jar:fop-0.95/lib/apache-ant-1.8.2.jar"
 CLASSPATH_PMD="pmd-4.2.5/lib/asm-3.1.jar:pmd-4.2.5/lib/javacc.jar:pmd-4.2.5/lib/jaxen-1.1.1.jar:pmd-4.2.5/lib/junit-4.4.jar:fop-0.95/lib/fop-all.jar:fop-0.95/lib/aspectjrt.jar:fop-0.95/lib/xmlgraphics-commons-1.3.1.jar:fop-0.95/lib/xml-resolver-1.2.jar:fop-0.95/lib/commons-cli-1.2.jar:fop-0.95/lib/fop-0.20.5.jar:fop-0.95/lib/jai_core-1.1.3.jar:fop-0.95/lib/apache-ant-1.8.2.jar"

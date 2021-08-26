@@ -15,12 +15,12 @@ The purpose of this repository is to have a static reference of what we describe
 ---
 
 With **IntraJ** you can:
-- 🏗 construct intra-procedural **Control Flow Graph**,
-- 🔎 (*DAA*) detect **Dead assignments** in your codebase, and
-- 🔎 (*NPA*) detect occurences of **NullPointerException**.
+- construct intra-procedural **Control Flow Graph**,
+- (*DAA*) detect **Dead assignments** in your codebase, and
+- (*NPA*) detect occurences of **NullPointerException**.
 
 
-**IntraJ** supports Java 4 to 7.
+With **IntraJ** you can analyze codebases written in Java-4 up to Java-7.
 
 ---
 # Docker 
@@ -77,11 +77,11 @@ The top-level structure of the repository:
     |          ├── utils                     # General helpers for visualisation
     |          └── test                      # JUnit test spec
     ├── tools                                # IntraJ source code
-    |    └── jastadd-2.3.6-custom            # Custome version of Jastadd
+    |    └── jastadd-2.3.6-custom            # Custom version of Jastadd
     ├── testfiles                            # Automated test files
     |    ├── DataFlow
     |    └── CFG
-    ├── eval.sh                              #Evaluation entry point
+    ├── eval.sh                              # Evaluation entry point
     ├── LICENSE
     └── README.md
 
@@ -133,28 +133,28 @@ _Note_: the features introduced in Java 6 do not affect the construction of the 
 
 
 
-## 🚀 How to run IntraJ 
-### 1️⃣ Prerequisite
+## How to run IntraJ 
+### Prerequisite
 
 To run IntraJ is sufficient to have installed:
 
-1) **Java SDK version 7**. (tested with  SDK 7.0.292-zulu. See [sdkman](https://sdkman.io).)
+*  **Java SDK version 7**. (tested with  SDK 7.0.292-zulu. See [sdkman](https://sdkman.io).)
 
-To generate the CFGs PDF you need
+To generate the CFGs PDF you need:
 1) **Dot** (graphiz) - _PDF generation_
 2) **Vim** - _PDF generation_
 3) **Python3.x** with the following dependencies:
-    * 📈 **PyPDF2 v1.26.0** - _PDF generation_
-    * 🧪 **numpy v1.20.1** - _Evaluation and Plots geneartion_
-    * 🧪 **pandas v1.2.4** - _Evaluation and Plots geneartion_
-    * 🧪 **matplotlib v3.3.4** - _Evaluation and Plots geneartion_
-    * 🧪 **seaborn v0.11.1** - _Evaluation and Plots geneartion_
-    * 🧪 **ipython v7.26.0** - _Evaluation and Plots geneartion_
+    * **PyPDF2 v1.26.0** - _PDF generation_
+    * **numpy v1.20.1** - _Evaluation and Plots geneartion_
+    * **pandas v1.2.4** - _Evaluation and Plots geneartion_
+    * **matplotlib v3.3.4** - _Evaluation and Plots geneartion_
+    * **seaborn v0.11.1** - _Evaluation and Plots geneartion_
+    * **ipython v7.26.0** - _Evaluation and Plots geneartion_
 
 
 The evaluation script uses `sdkman`. 
 To run the evaluation you need:
-1) - The scripts `eval.sh` and `evaluation/run_eval.sh` uses `sdkman`. If you don't have `sdkman` installed but have Java SDK 7 installed, you can comment all the lines starting with `sdk` in `eval.sh` and in `evaluation/run_eval.sh`. To install `sdkman` by running the following commands:
+* The scripts `eval.sh` and `evaluation/run_eval.sh` uses `sdkman`. If you don't have `sdkman` installed but have Java SDK 7 installed, you can comment all the lines starting with `sdk` in `eval.sh` and in `evaluation/run_eval.sh`. To install `sdkman` by running the following commands:
 
   ```
   curl -s "https://get.sdkman.io" | bash
@@ -170,13 +170,13 @@ To run the evaluation you need:
 To install all the necessary Python dependencies, you can run the instruction described in the next section.
 
 
-### 2️⃣ Build 🛠
+### Build
 To clone the **IntraJ** code, run, in your working directory:
 ```
 git clone https://github.com/lu-cs-sde/IntraJ.git --recursive
 ```
 
-🗂 Move to the **IntraJ** directory:
+Move to the **IntraJ** directory:
 
 ```
 cd IntraJ
@@ -189,19 +189,19 @@ cd IntraJ
     git submodule update
 ```
 
-🍯 To generate the Jar file, execute
+To generate the Jar file, execute
 
 ```
 ./gradlew jar
 ```
 
-🧪 To run all the tests, execute:
+To run all the tests, execute:
 
 ```
 ./gradlew test
 ```
 
-### 3️⃣ Python 🐍 Dependencies
+### Python Dependencies
 
 To install Python dependencies, you can execute the following instruction:
 
@@ -227,7 +227,7 @@ Available analysis (`ID`):
   * `NPA`: Detects occurrences of Null Pointer Dereferenciation
    - `-WID`: enable the analysis with the respective `ID`, e.g., `-WDAA`
    - `-Wall`: enables all the available analysis
-   - `-Wexcept=ID`: enable all the available analysis except `ID`.
+   - `-Wexcept=ID`: enable all the available analysis except `ID.
 
 ---
 
@@ -235,12 +235,12 @@ Available analysis (`ID`):
 
 Let us consider the `Example.java` file located in your workspace:
 ```
-public  class  Example {
-  int  example() {
-    Integer  m  =  null;
+public class Example {
+  int example() {
+    Integer m = null;
     m.toString();
-    int  x  =  0;
-    x =  1;
+    int x = 0;
+    x = 1;
     return x;
   }
 }
@@ -272,7 +272,7 @@ And the following PDF is generated:
 
 ---
 # How to run the evaluation
-1) First execute all the steps in `"🚀 How to run IntraJ"`.
+1) First execute all the steps in `"How to run IntraJ"`.
 2) Run the command `./gradlew build`. This generates the following _jar_ files:
     - intraj.jar
     - intraj_bl.jar
@@ -282,7 +282,7 @@ And the following PDF is generated:
 3) Start the evaluation by executing `"zsh eval.sh N_iter_outerloop N_iter_innerloop"`.  For the paper we used `N_iter_outerloop = N_iter_innerloop = 50`.
     - ⚠️ _Note_: all the dependencies required in "🚀 How to run IntraJ" are also required for the evaluation.
 
-All the results are stored in `evaluation/YYYYMMDD_HHMM`
+All the results are stored in `evaluation/YYYYMMDD_HHMM`.
 
 _Note_: All these steps can be performed inside the Docker container. Follow the steps in the ["Docker" section](https://github.com/lu-cs-sde/IntraJSCAM2021#docker).
 
@@ -292,16 +292,11 @@ _Note_: All these steps can be performed inside the Docker container. Follow the
  - 🗄 **[IntraJ](https://github.com/lu-cs-sde/IntraJ)**: updated repository
  - 🗄 **[IntraCFG](https://github.com/lu-cs-sde/IntraCFG)**: updated repository 
  - 🔗 **[ExtendJ](https://extendj.org)**: extensible Java compiler built using the declarative attribute grammar system JastAdd.
- - 🔗 **[JastAdd](https://jastadd.cs.lth.se/web/)**: meta-compilation system that supports Reference Attribute Grammars (RAGs).
+ - 🔗 **[JastAdd](https://jastadd.cs.lth.se/web/)**: meta-compilation system that supports Reference Attribute Grammars (RAGs). 
  - 🔗 **[SonarQube](https://www.sonarqube.org/downloads/)**: platform developed by SonarSource for continuous inspection of code quality.
  - 🗄 **[JastAddJ-Intraflow](https://bitbucket.org/jastadd/jastaddj-intraflow/src/master/)**: An extension to the JastAdd extensible Java compiler (JastAddJ) adding intra-procedural control flow, dataflow, and dead assignment analysis on top of the abstract syntax tree. 
  
 
- 
-
----
- # Known issues
-  - 🐞 Depending on the OS, JastAdd might behave differently and this would cause some tests to fail: [Issue1](https://github.com/lu-cs-sde/IntraJ/issues/1) 🔗.
 
   
 

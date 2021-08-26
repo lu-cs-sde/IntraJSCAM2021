@@ -345,14 +345,17 @@ echo $jji_cfgdda_ss
 PROJECT_DIR=$CURRDIR/$PROJECT
 mkdir $PROJECT_DIR
 
-INTRAJ $FILES -WDAA -statistics > "$PROJECT_DIR/INTRAJ_NH_DAA.txt"
-INTRAJ $FILES -WDAA -statistics -excludelit > "$PROJECT_DIR/INTRAJ_H_DAA.txt"
-INTRAJ $FILES -WNPA -statistics > "$PROJECT_DIR/INTRAJ_NPA.txt"
+INTRAJ $FILES -WDAA -statistics  -txt-output> "$PROJECT_DIR/INTRAJ_NH_DAA.txt"
+INTRAJ $FILES -WDAA -statistics -excludelit -txt-output> "$PROJECT_DIR/INTRAJ_H_DAA.txt"
+INTRAJ $FILES -WNPA -statistics -txt-output> "$PROJECT_DIR/INTRAJ_NPA.txt"
 sdk use java 11.0.9.fx-zulu
+echo '\u001b[33;1m[INFO] Starting Sonarqube Server. The log is printed on std input \u001b[0m'
+echo '\u001b[33;1m[INFO] The warnings detected by SQ on the different projects are printed on the std input \u001b[0m'
+echo '\u001b[33;1m[INFO] Please just ignore them \u001b[0m'
 start_sq
 # sh sonarqube_dda/bin/macosx-universal-64/sonar.sh console &
 # sh sonarqube_dda/bin/linux-x86-64/sonar.sh console &
-sleep 3m
+sleep 30s
 cd $PRJECTDIR
 echo '\u001b[33;1m[INFO] Running Time performance evaluation (SQ_DDA) \u001b[0m'
 for a in {1..$N_ITER}
@@ -372,11 +375,13 @@ done < "$input"
 cd ..
 
 
-
+echo '\u001b[33;1m[INFO] Starting Sonarqube Server. The log is printed on std input \u001b[0m'
+echo '\u001b[33;1m[INFO] The warnings detected by SQ on the different projects are printed on the std input \u001b[0m'
+echo '\u001b[33;1m[INFO] Please just ignore them \u001b[0m'
 start_sq
 # sh sonarqube_npa/bin/macosx-universal-64/sonar.sh console &
 # sh sonarqube_npa/bin/linux-x86-64/sonar.sh console&
-sleep 3m
+sleep 30s
 cd $PRJECTDIR
 echo '\u001b[33;1m[INFO] Running Time performance evaluation (SQ_NPA) \u001b[0m'
 for a in {1..$N_ITER}
@@ -396,11 +401,13 @@ cd ..
 
 
 
-
+echo '\u001b[33;1m[INFO] Starting Sonarqube Server. The log is printed on std input \u001b[0m'
+echo '\u001b[33;1m[INFO] The warnings detected by SQ on the different projects are printed on the std input \u001b[0m'
+echo '\u001b[33;1m[INFO] Please just ignore them \u001b[0m'
 start_sq
 # sh sonarqube_npa/bin/macosx-universal-64/sonar.sh console &
 # sh sonarqube_npa/bin/linux-x86-64/sonar.sh console&
-sleep 3m
+sleep 30s
 cd $PRJECTDIR
 echo '\u001b[33;1m[INFO] Running Time performance evaluation (SQ_BL) \u001b[0m'
 for a in {1..$N_ITER}

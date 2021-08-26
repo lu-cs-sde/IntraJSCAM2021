@@ -74,6 +74,7 @@ public class IntraJ extends Frontend {
   private static boolean printTime = false;
   private static boolean statistics = false;
   private static long totalTime = 0;
+  private static boolean toTxt = false;
 
   public static ArrayList<Analysis> analysis = new ArrayList<>();
 
@@ -97,6 +98,9 @@ public class IntraJ extends Frontend {
       } else if (opt.startsWith("-Wall")) {
         analysis.add(Analysis.NPA);
         analysis.add(Analysis.DAA);
+        continue;
+      } else if (opt.equals("-txt-output")) {
+        toTxt = true;
         continue;
       } else if (opt.startsWith("-Wexcept=")) {
         String an = opt.substring(9, opt.length());
