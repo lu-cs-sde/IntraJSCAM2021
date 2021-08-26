@@ -373,7 +373,8 @@ do
 done < "$input"
 
 cd ..
-
+pkill wrapper
+sleep 5s
 
 echo '\u001b[33;1m[INFO] Starting Sonarqube Server. The log is printed on std input \u001b[0m'
 echo '\u001b[33;1m[INFO] The warnings detected by SQ on the different projects are printed on the std input \u001b[0m'
@@ -398,8 +399,8 @@ do
  sq_npa+=($line)
 done < "$input"
 cd ..
-
-
+pkill wrapper
+sleep 5s
 
 echo '\u001b[33;1m[INFO] Starting Sonarqube Server. The log is printed on std input \u001b[0m'
 echo '\u001b[33;1m[INFO] The warnings detected by SQ on the different projects are printed on the std input \u001b[0m'
@@ -424,7 +425,8 @@ do
  sq_bl+=($line)
 done < "$input"
 cd ..
-
+pkill wrapper
+sleep 5s
 
 cd $PROJECT_DIR
 
