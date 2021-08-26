@@ -59,6 +59,10 @@ public class Utils {
     out.println(msg);
   }
 
+  public static void printNoColors(PrintStream out, String msg) {
+    out.println(msg);
+  }
+
   public static void printTest(PrintStream out, String location, String msg) {
     // out.println("[" + location + " - " + msg + " ]");
     out.println("[" + location + "]");
@@ -66,7 +70,7 @@ public class Utils {
 
   public static void printInfo(PrintStream out, String msg) {
     if (IntraJ.toTxt) {
-      printNoColors(out, location, msg);
+      printNoColors(out, msg);
     } else {
       out.print(GREEN_BOLD);
       out.print("[INFO]: ");
@@ -78,7 +82,7 @@ public class Utils {
 
   public static void printStatistics(PrintStream out, String msg) {
     if (IntraJ.toTxt) {
-      printNoColors(out, location, msg);
+      printNoColors(out, msg);
     } else {
       out.print(YELLOW_BOLD);
       out.print("[STATISTIC]: ");

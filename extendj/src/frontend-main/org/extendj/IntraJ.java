@@ -74,7 +74,7 @@ public class IntraJ extends Frontend {
   private static boolean printTime = false;
   private static boolean statistics = false;
   private static long totalTime = 0;
-  private static boolean toTxt = false;
+  public static boolean toTxt = false;
 
   public static ArrayList<Analysis> analysis = new ArrayList<>();
 
