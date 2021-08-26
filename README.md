@@ -26,13 +26,25 @@ With **IntraJ** you can analyze codebases written in Java-4 up to Java-7.
 # Docker 
 
 We provide a [Docker](https://www.docker.com) image that contains *IntraJ* and evaluation scripts, packaged together with all the necessary dependencies.
+To run such an image, make sure to install the relevant tools:
+
+* For Windows and OS X systems, follow the guidelines on the [Docker desktop download site](https://www.docker.com/products/docker-desktop)
+
+* On Linux-based systems, install the docker command line tool. This tool may be provided by the docker.io and/or docker-ce packages. If your distribution does not provide these packages, follow the steps here:
+  * For [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+  * For [Debian](https://docs.docker.com/engine/install/debian/)
+  * For [CentOS](https://docs.docker.com/engine/install/centos/)
+  * For [Fedora](https://docs.docker.com/engine/install/fedora/)
+Users of other distributions can download [pre-compiled binaries](https://docs.docker.com/engine/install/binaries/) or build Docker from [source](https://github.com/docker) (both "cli" and "engine")
+
+Once you have Docker installed:
 ```
 cd Docker
 docker build -t intraj:scam21 .
 ```
 ---
 If you don't want to compile the docker container, you can download the image from here:
-<a href="https://lu.box.com/s/it8x9vno6yqc1ueu8fipbh5sk2li8xvh" download>
+<a href="https://lu.box.com/s/kdaz6t5wo0gly77mqe8r6akurtjjlds9" download>
 <p align="center">
   <img width="300"  src="resources/DownloadImage.png">
 </p>
@@ -48,18 +60,37 @@ docker load << PATH/TO/intraj_scam21.tar.gz
 Run the image using:
 
 ```
-docker run -it intraj:scam21
+docker run  -it --network="host" --expose 9000 --expose 9001 --memory="10g" --memory-swap="10g" intraj:scam21
+```
+_Note_: SonarQube requires a high amount of memory. We tested the container with 10GByte of memory and 10GBute of swap memory. If you are running the container from Windows or Mac, please set these two parameters from the GUI.
 
-cd workspace/intraj/
-zsh eval.sh 50 50
+You will be logged in with the user _SCAM21_. Once logged in, run the following compands to launch the evaluation:
 
 ```
+cd workspace/intraj/
+./eval.sh 50 50
 
+```
 The results are saved in: `~/workspace/intraj/evaluation/YYYYMMDD_HHMMSS`
 
 _Note_: calling `eval.sh 50 50` will run IntraJ 2500 times for each analysis. Therefore, computing the evaluation can take several hours.
 
+_Note_: Don't close the bash nor kill the container. The results will be lost.
+### Saving the results
+To save the results in your own machine run the follwing commands in a new bash:
+```
+> docker ps
+```
+This will print:
+```
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+4d882c86b5ab   intraj:scam21   "bash"    x   Up x seconds  random_name
+```
+With *your* CONTAINER ID run the following command:
 
+```
+docker cp 4d882c86b5ab:workspace/intraj/evaluation/YYYYMMDD_HHMMSS /PATH/IN/YOUR/MACHINE
+```
 
 ### Repository overview
 The top-level structure of the repository:
@@ -138,7 +169,8 @@ _Note_: the features introduced in Java 6 do not affect the construction of the 
 
 To run IntraJ is sufficient to have installed:
 
-*  **Java SDK version 7**. (tested with  SDK 7.0.292-zulu. See [sdkman](https://sdkman.io).)
+*  **Java SDK version 7**. (tested with  SDK 7.0.292-zulu. See [sdkman](https://sdkman.io)).
+*  **Java SDK version 11** (tested with SDK 11.0.9.fx-zulu. See [sdkman](https://sdkman.io)).
 
 To generate the CFGs PDF you need:
 1) **Dot** (graphiz) - _PDF generation_
