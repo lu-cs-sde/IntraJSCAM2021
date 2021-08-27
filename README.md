@@ -42,7 +42,7 @@ Users of other distributions can download [pre-compiled binaries](https://docs.d
 
 
 ## Download pre-built Docker image
-Download the pre-built image [here](https://lu.box.com/s/b0e0kypwpzif0a1wic32va25rzxwfatg).
+Download the pre-built image [here](https://zenodo.org/record/5296449/files/intraj_scam21.tar.gz).
 Then, anywhere in your workspace run
 
 ```
