@@ -42,7 +42,7 @@ Users of other distributions can download [pre-compiled binaries](https://docs.d
 
 
 ## Download pre-built Docker image
-Download the pre-built image [here](https://lu.box.com/s/kdaz6t5wo0gly77mqe8r6akurtjjlds9).
+Download the pre-built image [here](https://lu.box.com/s/b0e0kypwpzif0a1wic32va25rzxwfatg).
 Then, anywhere in your workspace run
 
 ```
@@ -335,7 +335,7 @@ All the results are stored in `evaluation/YYYYMMDD_HHMM`.
 # Related repository repositories/links 🔗
  - 🗄 **[IntraJ](https://github.com/lu-cs-sde/IntraJ)**: main repository for IntraJ (control-flow analysis for Java)
  - 🗄 **[IntraCFG](https://github.com/lu-cs-sde/IntraCFG)**: main repository for IntraCFG (language-independent framework for control-flow analysis)
- - 🔗 **[JastAdd](https://jastadd.org)**: meta-compilation system that supports Reference Attribute Grammars
- - 🔗 **[ExtendJ](https://extendj.org)**: extensible Java compiler built using JastAdd
+ - 🔗 **[JastAdd](https://jastadd.org)**: meta-compilation system that supports Reference Attribute Grammars. We used a custom [JastAdd](https://bitbucket.org/jastadd/jastadd2/src/f00c118684f4cc9b42931b5a491046e41d68b6bf/) version which better supports interfaces.
+ - 🔗 **[ExtendJ](https://extendj.org)**: extensible Java compiler built using JastAdd. We built **IntraJ** as an Static Analysis Extension of ExtendJ. More can be found [here](https://bitbucket.org/extendj/analysis-template/src/master/). 
  - 🔗 **[SonarQube](https://www.sonarqube.org/downloads/)**: platform developed by SonarSource for continuous inspection of code quality
  - 🗄 **[JastAddJ-Intraflow](https://bitbucket.org/jastadd/jastaddj-intraflow/src/master/)**: An earlier approach to implementing intra-procedural control flow, dataflow, and dead assignment analysis for Java, also using JastAdd.

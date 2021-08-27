@@ -3,38 +3,6 @@
 In this file, will describe how **IntraJ** and **IntraCFG** can be reused.
 
 
-## Apply the IntraCFG framework to a new language
-The intraprocedural framework **IntraCFG** is language-independent. 
-Therfore, can be applied to any imperative langauge.
-
-## Extending the language with a new constructor
-An example is the feature added in each Java version. Le us consider the differences between _Java 4_ and _Java 5_.
-The only constructor that affects the Control Flow Graph construction is the _enhanced for_ statement. 
-In _ExtendJ_ abstract grammar, this is defined as follow:
-
-```
-EnhancedFor:BranchTargetStmt::=VarDecl Expr Stmt;
-```
-
-Extending _Java 4_ to support _Java 5_ requires adding these new few lines of code:
-```
-aspect CFG_java5 {
-  EnhancedForStmt implements CFGNode;
-  EnumConstant implements CFGNode;
-
-  eq EnhancedForStmt.firstNodes() = getExpr().firstNodes();
-  eq EnhancedForStmt.getExpr().nextNodesTT() = getVariableDecl().firstNodes();
-  eq EnhancedForStmt.getExpr().nextNodesFF() = nextNodes();
-  eq EnhancedForStmt.getExpr().nextNodes() = getExpr().jointTrueFalse();
-  eq EnhancedForStmt.getStmt().nextNodes() = getExpr().firstNodes();
-  eq EnhancedForStmt.getVariableDecl().nextNodes() = getStmt().firstNodes();
-  eq EnhancedForStmt.nextContinue() = getExpr().firstNodes();
-}
-
-```
-We can reuse _Java 4_ module combined with the new _Java 5_ module to analyze any Java 5 programs.
-
-
 ## Use IntraJ for analyzing Java projects
 You can use **IntraJ** to analyze any Java [4-7] project. 
 Evaluation projects can be found in `IntraJSCAM2021/evaluation`.
@@ -42,13 +10,42 @@ Evaluation projects can be found in `IntraJSCAM2021/evaluation`.
 We analysed several projects ([Table I](https://github.com/lu-cs-sde/IntraJSCAM2021/blob/main/intraj-preprint.pdf)), such as:
 
 | Project      | Version          |      LOC  |
-| :---         |     :---:        | :---:     |
+| :---         |     :---:        |     :---: |
 | ANTRL        |  2.7.2           |     33737 |
 | PMD          |  4.2             |     49610 |
 | JFreeChart   |  1.0             |     95664 |
 | FOP          |  0.95            |     97288 |
 
 More can be read about the evaluation in Section IV of the **IntraJ** and **IntraCFG** [paper](https://github.com/lu-cs-sde/IntraJSCAM2021/blob/main/intraj-preprint.pdf).
+
+
+To run the IntraJ on a specific project, you have to provide the complete `classpath` precedeed by the option `--classpath`.
+
+For example, to run all the analysis in **IntraJ** on PMD, run the following command:
+```
+java -jar intraj.jar evaluation/pmd-4.2.5/src/**/*.java -classpath evaluation/pmd-4.2.5/lib/asm-3.1.jar:evaluation/pmd-4.2.5/lib/javacc.jar:evaluation/pmd-4.2.5/lib/jaxen-1.1.1.jar:evaluation/pmd-4.2.5/lib/junit-4.4.jar:evaluation/fop-0.95/lib/fop-all.jar:evaluation/fop-0.95/lib/aspectjrt.jar:evaluation/fop-0.95/lib/xmlgraphics-commons-1.3.1.jar:evaluation/fop-0.95/lib/xml-resolver-1.2.jar:evaluation/fop-0.95/lib/commons-cli-1.2.jar:evaluation/fop-0.95/lib/fop-0.20.5.jar:evaluation/fop-0.95/lib/jai_core-1.1.3.jar:evaluation/fop-0.95/lib/apache-ant-1.8.2.jar -Wall
+```
+
+The available options in **IntraJ** are:
+  - `-help`: prints all the available options.
+  - `-genpdf`: generates a pdf with AST structure of all the methods in the analysed files. It can be used combined with `-succ`,`-pred`.
+  - `-succ`: generates a pdf with the successor relation for all the methods in the analysed files. It can be used combined with `-pred`.
+  - `-pred`: generates a pdf with the predecessor relation for all the methods in the analysed files. It can be used combined with `-succ`.
+  - `-statistics`: prints the number of _**CFGRoots**_, _**CFGNodes**_ and _**CFGEdges**_ in the analysed files.
+  - `-nowarn`: the warning messages are not printed.
+
+-------------- _ANALYSIS OPTIONS_ --------------------
+
+Available analyses:
+  * `DAA`: Detects unused dead assignments
+  * `NPA`: Detects occurrences of Null Pointer Dereferencing
+
+Options (where `id` corresponds to one of the analyses above):
+   - `-Wid`: enable a given analysis, e.g., `-WDAA`
+   - `-Wall`: enables all the available analyses
+   - `-Wexcept=id`: enable all the available analyses except `id`, e.g., `-Wexcept=DAA`
+
+
 
 
 ## Use the CFG to write your analysis
@@ -141,3 +138,36 @@ Now run and test your extension:
 java -jar intraj.jar PATH/TO/Example.java -WNRCFG -succ -pred
 ```
 **IntraJ** will print, for each `CFGRoot`, a warning starting with the `NRCFG` identifier.
+## Extending the language with a new constructor
+An example is the feature added in each Java version. Le us consider the differences between _Java 4_ and _Java 5_.
+The only constructor that affects the Control Flow Graph construction is the _enhanced for_ statement. 
+In _ExtendJ_ abstract grammar, this is defined as follow:
+
+```
+EnhancedFor:BranchTargetStmt::=VarDecl Expr Stmt;
+```
+
+Extending _Java 4_ to support _Java 5_ requires adding these new few lines of code:
+```
+aspect CFG_java5 {
+  EnhancedForStmt implements CFGNode;
+  EnumConstant implements CFGNode;
+
+  eq EnhancedForStmt.firstNodes() = getExpr().firstNodes();
+  eq EnhancedForStmt.getExpr().nextNodesTT() = getVariableDecl().firstNodes();
+  eq EnhancedForStmt.getExpr().nextNodesFF() = nextNodes();
+  eq EnhancedForStmt.getExpr().nextNodes() = getExpr().jointTrueFalse();
+  eq EnhancedForStmt.getStmt().nextNodes() = getExpr().firstNodes();
+  eq EnhancedForStmt.getVariableDecl().nextNodes() = getStmt().firstNodes();
+  eq EnhancedForStmt.nextContinue() = getExpr().firstNodes();
+}
+
+```
+We can reuse _Java 4_ module combined with the new _Java 5_ module to analyze any Java 5 programs.
+
+
+## Apply the IntraCFG framework to a new language
+The intraprocedural framework **IntraCFG** is language-independent. 
+Therfore, can be applied to any imperative langauge.
+
+
