@@ -3,21 +3,20 @@
   <img width="300"  src="resources/logo.png">
 </p>
 
-This repository is a snapshot of the *IntraJ* ([6bcd885](https://github.com/lu-cs-sde/IntraJ/commit/6bcd8859ad0610ee938940f0814a838dac126f52)) and *IntraCFG* ([479e927](https://github.com/lu-cs-sde/IntraCFG/commit/479e9272809324296b623c6ff6872f216a10093d)) projects and will not change in the future.
-The purpose of this repository is to have a static reference of what we described in the paper submitted at IEEE-SCAM2021:
+This repository contains the artifact for the following paper:
 
-* __[A Precise Framework for Source-Level Control-Flow Analysis](http://creichen.net/papers/intraj.pdf)__, _[Idriss Riouak 🔗](https://github.com/IdrissRio), [Christoph Reichenbach 🔗](https://creichen.net), [Görel Hedin 🔗](https://cs.lth.se/gorel-hedin/) and [Niklas Fors 🔗](https://portal.research.lu.se/portal/en/persons/niklas-fors(c1e9efdd-5891-45ec-aa9d-87b8fb7f3dbc).html)_. _[IEEE-SCAM 2021 🔗](http://www.ieee-scam.org/2021/#home)._ 
+* __[A Precise Framework for Source-Level Control-Flow Analysis](http://creichen.net/papers/intraj.pdf)__, _[Idriss Riouak 🔗](https://orcid.org/0000-0003-3520-2262), [Christoph Reichenbach 🔗](https://orcid.org/0000-0003-0608-7023), [Görel Hedin 🔗](https://orcid.org/0000-0002-3003-2623) and [Niklas Fors 🔗](https://orcid.org/0000-0003-2714-9457)_. _To appear at the 21st IEEE International Working Conference on Source Code Analysis & Manipulation, 2021 ([SCAM 2021 🔗](http://www.ieee-scam.org/2021))._
 
-**IntraJ** is an application of the **[IntraCFG](https://github.com/lu-cs-sde/IntraCFG)** framework for the Java language, build as an extension of the **[ExtendJ](https://extendj.org)** Java Compiler. More details can be found in the paper mentioned above.
+The repository contains:
 
+* A snapshot of **IntraCFG** ([479e927](https://github.com/lu-cs-sde/IntraCFG/commit/479e9272809324296b623c6ff6872f216a10093d)), i.e., a language-independent framework for building control-flow graphs (CFGs) using reference attribute grammars, as described in section 2 in the paper.
+* A snapshot of **IntraJ** ([6bcd885](https://github.com/lu-cs-sde/IntraJ/commit/6bcd8859ad0610ee938940f0814a838dac126f52)), i.e., a tool that applies IntraCFG to construct control-flow graphs (CFGs) for Java source programs, as described in section 3 in the paper. IntraJ is built as an extension to the [ExtendJ](https://extendj.org) Java compiler, which is in turn implemented using [JastAdd](https://jastadd.org) (a metacompiler supporting reference attribute grammars).
+* In addition to **CFG construction**, IntraJ contains two example client analyses that make use of the CFG, as described in section 4 in the paper: **DAA** - detection of Dead Assignments in the codebase, and **NPA** - detection of occurrences of Null Pointer exceptions.
+* **Test cases** and **evaluation scripts** are also included. Using this artifact you can rerun the experiments presented in section 5 in the paper. This includes running IntraJ on a suite of subject codebases, and running competing tools (JastAddJ-Intraflow and SonarQube) on the same codebases.
 
-With **IntraJ**, you can:
-- construct _precise_ and _minimal_ intra-procedural **Control Flow Graph** (CFG),
-- (*DAA*) detect **Dead assignments** in your codebase, and
-- (*NPA*) detect occurrences of **NullPointerException**.
+You can **reuse** this artifact in various ways. For example:
 
-
-With **IntraJ**, you can construct CFGs and analyze codebases written in Java-4, Java 5, Java 6, and Java-7.
+* You can run IntraJ on other Java codebases (in Java-4, Java-5, Java-6, and Java-7) in order to construct CFGs and get DAA and NPA analysis results.
 
 ---
 # Get IntraJ
@@ -27,7 +26,7 @@ We proved three different ways of getting and run **IntraJ**:
   * Download and build **IntraJ** from the source code.
 
 ---
-# Docker 
+# Docker
 
 We provide a [Docker](https://www.docker.com) image that contains *IntraJ* and evaluation scripts, packaged together with all the necessary dependencies.
 To run such an image, make sure to install the relevant tools:
@@ -93,7 +92,7 @@ The results are saved in: `~/workspace/intraj/evaluation/YYYYMMDD_HHMMSS`
 | ❗️ Very Important ❗️         |
 |:---------------------------|
  |Do not close the bash nor kill the container! The results will be lost!|
- 
+
 ## Saving the results
 To save the results in your own machine, run the following commands in a new bash:
 ```
@@ -130,7 +129,7 @@ To generate the CFGs PDF you need:
     * **ipython v7.26.0** - _Evaluation and Plots geneartion_
 
 
-The evaluation script uses `sdkman`. 
+The evaluation script uses `sdkman`.
 To run the evaluation you need:
 * The scripts `eval.sh` and `evaluation/run_eval.sh` uses `sdkman`. If you don't have `sdkman` installed but have Java SDK 7 installed, you can comment all the lines starting with `sdk` in `eval.sh` and in `evaluation/run_eval.sh`. To install `sdkman` by running the following commands:
 
@@ -159,7 +158,7 @@ cd IntraJSCAM2021
 To generate all the JARs necessary for the evaluation, execute
 
 ```
-./gradlew build 
+./gradlew build
 ```
 
 To run all the tests, execute:
@@ -220,7 +219,7 @@ The directory is structured as follow:
     ├── Results.xlsx                         # Analyses resutls in Excel        (Paper §5)
     ├── Results.htm                          # Analyses resutls in HTML
     ├── plots.py                             # Script that generates plots
-    ├── run_eval.sh                          # Called by ../eval.sh 
+    ├── run_eval.sh                          # Called by ../eval.sh
     └── YYYYMMDD_HHMMSS                      # Evaluation results
 
 
@@ -274,7 +273,7 @@ Available analysis (`ID`):
 
 ---
 
-# Example 
+# Example
 
 Let us consider the `Example.java` file located in your workspace:
 ```
@@ -330,13 +329,8 @@ All the results are stored in `evaluation/YYYYMMDD_HHMM`.
 ---
 # Related repository repositories/links 🔗
  - 🗄 **[IntraJ](https://github.com/lu-cs-sde/IntraJ)**: updated repository
- - 🗄 **[IntraCFG](https://github.com/lu-cs-sde/IntraCFG)**: updated repository 
+ - 🗄 **[IntraCFG](https://github.com/lu-cs-sde/IntraCFG)**: updated repository
  - 🔗 **[ExtendJ](https://extendj.org)**: extensible Java compiler built using the declarative attribute grammar system JastAdd.
- - 🔗 **[JastAdd](https://jastadd.cs.lth.se/web/)**: meta-compilation system that supports Reference Attribute Grammars (RAGs). 
+ - 🔗 **[JastAdd](https://jastadd.cs.lth.se/web/)**: meta-compilation system that supports Reference Attribute Grammars (RAGs).
  - 🔗 **[SonarQube](https://www.sonarqube.org/downloads/)**: platform developed by SonarSource for continuous inspection of code quality.
- - 🗄 **[JastAddJ-Intraflow](https://bitbucket.org/jastadd/jastaddj-intraflow/src/master/)**: An extension to the JastAdd extensible Java compiler (JastAddJ) adding intra-procedural control flow, dataflow, and dead assignment analysis on top of the abstract syntax tree. 
- 
-
-
-  
-
+ - 🗄 **[JastAddJ-Intraflow](https://bitbucket.org/jastadd/jastaddj-intraflow/src/master/)**: An extension to the JastAdd extensible Java compiler (JastAddJ) adding intra-procedural control flow, dataflow, and dead assignment analysis on top of the abstract syntax tree.
