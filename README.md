@@ -11,16 +11,20 @@ The purpose of this repository is to have a static reference of what we describe
 **IntraJ** is an application of the **[IntraCFG](https://github.com/lu-cs-sde/IntraCFG)** framework for the Java language, build as an extension of the **[ExtendJ](https://extendj.org)** Java Compiler. More details can be found in the paper mentioned above.
 
 
-
----
-
 With **IntraJ** you can:
-- construct intra-procedural **Control Flow Graph**,
+- construct _precise_ and _minimal_ intra-procedural **Control Flow Graph** (CFG),
 - (*DAA*) detect **Dead assignments** in your codebase, and
 - (*NPA*) detect occurences of **NullPointerException**.
 
 
-With **IntraJ** you can analyze codebases written in Java-4 up to Java-7.
+With **IntraJ** you can construct CFGs and analyze codebases written in Java-4, Java 5, Java 6, and Java-7.
+
+---
+# Get IntraJ
+We proved three different ways of getting and run **IntraJ**:
+  * You can download the pre-built docker image (recommended).  
+  * Build your own docker image using the Dockerfile script.
+  * Download a build from the source code.
 
 ---
 # Docker 
@@ -37,32 +41,40 @@ To run such an image, make sure to install the relevant tools:
   * For [Fedora](https://docs.docker.com/engine/install/fedora/)
 Users of other distributions can download [pre-compiled binaries](https://docs.docker.com/engine/install/binaries/) or build Docker from [source](https://github.com/docker) (both "cli" and "engine")
 
-Once you have Docker installed:
-```
-cd Docker
-docker build -t intraj:scam21 .
-```
----
-If you don't want to compile the docker container, you can download the image from here:
-<a href="https://lu.box.com/s/kdaz6t5wo0gly77mqe8r6akurtjjlds9" download>
-<p align="center">
-  <img width="300"  src="resources/DownloadImage.png">
-</p>
-</a>
+
+## Download pre-built Docker image
+Download the pre-built image [here](https://lu.box.com/s/kdaz6t5wo0gly77mqe8r6akurtjjlds9).
 Then, anywhere in your workspace run
 
 ```
-docker load << PATH/TO/intraj_scam21.tar.gz
+docker load << Downloads/intraj_scam21.tar.gz
 ```
 
----
+## Build your own Docker image
+Clone the IntraJSCAM2021 repository by running the following command:
+```
+https://github.com/lu-cs-sde/IntraJSCAM2021.git
+```
+Once you have cloned the repository
+```
+cd IntraJSCAM2021/Docker
+docker build -t intraj:scam21 .
+```
+
+| ⚠️ Note          |
+|:---------------------------|
+|It might take several minutes to build the Docker image.|
+## Run the image
 
 Run the image using:
 
 ```
-docker run  -it --network="host" --expose 9000 --expose 9001 --memory="10g" --memory-swap="10g" intraj:scam21
+docker run  -it --network="host" --expose 9000 --expose 9001 --memory="10g" --memory-swap="4g" intraj:scam21
 ```
-_Note_: SonarQube requires a high amount of memory. We tested the container with 10GByte of memory and 10GByte of swap memory. If you are running the container from Windows or Mac, please set these two parameters from the GUI.
+| ❗️ Very Important ❗️          |
+|:---------------------------|
+| SonarQube requires a high amount of memory. We tested the container with 10GByte of memory and 10GByte of swap memory. If you are running the container from Windows or Mac, the command-line options related to the available memory in the container (i.e., `--memory="10g"`, `--memory-swap="4g"`) are ignored. Please, set these two parameters from the GUI. Read more about it here:  [Windows](https://docs.docker.com/desktop/windows/) - [Mac](https://docs.docker.com/desktop/mac/)|
+
 
 You will be logged in with the user _SCAM21_. Once logged in, run the following compands to launch the evaluation:
 
@@ -73,10 +85,16 @@ cd workspace/intraj/
 ```
 The results are saved in: `~/workspace/intraj/evaluation/YYYYMMDD_HHMMSS`
 
-_Note_: calling `eval.sh 50 50` will run IntraJ 2500 times for each analysis. Therefore, computing the evaluation can take several hours.
+| ⚠️ Note          |
+|:---------------------------|
+|Calling `eval.sh 50 50` will run IntraJ 2500 times for each analysis. Therefore, computing the evaluation can take several hours.|
 
-_Note_: Don't close the bash nor kill the container. The results will be lost.
-### Saving the results
+
+| ❗️ Very Important ❗️         |
+|:---------------------------|
+ |Don't close the bash nor kill the container. The results will be lost.|
+ 
+## Saving the results
 To save the results in your own machine run the follwing commands in a new bash:
 ```
 > docker ps
@@ -91,6 +109,77 @@ With *your* CONTAINER ID run the following command:
 ```
 docker cp 4d882c86b5ab:workspace/intraj/evaluation/YYYYMMDD_HHMMSS /PATH/IN/YOUR/MACHINE
 ```
+
+# Build IntraJ from the source code
+## Prerequisite
+
+To run IntraJ is sufficient to have installed:
+
+*  **Java SDK version 7**. (tested with  SDK 7.0.292-zulu. See [sdkman](https://sdkman.io)).
+*  **Java SDK version 11** (tested with SDK 11.0.9.fx-zulu. See [sdkman](https://sdkman.io)).
+
+To generate the CFGs PDF you need:
+1) **Dot** (graphiz) - _PDF generation_
+2) **Vim** - _PDF generation_
+3) **Python3.x** with the following dependencies:
+    * **PyPDF2 v1.26.0** - _PDF generation_
+    * **numpy v1.20.1** - _Evaluation and Plots geneartion_
+    * **pandas v1.2.4** - _Evaluation and Plots geneartion_
+    * **matplotlib v3.3.4** - _Evaluation and Plots geneartion_
+    * **seaborn v0.11.1** - _Evaluation and Plots geneartion_
+    * **ipython v7.26.0** - _Evaluation and Plots geneartion_
+
+
+The evaluation script uses `sdkman`. 
+To run the evaluation you need:
+* The scripts `eval.sh` and `evaluation/run_eval.sh` uses `sdkman`. If you don't have `sdkman` installed but have Java SDK 7 installed, you can comment all the lines starting with `sdk` in `eval.sh` and in `evaluation/run_eval.sh`. To install `sdkman` by running the following commands:
+
+  ```
+  curl -s "https://get.sdkman.io" | bash
+  source "$HOME/.sdkman/bin/sdkman-init.sh"
+  sdk install java 7.0.292-zulu
+  sdk use java 7.0.292-zulu
+  ```
+
+To install all the necessary Python dependencies, you can run the instruction described in the next section.
+
+
+## Build
+To clone the **IntraJ** code, run, in your working directory:
+```
+git clone https://github.com/lu-cs-sde/IntraJSCAM2021.git
+```
+
+Move to the **IntraJ** directory:
+
+```
+cd IntraJSCAM2021
+```
+
+To generate the all the JARs necessary for the evaluation, execute
+
+```
+./gradlew build 
+```
+
+To run all the tests, execute:
+
+```
+./gradlew test
+```
+
+### Python Dependencies
+
+To install Python dependencies, you can execute the following instruction:
+
+```
+cd resources
+pip3 install - requirements.txt
+```
+
+---
+
+
 
 ### Repository overview
 The top-level structure of the repository:
@@ -160,91 +249,13 @@ The directory is structured as follow:
                └── NullAnalysis.jrag          # NPE sepc                        (Paper §4.a)
 ---
 
-_Note_: the features introduced in Java 6 do not affect the construction of the CFG.
+| ⚠️ Note          |
+|:---------------------------|
+|The features introduced in Java 6 do not affect the construction of the CFG. |
 
 
 
-## How to run IntraJ 
-### Prerequisite
-
-To run IntraJ is sufficient to have installed:
-
-*  **Java SDK version 7**. (tested with  SDK 7.0.292-zulu. See [sdkman](https://sdkman.io)).
-*  **Java SDK version 11** (tested with SDK 11.0.9.fx-zulu. See [sdkman](https://sdkman.io)).
-
-To generate the CFGs PDF you need:
-1) **Dot** (graphiz) - _PDF generation_
-2) **Vim** - _PDF generation_
-3) **Python3.x** with the following dependencies:
-    * **PyPDF2 v1.26.0** - _PDF generation_
-    * **numpy v1.20.1** - _Evaluation and Plots geneartion_
-    * **pandas v1.2.4** - _Evaluation and Plots geneartion_
-    * **matplotlib v3.3.4** - _Evaluation and Plots geneartion_
-    * **seaborn v0.11.1** - _Evaluation and Plots geneartion_
-    * **ipython v7.26.0** - _Evaluation and Plots geneartion_
-
-
-The evaluation script uses `sdkman`. 
-To run the evaluation you need:
-* The scripts `eval.sh` and `evaluation/run_eval.sh` uses `sdkman`. If you don't have `sdkman` installed but have Java SDK 7 installed, you can comment all the lines starting with `sdk` in `eval.sh` and in `evaluation/run_eval.sh`. To install `sdkman` by running the following commands:
-
-  ```
-  curl -s "https://get.sdkman.io" | bash
-  source "$HOME/.sdkman/bin/sdkman-init.sh"
-  sdk install java 7.0.292-zulu
-  sdk use java 7.0.292-zulu
-  ```
-
-
-
-
-
-To install all the necessary Python dependencies, you can run the instruction described in the next section.
-
-
-### Build
-To clone the **IntraJ** code, run, in your working directory:
-```
-git clone https://github.com/lu-cs-sde/IntraJ.git --recursive
-```
-
-Move to the **IntraJ** directory:
-
-```
-cd IntraJ
-```
-
-⚠️ *Note the `--recursive` flag when cloning the repository! If you have previously cloned this repository and forgot the `--recursive` flag, use:* ⚠️
-
-```
-    git submodule init
-    git submodule update
-```
-
-To generate the Jar file, execute
-
-```
-./gradlew jar
-```
-
-To run all the tests, execute:
-
-```
-./gradlew test
-```
-
-### Python Dependencies
-
-To install Python dependencies, you can execute the following instruction:
-
-```
-cd resources
-pip3 install - requirements.txt
-```
-
----
-
-### Available options:
+## Available options:
   - `-help`: prints all the available options.
   - `-genpdf`: generates a pdf with AST structure of all the methods in the analysed files. It can be used combined with `-succ`,`-pred`.
   - `-succ`: generates a pdf with the successor relation for all the methods in the analysed files. It can be used combined with `-pred`.
@@ -312,11 +323,8 @@ And the following PDF is generated:
     - intraj_cfgdda.jar
     - intraj_dda.jar
 3) Start the evaluation by executing `"zsh eval.sh N_iter_outerloop N_iter_innerloop"`.  For the paper we used `N_iter_outerloop = N_iter_innerloop = 50`.
-    - ⚠️ _Note_: all the dependencies required in "🚀 How to run IntraJ" are also required for the evaluation.
 
 All the results are stored in `evaluation/YYYYMMDD_HHMM`.
-
-_Note_: All these steps can be performed inside the Docker container. Follow the steps in the ["Docker" section](https://github.com/lu-cs-sde/IntraJSCAM2021#docker).
 
 
 ---
