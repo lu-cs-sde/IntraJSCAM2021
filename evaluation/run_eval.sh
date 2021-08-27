@@ -34,6 +34,7 @@ alias INTRAJ_NPA="java -jar ../intraj_npa.jar -excludelit -classpath "$CLASSPATH
 alias INTRAJ_CFGNPA="java -jar ../intraj_cfgnpa.jar -excludelit -classpath "$CLASSPATH
 alias INTRAJ_CFG="java  -jar  ../intraj_cfg.jar -classpath "$CLASSPATH
 alias INTRAJ_CFGDDA="java  -jar  ../intraj_cfgdaa.jar -classpath "$CLASSPATH
+alias JJI="java  -cp jastaddj-intraflow/:jastaddj-intraflow/bin:jastaddj-intraflow/jastaddj/tools/beaver-rt.jar org.jastadd.jastaddj.flow.JavaDeadAssignChecker -classpath "$CLASSPATH
 alias JJI_BL="java  -cp jastaddj-intraflow/:jastaddj-intraflow/bin:jastaddj-intraflow/jastaddj/tools/beaver-rt.jar org.jastadd.jastaddj.flow.JJI -classpath "$CLASSPATH
 alias JJI_DDA="java  -cp jastaddj-intraflow/:jastaddj-intraflow/bin:jastaddj-intraflow/jastaddj/tools/beaver-rt.jar org.jastadd.jastaddj.flow.JJI_DDA -classpath "$CLASSPATH
 alias JJI_CFG="java  -cp jastaddj-intraflow/:jastaddj-intraflow/bin:jastaddj-intraflow/jastaddj/tools/beaver-rt.jar org.jastadd.jastaddj.flow.JJI_CFG -classpath "$CLASSPATH
@@ -345,9 +346,16 @@ echo $jji_cfgdda_ss
 PROJECT_DIR=$CURRDIR/$PROJECT
 mkdir $PROJECT_DIR
 
+echo '\u001b[33;1m[INFO] Executing and saving the warnings on files (INTRAJ_NH_DDA) \u001b[0m'
 INTRAJ $FILES -WDAA -statistics  -txt-output> "$PROJECT_DIR/INTRAJ_NH_DAA.txt"
+echo '\u001b[33;1m[INFO] Executing and saving the warnings on files (INTRAJ_H_DDA) \u001b[0m'
 INTRAJ $FILES -WDAA -statistics -excludelit -txt-output> "$PROJECT_DIR/INTRAJ_H_DAA.txt"
+echo '\u001b[33;1m[INFO] Executing and saving the warnings on files (INTRAJ_NPA) \u001b[0m'
 INTRAJ $FILES -WNPA -statistics -txt-output> "$PROJECT_DIR/INTRAJ_NPA.txt"
+echo '\u001b[33;1m[INFO] Executing and saving the warnings on files (JJI_DAA) \u001b[0m'
+JJI $FILES > "$PROJECT_DIR/JJI_DAA.txt"
+
+
 sdk use java 11.0.9.fx-zulu
 echo '\u001b[33;1m[INFO] Starting Sonarqube Server. The log is printed on std input \u001b[0m'
 echo '\u001b[33;1m[INFO] The warnings detected by SQ on the different projects are printed on the std input \u001b[0m'
