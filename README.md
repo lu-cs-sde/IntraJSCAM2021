@@ -11,20 +11,20 @@ The purpose of this repository is to have a static reference of what we describe
 **IntraJ** is an application of the **[IntraCFG](https://github.com/lu-cs-sde/IntraCFG)** framework for the Java language, build as an extension of the **[ExtendJ](https://extendj.org)** Java Compiler. More details can be found in the paper mentioned above.
 
 
-With **IntraJ** you can:
+With **IntraJ**, you can:
 - construct _precise_ and _minimal_ intra-procedural **Control Flow Graph** (CFG),
 - (*DAA*) detect **Dead assignments** in your codebase, and
-- (*NPA*) detect occurences of **NullPointerException**.
+- (*NPA*) detect occurrences of **NullPointerException**.
 
 
-With **IntraJ** you can construct CFGs and analyze codebases written in Java-4, Java 5, Java 6, and Java-7.
+With **IntraJ**, you can construct CFGs and analyze codebases written in Java-4, Java 5, Java 6, and Java-7.
 
 ---
 # Get IntraJ
 We proved three different ways of getting and run **IntraJ**:
-  * You can download the pre-built docker image (recommended).  
-  * Build your own docker image using the Dockerfile script.
-  * Download a build from the source code.
+  * You can download the pre-built Docker image (recommended).  
+  * Build your own Docker image using the Dockerfile script.
+  * Download and build **IntraJ** from the source code.
 
 ---
 # Docker 
@@ -34,7 +34,7 @@ To run such an image, make sure to install the relevant tools:
 
 * For Windows and OS X systems, follow the guidelines on the [Docker desktop download site](https://www.docker.com/products/docker-desktop)
 
-* On Linux-based systems, install the docker command line tool. This tool may be provided by the docker.io and/or docker-ce packages. If your distribution does not provide these packages, follow the steps here:
+* On Linux-based systems, install the docker command-line tool. This tool may be provided by the docker.io and/or docker-ce packages. If your distribution does not provide these packages, follow the steps here:
   * For [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
   * For [Debian](https://docs.docker.com/engine/install/debian/)
   * For [CentOS](https://docs.docker.com/engine/install/centos/)
@@ -76,7 +76,7 @@ docker run  -it --network="host" --expose 9000 --expose 9001 --memory="10g" --me
 | SonarQube requires a high amount of memory. We tested the container with 10GByte of memory and 10GByte of swap memory. If you are running the container from Windows or Mac, the command-line options related to the available memory in the container (i.e., `--memory="10g"`, `--memory-swap="4g"`) are ignored. Please, set these two parameters from the GUI. Read more about it here:  [Windows](https://docs.docker.com/desktop/windows/) - [Mac](https://docs.docker.com/desktop/mac/)|
 
 
-You will be logged in with the user _SCAM21_. Once logged in, run the following compands to launch the evaluation:
+You will be logged in with the user _SCAM21_. Once logged in, run the following commands to launch the evaluation:
 
 ```
 cd workspace/intraj/
@@ -87,15 +87,15 @@ The results are saved in: `~/workspace/intraj/evaluation/YYYYMMDD_HHMMSS`
 
 | ⚠️ Note          |
 |:---------------------------|
-|Calling `eval.sh 50 50` will run IntraJ 2500 times for each analysis. Therefore, computing the evaluation can take several hours.|
+|The command `eval.sh 50 50` will run IntraJ 2500 times for each analysis. Therefore, computing the evaluation can take several hours.|
 
 
 | ❗️ Very Important ❗️         |
 |:---------------------------|
- |Don't close the bash nor kill the container. The results will be lost.|
+ |Do not close the bash nor kill the container! The results will be lost!|
  
 ## Saving the results
-To save the results in your own machine run the follwing commands in a new bash:
+To save the results in your own machine, run the following commands in a new bash:
 ```
 > docker ps
 ```
@@ -156,7 +156,7 @@ Move to the **IntraJ** directory:
 cd IntraJSCAM2021
 ```
 
-To generate the all the JARs necessary for the evaluation, execute
+To generate all the JARs necessary for the evaluation, execute
 
 ```
 ./gradlew build 
