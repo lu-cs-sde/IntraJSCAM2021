@@ -96,39 +96,31 @@ public class IntraJ extends Frontend {
       if (opt.equals("-help")) {
         printOptionsUsage();
       } else if (opt.startsWith("-Wall")) {
-        analysis.add(Analysis.NPA);
-        analysis.add(Analysis.DAA);
+        for (Analysis a : Analysis.values())
+          analysis.add(a);
         continue;
       } else if (opt.equals("-txt-output")) {
         toTxt = true;
         continue;
       } else if (opt.startsWith("-Wexcept=")) {
         String an = opt.substring(9, opt.length());
-        switch (an) {
-        case "NPA":
-          analysis.remove(Analysis.NPA);
+        if (Arrays.asList(Analysis.names()).contains(an)) {
+          analysis.remove(Analysis.valueOf(an));
           continue;
-        case "DAA":
-          analysis.remove(Analysis.DAA);
-          continue;
-        default:
+        }
           System.err.println("There is no analsis with name '" + an +
                              "' -wExcept");
           printOptionsUsage();
-        }
+
       } else if (opt.startsWith("-W")) {
         String an = opt.substring(2, opt.length());
-        switch (an) {
-        case "NPA":
-          analysis.add(Analysis.NPA);
+
+        if (Arrays.asList(Analysis.names()).contains(an)) {
+          analysis.add(Analysis.valueOf(an));
           continue;
-        case "DAA":
-          analysis.add(Analysis.DAA);
-          continue;
-        default:
+        }
           System.err.println("There is no analsis with name '" + an + "' -W");
           printOptionsUsage();
-        }
       }
       switch (opt) {
       case "-succ":
