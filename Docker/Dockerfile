@@ -53,7 +53,7 @@ ENV PATH="$JAVA_HOME/bin:~/.sdkman:$PATH"
 RUN chmod 777 /workspace/**/*
 RUN echo "SCAM2021:SCAM2021" | chpasswd && adduser SCAM2021 sudo
 RUN chown -R SCAM2021 /workspace/
-RUN chown -R SCAM2021 ~/sdkman
+RUN chown -R SCAM2021 $SDKMAN_DIR
 USER SCAM2021
 
 # RUN cd workspace/intraj && sdk use java 7.0.292-zulu &&./gradlew build
