@@ -111,7 +111,7 @@ java -jar intraj.jar PATH/TO/Example.java -WNRCFG -succ -pred
 ```
 **IntraJ** will print, for each `CFGRoot`, a warning starting with the `NRCFG` identifier.
 
-## Use the results of an existing analysis to write a new one
+## Use the results of existing analyses to write a new one
 It is possible to reuse results and attributes defined in other analyses to create a new one.
 
 For example, we can modify the previous analysis and count the number of `VarAccess` that might be bull
