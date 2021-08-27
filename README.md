@@ -19,11 +19,11 @@ You can **reuse** this artifact in various ways. For example:
 * You can run IntraJ on other Java codebases (in Java-4, Java-5, Java-6, and Java-7) in order to construct CFGs and get DAA and NPA analysis results.
 
 ---
-# Get IntraJ
-We proved three different ways of getting and run **IntraJ**:
+# Get the IntraJ artifact
+We provide three different ways of getting and running **IntraJ**:
   * You can download the pre-built Docker image (recommended).  
   * Build your own Docker image using the Dockerfile script.
-  * Download and build **IntraJ** from the source code.
+  * Download and build **IntraJ** from the artifact source code.
 
 ---
 # Docker
@@ -52,7 +52,7 @@ docker load << Downloads/intraj_scam21.tar.gz
 ## Build your own Docker image
 Clone the IntraJSCAM2021 repository by running the following command:
 ```
-https://github.com/lu-cs-sde/IntraJSCAM2021.git
+git clone https://github.com/lu-cs-sde/IntraJSCAM2021.git
 ```
 Once you have cloned the repository
 ```
@@ -110,28 +110,31 @@ docker cp 4d882c86b5ab:workspace/intraj/evaluation/YYYYMMDD_HHMMSS /PATH/IN/YOUR
 ```
 
 # Build IntraJ from the source code
-## Prerequisite
+## Prerequisites
 
-To run IntraJ is sufficient to have installed:
+We have run IntraJ on the following Java version:
 
 *  **Java SDK version 7**. (tested with  SDK 7.0.292-zulu. See [sdkman](https://sdkman.io)).
+
+If you also want to run the competing tool SonarQube (for checking the evaluation section), you will additionally need the following Java version:
+
 *  **Java SDK version 11** (tested with SDK 11.0.9.fx-zulu. See [sdkman](https://sdkman.io)).
 
-To generate the CFGs PDF you need:
+It is possible to generate PDFs that show the CFGs visually. For this you need:
 1) **Dot** (graphiz) - _PDF generation_
 2) **Vim** - _PDF generation_
 3) **Python3.x** with the following dependencies:
     * **PyPDF2 v1.26.0** - _PDF generation_
-    * **numpy v1.20.1** - _Evaluation and Plots geneartion_
-    * **pandas v1.2.4** - _Evaluation and Plots geneartion_
-    * **matplotlib v3.3.4** - _Evaluation and Plots geneartion_
-    * **seaborn v0.11.1** - _Evaluation and Plots geneartion_
-    * **ipython v7.26.0** - _Evaluation and Plots geneartion_
+    * **numpy v1.20.1** - _Evaluation and Plots generation_
+    * **pandas v1.2.4** - _Evaluation and Plots generation_
+    * **matplotlib v3.3.4** - _Evaluation and Plots generation_
+    * **seaborn v0.11.1** - _Evaluation and Plots generation_
+    * **ipython v7.26.0** - _Evaluation and Plots generation_
 
 
 The evaluation script uses `sdkman`.
 To run the evaluation you need:
-* The scripts `eval.sh` and `evaluation/run_eval.sh` uses `sdkman`. If you don't have `sdkman` installed but have Java SDK 7 installed, you can comment all the lines starting with `sdk` in `eval.sh` and in `evaluation/run_eval.sh`. To install `sdkman` by running the following commands:
+* The scripts `eval.sh` and `evaluation/run_eval.sh` uses `sdkman`. If you don't have `sdkman` installed but have Java SDK 7 installed, you can comment all the lines starting with `sdk` in `eval.sh` and in `evaluation/run_eval.sh`. You install `sdkman` by running the following commands:
 
   ```
   curl -s "https://get.sdkman.io" | bash
@@ -216,8 +219,8 @@ The directory is structured as follow:
     ├── pmd-4.2.5                            # PMD Benchmark                    (Paper §5)
     ├── jfreechar-1.0.0                      # JFC Benchmark                    (Paper §5)
     ├── fop-0.95                             # FOP Benchmark                    (Paper §5)
-    ├── Results.xlsx                         # Analyses resutls in Excel        (Paper §5)
-    ├── Results.htm                          # Analyses resutls in HTML
+    ├── Results.xlsx                         # Analyses results in Excel        (Paper §5)
+    ├── Results.htm                          # Analyses results in HTML
     ├── plots.py                             # Script that generates plots
     ├── run_eval.sh                          # Called by ../eval.sh
     └── YYYYMMDD_HHMMSS                      # Evaluation results
@@ -250,11 +253,11 @@ The directory is structured as follow:
 
 | ⚠️ Note          |
 |:---------------------------|
-|The features introduced in Java 6 do not affect the construction of the CFG. |
+|There is no subdirectory for `java6`, since features introduced in Java 6 do not affect the construction of the CFG. |
 
 
 
-## Available options:
+## Available options to IntraJ:
   - `-help`: prints all the available options.
   - `-genpdf`: generates a pdf with AST structure of all the methods in the analysed files. It can be used combined with `-succ`,`-pred`.
   - `-succ`: generates a pdf with the successor relation for all the methods in the analysed files. It can be used combined with `-pred`.
@@ -264,18 +267,20 @@ The directory is structured as follow:
 
 -------------- _ANALYSIS OPTIONS_ --------------------
 
-Available analysis (`ID`):
-  * `DAA`: Detects unused `dead` assignments
-  * `NPA`: Detects occurrences of Null Pointer Dereferenciation
-   - `-WID`: enable the analysis with the respective `ID`, e.g., `-WDAA`
-   - `-Wall`: enables all the available analysis
-   - `-Wexcept=ID`: enable all the available analysis except `ID.
+Available analyses:
+  * `DAA`: Detects unused dead assignments
+  * `NPA`: Detects occurrences of Null Pointer Dereferencing
+
+Options (where `id` corresponds to one of the analyses above):
+   - `-Wid`: enable a given analysis, e.g., `-WDAA`
+   - `-Wall`: enables all the available analyses
+   - `-Wexcept=id`: enable all the available analyses except `id`, e.g., `-Wexcept=DAA`
 
 ---
 
-# Example
+# Example of running IntraJ
 
-Let us consider the `Example.java` file located in your workspace:
+Suppose you would like to analyze a file `Example.java` located in your workspace:
 ```
 public class Example {
   int example() {
@@ -314,7 +319,7 @@ And the following PDF is generated:
 
 ---
 # How to run the evaluation
-1) First execute all the steps in `"How to run IntraJ"`.
+1) Follow the instructions in `"Prerequisites"` and `"Build"` above.
 2) Run the command `./gradlew build`. This generates the following _jar_ files:
     - intraj.jar
     - intraj_bl.jar
@@ -328,9 +333,9 @@ All the results are stored in `evaluation/YYYYMMDD_HHMM`.
 
 ---
 # Related repository repositories/links 🔗
- - 🗄 **[IntraJ](https://github.com/lu-cs-sde/IntraJ)**: updated repository
- - 🗄 **[IntraCFG](https://github.com/lu-cs-sde/IntraCFG)**: updated repository
- - 🔗 **[ExtendJ](https://extendj.org)**: extensible Java compiler built using the declarative attribute grammar system JastAdd.
- - 🔗 **[JastAdd](https://jastadd.cs.lth.se/web/)**: meta-compilation system that supports Reference Attribute Grammars (RAGs).
- - 🔗 **[SonarQube](https://www.sonarqube.org/downloads/)**: platform developed by SonarSource for continuous inspection of code quality.
- - 🗄 **[JastAddJ-Intraflow](https://bitbucket.org/jastadd/jastaddj-intraflow/src/master/)**: An extension to the JastAdd extensible Java compiler (JastAddJ) adding intra-procedural control flow, dataflow, and dead assignment analysis on top of the abstract syntax tree.
+ - 🗄 **[IntraJ](https://github.com/lu-cs-sde/IntraJ)**: main repository for IntraJ (control-flow analysis for Java)
+ - 🗄 **[IntraCFG](https://github.com/lu-cs-sde/IntraCFG)**: main repository for IntraCFG (language-independent framework for control-flow analysis)
+ - 🔗 **[JastAdd](https://jastadd.org)**: meta-compilation system that supports Reference Attribute Grammars
+ - 🔗 **[ExtendJ](https://extendj.org)**: extensible Java compiler built using JastAdd
+ - 🔗 **[SonarQube](https://www.sonarqube.org/downloads/)**: platform developed by SonarSource for continuous inspection of code quality
+ - 🗄 **[JastAddJ-Intraflow](https://bitbucket.org/jastadd/jastaddj-intraflow/src/master/)**: An earlier approach to implementing intra-procedural control flow, dataflow, and dead assignment analysis for Java, also using JastAdd.
