@@ -1,4 +1,4 @@
-
+[![DOI](https://zenodo.org/badge/392981505.svg)](https://zenodo.org/badge/latestdoi/392981505)
 <p align="center">
   <img width="300"  src="resources/logo.png">
 </p>
