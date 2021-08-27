@@ -10,8 +10,10 @@
 if [[ `uname` != "Darwin" ]]; then
     alias gdate="date"
     alias start_sq="sh sonarqube_npa/bin/linux-x86-64/sonar.sh console &"
+    alias kill_sq="sh sonarqube_npa/bin/linux-x86-64/sonar.sh stop "
 else
     alias start_sq="sh sonarqube_npa/bin/macosx-universal-64/sonar.sh console &"
+    alias kill_sq="sh sonarqube_npa/bin/macosx-universal-64/sonar.sh stop "
 fi
 set -e
 
@@ -381,7 +383,7 @@ do
 done < "$input"
 
 cd ..
-pkill wrapper
+kill_sq
 sleep 20s
 
 echo '\u001b[33;1m[INFO] Starting Sonarqube Server. The log is printed on std input \u001b[0m'
@@ -407,7 +409,7 @@ do
  sq_npa+=($line)
 done < "$input"
 cd ..
-pkill wrapper
+kill_sq
 sleep 20s
 
 echo '\u001b[33;1m[INFO] Starting Sonarqube Server. The log is printed on std input \u001b[0m'
@@ -433,7 +435,7 @@ do
  sq_bl+=($line)
 done < "$input"
 cd ..
-pkill wrapper
+kill_sq
 sleep 20s
 
 cd $PROJECT_DIR
