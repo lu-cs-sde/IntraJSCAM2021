@@ -1,6 +1,6 @@
 |_**Repository**_|[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5296618.svg)](https://doi.org/10.5281/zenodo.5296618)|
 |:------------|---------------|
-|_**Docker image**_|[![DOI](https://zenodo.org/badge/392981505.svg)](https://zenodo.org/badge/latestdoi/392981505)|
+|_**Docker image**_|[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5296449.svg)](https://doi.org/10.5281/zenodo.5296449)|
 
 <p align="center">
   <img width="300"  src="resources/logo.png">
