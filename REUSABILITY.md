@@ -18,7 +18,7 @@ EnhancedFor:BranchTargetStmt::=VarDecl Expr Stmt;
 ```
 
 Extending _Java 4_ to support _Java 5_ requires adding these new few lines of code:
-```java
+```
 aspect CFG_java5 {
   EnhancedForStmt implements CFGNode;
   EnumConstant implements CFGNode;
