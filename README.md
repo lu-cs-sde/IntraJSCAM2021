@@ -69,7 +69,7 @@ docker build -t intraj:scam21 .
 Run the image using:
 
 ```
-docker run  -it --network="host" --expose 9000 --expose 9001 --memory="10g" --memory-swap="4g" intraj:scam21
+docker run  -it --network="host" --expose 9000 --expose 9001 --memory="10g" --memory-swap="16g" intraj:scam21
 ```
 | ❗️ Very Important ❗️          |
 |:---------------------------|
