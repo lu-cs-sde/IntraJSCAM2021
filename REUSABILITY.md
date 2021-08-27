@@ -8,8 +8,7 @@ The intraprocedural framework **IntraCFG** is language-independent.
 Therfore, can be applied to any imperative langauge.
 
 ## Extending the language with a new constructor
-Let us suppose that we have the entire **IntraJ** specification for _Java 4_, and we want 
-to extend it to support _Java 5_.
+An example is the feature added in each Java version. Le us consider the differences between _Java 4_ and _Java 5_.
 The only constructor that affects the Control Flow Graph construction is the _enhanced for_ statement. 
 In _ExtendJ_ abstract grammar, this is defined as follow:
 
@@ -83,7 +82,7 @@ To the same file add the collection attribute that collects all the warning gene
 5) Create a new file in `src/jastadd/DataFlow/` called `NonReachabelCFG.jrag`
 ```java
 aspect NumbOfSuccessors {
-  //Colects all the CFGNodes that are not in the CFG.
+  //Collects all the CFGNodes that are not in the CFG.
   coll SmallSet<CFGNode> CFGRoot.nonReachableNodes()[SmallSet.<CFGNode>mutable()] with add root CompilationUnit;
   CFGNode contributes this when !isCFGNode() to CFGRoot.nonReachableNodes() for getRoot();
 
@@ -92,12 +91,12 @@ aspect NumbOfSuccessors {
       "The method '" + name() + "' has " + nonReachableNodes().size() +" non-reachableble nodes.", Analysis.NRCFG) 
       to CompilationUnit.NRCFG();
 
-  //The CFGRoot reference is inherited by all its CFGNode child
+  //The CFGRoot reference is inherited by all its CFGNode children
   inh CFGRoot CFGNode.getRoot();
   eq CFGRoot.getChild().getRoot() = this;
   eq Program.getChild().getRoot() = null;
 
-  //The CompilationUnit reference is inherited by all its CFGRoot child
+  //The CompilationUnit reference is inherited by all its CFGRoot children
   inh CompilationUnit CFGRoot.getCompilationUnit();
   eq CompilationUnit.getChild().getCompilationUnit() = this;
 }
