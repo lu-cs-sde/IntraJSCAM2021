@@ -71,10 +71,11 @@ class JJI_CFGDDA extends Frontend {
 
   protected void processNoErrors(CompilationUnit unit) {
     long startTime = System.currentTimeMillis();
-    SmallSet<CFGNode> result = unit.deadAssignments();
     for (BodyDecl t : unit.methods()) {
       traverseCFG(t.entry(), new HashSet<CFGNode>());
     }
+    unit.deadAssignments();
+   
     long dt = System.currentTimeMillis() - startTime;
     totalTime += dt;
   }

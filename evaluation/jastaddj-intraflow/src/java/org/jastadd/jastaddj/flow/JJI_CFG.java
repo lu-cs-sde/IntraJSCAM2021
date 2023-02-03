@@ -71,7 +71,6 @@ class JJI_CFG extends Frontend {
 
   protected void processNoErrors(CompilationUnit unit) {
     long startTime = System.currentTimeMillis();
-    SmallSet<CFGNode> result = unit.deadAssignments();
     for (BodyDecl t : unit.methods()) {
       traverseCFG(t.entry(), new HashSet<CFGNode>());
     }
