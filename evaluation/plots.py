@@ -181,6 +181,7 @@ data1 = pd.DataFrame(intraj_cfgdaa_ss, columns=['IntraJ']).assign(Location=1)
 data2 = pd.DataFrame(jji_cfgdda_ss, columns=[
                      'JastaddJ-Intraflow']).assign(Location=2)
 cdf = pd.concat([data1, data2])
+mdf = pd.melt(cdf, id_vars=['Location'], var_name=['Framework'])
 ax = sns.boxplot(x="Framework", y="value",  data=mdf)
 ax = sns.swarmplot(x="Framework", y="value", data=mdf, color=".25")
 ax = ax.axes
