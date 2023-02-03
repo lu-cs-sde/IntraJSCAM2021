@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:16
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:16
  * @production Dot : {@link AbstractDot};
 
  */
 public class Dot extends AbstractDot implements Cloneable {
   /**
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:99
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:99
    */
   public Dot lastDot() {
     Dot node = this;
@@ -34,7 +34,7 @@ public class Dot extends AbstractDot implements Cloneable {
   }
   /**
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:113
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:113
    */
   public Dot qualifiesAccess(Access access) {
     Dot lastDot = lastDot();
@@ -47,7 +47,7 @@ public class Dot extends AbstractDot implements Cloneable {
   }
   /**
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:124
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:124
    */
   private Access qualifyTailWith(Access expr) {
     if(getRight/*NoTransform*/() instanceof AbstractDot) {
@@ -58,14 +58,14 @@ public class Dot extends AbstractDot implements Cloneable {
   }
   /**
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:141
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:141
    */
   public Access extractLast() {
     return lastDot().getRightNoTransform();
   }
   /**
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:144
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:144
    */
   public void replaceLast(Access access) {
     lastDot().setRight(access);
@@ -220,13 +220,13 @@ public class Dot extends AbstractDot implements Cloneable {
   /**
    * @apilevel internal
    */
-  public ASTNode rewriteTo() {    // Declared at @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:210
+  public ASTNode rewriteTo() {    // Declared at @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:210
     if (!duringSyntacticClassification() && leftSide().isPackageAccess() && rightSide().isPackageAccess()) {
       state().duringNameResolution++;
       ASTNode result = rewriteRule0();
       state().duringNameResolution--;
       return result;
-    }    // Declared at @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:222
+    }    // Declared at @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:222
     if (!duringSyntacticClassification() && leftSide().isPackageAccess() && !((Access)leftSide()).hasPrevExpr() && rightSide() instanceof TypeAccess) {
       state().duringNameResolution++;
       ASTNode result = rewriteRule1();
@@ -234,7 +234,7 @@ public class Dot extends AbstractDot implements Cloneable {
       return result;
     }    return super.rewriteTo();
   }  /**
-   * @declaredat @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:210
+   * @declaredat @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:210
    * @apilevel internal
    */  private Access rewriteRule0() {
 {
@@ -245,7 +245,7 @@ public class Dot extends AbstractDot implements Cloneable {
       return qualifyTailWith(left);
     }  }
   /**
-   * @declaredat @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:222
+   * @declaredat @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:222
    * @apilevel internal
    */  private Access rewriteRule1() {
 {

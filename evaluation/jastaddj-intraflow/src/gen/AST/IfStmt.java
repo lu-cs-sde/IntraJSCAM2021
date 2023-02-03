@@ -17,28 +17,28 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:205
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:205
  * @production IfStmt : {@link Stmt} ::= <span class="component">Condition:{@link Expr}</span> <span class="component">Then:{@link Stmt}</span> <span class="component">[Else:{@link Stmt}]</span>;
 
  */
 public class IfStmt extends Stmt implements Cloneable {
   /**
    * @aspect NodeConstructors
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:66
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:66
    */
   public IfStmt(Expr cond, Stmt thenBranch) {
     this(cond, thenBranch, new Opt());
   }
   /**
    * @aspect NodeConstructors
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:70
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:70
    */
   public IfStmt(Expr cond, Stmt thenBranch, Stmt elseBranch) {
     this(cond, thenBranch, new Opt(elseBranch));
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:593
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:593
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(indent());
@@ -54,7 +54,7 @@ public class IfStmt extends Stmt implements Cloneable {
   }
   /**
    * @aspect TypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:315
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:315
    */
   public void typeCheck() {
     TypeDecl cond = getCondition().type();
@@ -276,7 +276,7 @@ public class IfStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:538
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:538
    */
   public boolean isDAafter(Variable v) {
     Object _parameters = v;
@@ -303,7 +303,7 @@ public class IfStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1052
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1052
    */
   public boolean isDUafter(Variable v) {
     Object _parameters = v;
@@ -337,7 +337,7 @@ public class IfStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect UnreachableStatements
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:141
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:141
    */
   public boolean canCompleteNormally() {
     if(canCompleteNormally_computed) {
@@ -370,7 +370,7 @@ public class IfStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:144
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:144
    */
   public SmallSet<CFGNode> succ() {
     if(succ_computed) {
@@ -392,7 +392,7 @@ public class IfStmt extends Stmt implements Cloneable {
    */
   private SmallSet<CFGNode> succ_compute() {  return SmallSet.<CFGNode>singleton(getCondition());  }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:541
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:541
    * @apilevel internal
    */
   public boolean Define_boolean_isDAbefore(ASTNode caller, ASTNode child, Variable v) {
@@ -410,7 +410,7 @@ public class IfStmt extends Stmt implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1055
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1055
    * @apilevel internal
    */
   public boolean Define_boolean_isDUbefore(ASTNode caller, ASTNode child, Variable v) {
@@ -428,7 +428,7 @@ public class IfStmt extends Stmt implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:144
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:144
    * @apilevel internal
    */
   public boolean Define_boolean_reachable(ASTNode caller, ASTNode child) {
@@ -443,7 +443,7 @@ public class IfStmt extends Stmt implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:150
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:150
    * @apilevel internal
    */
   public boolean Define_boolean_reportUnreachable(ASTNode caller, ASTNode child) {
@@ -458,7 +458,7 @@ public class IfStmt extends Stmt implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:145
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:145
    * @apilevel internal
    */
   public SmallSet<CFGNode> Define_SmallSet_CFGNode__followingWhenTrue(ASTNode caller, ASTNode child) {
@@ -470,7 +470,7 @@ public class IfStmt extends Stmt implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:146
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:146
    * @apilevel internal
    */
   public SmallSet<CFGNode> Define_SmallSet_CFGNode__followingWhenFalse(ASTNode caller, ASTNode child) {
@@ -483,7 +483,7 @@ public class IfStmt extends Stmt implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:148
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:148
    * @apilevel internal
    */
   public SmallSet<CFGNode> Define_SmallSet_CFGNode__following(ASTNode caller, ASTNode child) {

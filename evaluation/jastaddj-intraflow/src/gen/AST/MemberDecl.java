@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:76
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:76
  * @production MemberDecl : {@link BodyDecl};
 
  */
 public abstract class MemberDecl extends BodyDecl implements Cloneable {
   /**
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:192
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:192
    */
   public void checkModifiers() {
     if(!isSynthetic()) {
@@ -89,13 +89,13 @@ public abstract class MemberDecl extends BodyDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:222
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:222
    */
   public abstract boolean isStatic();
   /**
    * @attribute syn
    * @aspect ConstantExpression
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:223
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:223
    */
   public boolean isConstant() {
     ASTNode$State state = state();
@@ -106,7 +106,7 @@ public abstract class MemberDecl extends BodyDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:214
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:214
    */
   public boolean isSynthetic() {
     ASTNode$State state = state();

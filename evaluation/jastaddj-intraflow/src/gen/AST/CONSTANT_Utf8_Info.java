@@ -17,7 +17,7 @@ import java.util.Iterator;
 /**
  * @ast class
  * @aspect BytecodeCONSTANT
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BytecodeCONSTANT.jrag:245
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BytecodeCONSTANT.jrag:245
  */
  class CONSTANT_Utf8_Info extends CONSTANT_Info {
 

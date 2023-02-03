@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Annotations.ast:16
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Annotations.ast:16
  * @production AnnotatedCompilationUnit : {@link CompilationUnit} ::= <span class="component">{@link Modifiers}</span>;
 
  */
 public class AnnotatedCompilationUnit extends CompilationUnit implements Cloneable {
   /**
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:21
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:21
    */
   public void nameCheck() {
     super.nameCheck();
@@ -33,7 +33,7 @@ public class AnnotatedCompilationUnit extends CompilationUnit implements Cloneab
   }
   /**
    * @aspect AnnotationPrettyPrinting
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:578
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:578
    */
   public void prettyPrint(StringBuffer sb) {
       getModifiers().prettyPrint(sb);
@@ -411,7 +411,7 @@ public class AnnotatedCompilationUnit extends CompilationUnit implements Cloneab
     return (Modifiers) getChildNoTransform(2);
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:71
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:71
    * @apilevel internal
    */
   public boolean Define_boolean_mayUseAnnotationTarget(ASTNode caller, ASTNode child, String name) {
@@ -423,7 +423,7 @@ public class AnnotatedCompilationUnit extends CompilationUnit implements Cloneab
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:569
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:569
    * @apilevel internal
    */
   public String Define_String_hostPackage(ASTNode caller, ASTNode child) {

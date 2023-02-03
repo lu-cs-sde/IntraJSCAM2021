@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:195
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:195
  * @production Block : {@link Stmt} ::= <span class="component">{@link Stmt}*</span>;
 
  */
 public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @aspect DeclareBeforeUse
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DeclareBeforeUse.jrag:21
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DeclareBeforeUse.jrag:21
    */
   public boolean declaredBeforeUse(Variable decl, ASTNode use) {
     int indexDecl = ((ASTNode)decl).varChildIndex(this);
@@ -33,7 +33,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   }
   /**
    * @aspect DeclareBeforeUse
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DeclareBeforeUse.jrag:26
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DeclareBeforeUse.jrag:26
    */
   public boolean declaredBeforeUse(Variable decl, int indexUse) {
     int indexDecl = ((ASTNode)decl).varChildIndex(this);
@@ -41,7 +41,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:545
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:545
    */
   public void prettyPrint(StringBuffer sb) {
     String indent = indent();
@@ -278,7 +278,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute syn
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:313
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:313
    */
   public boolean checkReturnDA(Variable v) {
     Object _parameters = v;
@@ -317,7 +317,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute syn
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:454
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:454
    */
   public boolean isDAafter(Variable v) {
     Object _parameters = v;
@@ -343,7 +343,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute syn
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:460
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:460
    */
   public boolean isDUeverywhere(Variable v) {
     ASTNode$State state = state();
@@ -355,7 +355,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:782
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:782
    */
   public boolean checkReturnDU(Variable v) {
     Object _parameters = v;
@@ -394,7 +394,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:913
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:913
    */
   public boolean isDUafter(Variable v) {
     Object _parameters = v;
@@ -421,7 +421,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute syn
    * @aspect VariableScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:116
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:116
    */
   public VariableDeclaration localVariableDeclaration(String name) {
     Object _parameters = name;
@@ -452,7 +452,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute syn
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:777
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:777
    */
   public boolean addsIndentationLevel() {
     ASTNode$State state = state();
@@ -463,7 +463,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute syn
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:784
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:784
    */
   public boolean shouldHaveIndent() {
     ASTNode$State state = state();
@@ -482,7 +482,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute syn
    * @aspect UnreachableStatements
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:37
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:37
    */
   public boolean canCompleteNormally() {
     if(canCompleteNormally_computed) {
@@ -514,7 +514,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:135
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:135
    */
   public SmallSet<CFGNode> succ() {
     if(succ_computed) {
@@ -539,7 +539,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute inh
    * @aspect TypeScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:229
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:229
    */
   public SimpleSet lookupType(String name) {
     Object _parameters = name;
@@ -562,7 +562,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute inh
    * @aspect VariableScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:17
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:17
    */
   public SimpleSet lookupVariable(String name) {
     Object _parameters = name;
@@ -585,7 +585,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute inh
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:471
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:471
    */
   public SimpleSet otherLocalClassDecls(String name) {
     ASTNode$State state = state();
@@ -596,7 +596,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
   /**
    * @attribute inh
    * @aspect UnreachableStatements
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:28
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:28
    */
   public boolean reachable() {
     ASTNode$State state = state();
@@ -605,7 +605,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
     return reachable_value;
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:52
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:52
    * @apilevel internal
    */
   public boolean Define_boolean_isIncOrDec(ASTNode caller, ASTNode child) {
@@ -618,7 +618,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:457
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:457
    * @apilevel internal
    */
   public boolean Define_boolean_isDAbefore(ASTNode caller, ASTNode child, Variable v) {
@@ -631,7 +631,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:914
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:914
    * @apilevel internal
    */
   public boolean Define_boolean_isDUbefore(ASTNode caller, ASTNode child, Variable v) {
@@ -644,7 +644,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:352
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:352
    * @apilevel internal
    */
   public SimpleSet Define_SimpleSet_lookupType(ASTNode caller, ASTNode child, String name) {
@@ -670,7 +670,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:68
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:68
    * @apilevel internal
    */
   public SimpleSet Define_SimpleSet_lookupVariable(ASTNode caller, ASTNode child, String name) {
@@ -689,7 +689,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:322
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:322
    * @apilevel internal
    */
   public VariableScope Define_VariableScope_outerScope(ASTNode caller, ASTNode child) {
@@ -702,7 +702,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:475
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:475
    * @apilevel internal
    */
   public SimpleSet Define_SimpleSet_otherLocalClassDecls(ASTNode caller, ASTNode child, String name) {
@@ -729,7 +729,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:116
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:116
    * @apilevel internal
    */
   public NameType Define_NameType_nameType(ASTNode caller, ASTNode child) {
@@ -742,7 +742,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:38
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:38
    * @apilevel internal
    */
   public boolean Define_boolean_reachable(ASTNode caller, ASTNode child) {
@@ -755,7 +755,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:148
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:148
    * @apilevel internal
    */
   public boolean Define_boolean_reportUnreachable(ASTNode caller, ASTNode child) {
@@ -768,7 +768,7 @@ public class Block extends Stmt implements Cloneable, VariableScope {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:137
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:137
    * @apilevel internal
    */
   public SmallSet<CFGNode> Define_SmallSet_CFGNode__following(ASTNode caller, ASTNode child) {

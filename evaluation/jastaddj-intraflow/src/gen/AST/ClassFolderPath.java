@@ -18,7 +18,7 @@ import java.util.Iterator;
  * Concrete subclass of FolderPath. Represents a classfile folder.
  * @ast class
  * @aspect PathPart
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PathPart.jadd:460
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PathPart.jadd:460
  */
 public class ClassFolderPath extends FolderPath {
 

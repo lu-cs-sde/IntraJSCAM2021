@@ -17,7 +17,7 @@ import java.util.Iterator;
 /**
  * @ast class
  * @aspect ClassPath
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ClassPath.jrag:109
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ClassPath.jrag:109
  */
 public class ClassPath extends java.lang.Object {
 

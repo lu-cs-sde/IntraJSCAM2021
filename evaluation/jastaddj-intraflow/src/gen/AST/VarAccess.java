@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:18
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:18
  * @production VarAccess : {@link Access} ::= <span class="component">&lt;ID:String&gt;</span>;
 
  */
 public class VarAccess extends Access implements Cloneable {
   /**
    * @aspect DefiniteAssignment
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:94
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:94
    */
   public void definiteAssignment() {
     if(isSource()) {
@@ -110,7 +110,7 @@ public class VarAccess extends Access implements Cloneable {
   }
   /**
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:470
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:470
    */
   protected boolean checkDUeverywhere(Variable v) {
     if(isDest() && decl() == v)
@@ -119,7 +119,7 @@ public class VarAccess extends Access implements Cloneable {
   }
   /**
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:207
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:207
    */
   public void nameCheck() {
     if(decls().isEmpty() && (!isQualified() || !qualifier().type().isUnknown() || qualifier().isPackageAccess()))
@@ -156,7 +156,7 @@ public class VarAccess extends Access implements Cloneable {
   }
   /**
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:242
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:242
    */
   public BodyDecl closestBodyDecl(TypeDecl t) {
     ASTNode node = this;
@@ -169,7 +169,7 @@ public class VarAccess extends Access implements Cloneable {
   }
   /**
    * @aspect NodeConstructors
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:38
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:38
    */
   public VarAccess(String name, int start, int end) {
     this(name);
@@ -178,14 +178,14 @@ public class VarAccess extends Access implements Cloneable {
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:472
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:472
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(name());
   }
   /**
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:353
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:353
    */
   public void checkModifiers() {
     if(decl() instanceof FieldDeclaration) {
@@ -199,7 +199,7 @@ public class VarAccess extends Access implements Cloneable {
   }
   /**
    * @aspect Enums
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:464
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:464
    */
   protected void checkEnum(EnumDecl enumDecl) {
     super.checkEnum(enumDecl);
@@ -208,7 +208,7 @@ public class VarAccess extends Access implements Cloneable {
   }
   /**
    * @aspect Candidates
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Candidates.jrag:38
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Candidates.jrag:38
    */
   public String printCandidate() {
         StringBuffer buf = new StringBuffer();
@@ -388,7 +388,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect ConstantExpression
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:11
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:11
    */
   public Constant constant() {
     ASTNode$State state = state();
@@ -415,7 +415,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect ConstantExpression
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:245
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:245
    */
   public boolean isConstant() {
     if(isConstant_computed) {
@@ -486,7 +486,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect DefiniteAssignment
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:58
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:58
    */
   public Variable varDecl() {
     ASTNode$State state = state();
@@ -498,7 +498,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:364
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:364
    */
   public boolean isDAafter(Variable v) {
     Object _parameters = v;
@@ -524,7 +524,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:866
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:866
    */
   public boolean isDUafter(Variable v) {
     ASTNode$State state = state();
@@ -535,7 +535,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1254
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1254
    */
   public boolean unassignedEverywhere(Variable v, TryStmt stmt) {
     ASTNode$State state = state();
@@ -559,7 +559,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect VariableScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:241
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:241
    */
   public SimpleSet decls() {
     if(decls_computed) {
@@ -605,7 +605,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect VariableScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:256
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:256
    */
   public Variable decl() {
     if(decl_computed) {
@@ -634,7 +634,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:252
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:252
    */
   public boolean inSameInitializer() {
     ASTNode$State state = state();
@@ -655,7 +655,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:264
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:264
    */
   public boolean simpleAssignment() {
     ASTNode$State state = state();
@@ -666,7 +666,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:266
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:266
    */
   public boolean inDeclaringClass() {
     ASTNode$State state = state();
@@ -677,7 +677,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:821
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:821
    */
   public String dumpString() {
     ASTNode$State state = state();
@@ -688,7 +688,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect Names
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:17
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:17
    */
   public String name() {
     ASTNode$State state = state();
@@ -707,7 +707,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect AccessTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:23
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:23
    */
   public boolean isFieldAccess() {
     if(isFieldAccess_computed) {
@@ -731,7 +731,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect SyntacticClassification
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:56
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:56
    */
   public NameType predNameType() {
     ASTNode$State state = state();
@@ -750,7 +750,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:283
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:283
    */
   public TypeDecl type() {
     if(type_computed) {
@@ -774,7 +774,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:15
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:15
    */
   public boolean isVariable() {
     ASTNode$State state = state();
@@ -785,7 +785,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect Enums
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:503
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:503
    */
   public boolean isEnumConstant() {
     ASTNode$State state = state();
@@ -796,7 +796,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect Helpers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:43
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:43
    */
   public boolean isLocalStore() {
     ASTNode$State state = state();
@@ -807,7 +807,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect Helpers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:54
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:54
    */
   public boolean hasAnonymousUse() {
     ASTNode$State state = state();
@@ -820,7 +820,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect Helpers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:58
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:58
    */
   public boolean hasEnclosingClassInstanceExpr() {
     ASTNode$State state = state();
@@ -839,7 +839,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:25
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:25
    */
   public boolean includeInDeadAssignAnalysis() {
     if(includeInDeadAssignAnalysis_computed) {
@@ -871,7 +871,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:39
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:39
    */
   public boolean isDeadAssign() {
     if(isDeadAssign_computed) {
@@ -895,7 +895,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:29
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:29
    */
   public BitSet liveness_def() {
     ASTNode$State state = state();
@@ -907,7 +907,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:39
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:39
    */
   public BitSet liveness_use() {
     ASTNode$State state = state();
@@ -918,7 +918,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute inh
    * @aspect TypeHierarchyCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:141
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:141
    */
   public boolean inExplicitConstructorInvocation() {
     ASTNode$State state = state();
@@ -929,7 +929,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute inh
    * @aspect Helpers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:57
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:57
    */
   public ClassInstanceExpr enclosingClassInstanceExpr() {
     ASTNode$State state = state();
@@ -945,7 +945,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute coll
    * @aspect Candidates
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Candidates.jrag:7
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Candidates.jrag:7
    */
     if (includeInDeadAssignAnalysis()) {
       {
@@ -961,7 +961,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute coll
    * @aspect Helpers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:52
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:52
    */
     if (isSource() && hasAnonymousUse()) {
       {
@@ -977,7 +977,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute coll
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:10
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:10
    */
     if (isDest()) {
       {
@@ -993,7 +993,7 @@ public class VarAccess extends Access implements Cloneable {
   /**
    * @attribute coll
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:17
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:17
    */
     if (includeInDeadAssignAnalysis() && isDeadAssign()) {
       {

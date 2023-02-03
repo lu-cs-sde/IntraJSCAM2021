@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Annotations.ast:11
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Annotations.ast:11
  * @production ElementConstantValue : {@link ElementValue} ::= <span class="component">{@link Expr}</span>;
 
  */
 public class ElementConstantValue extends ElementValue implements Cloneable {
   /**
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:177
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:177
    */
   public void nameCheck() {
     if(enclosingAnnotationDecl().fullName().equals("java.lang.annotation.Target")) {
@@ -36,7 +36,7 @@ public class ElementConstantValue extends ElementValue implements Cloneable {
   }
   /**
    * @aspect AnnotationPrettyPrinting
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:625
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:625
    */
   public void prettyPrint(StringBuffer sb) {
     getExpr().prettyPrint(sb);
@@ -165,7 +165,7 @@ public class ElementConstantValue extends ElementValue implements Cloneable {
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:57
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:57
    */
   public boolean validTarget(Annotation a) {
     ASTNode$State state = state();
@@ -180,7 +180,7 @@ public class ElementConstantValue extends ElementValue implements Cloneable {
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:189
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:189
    */
   public ElementValue definesElementTypeValue(String name) {
     ASTNode$State state = state();
@@ -196,7 +196,7 @@ public class ElementConstantValue extends ElementValue implements Cloneable {
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:304
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:304
    */
   public boolean hasValue(String annot) {
     ASTNode$State state = state();
@@ -209,7 +209,7 @@ public class ElementConstantValue extends ElementValue implements Cloneable {
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:485
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:485
    */
   public boolean commensurateWithTypeDecl(TypeDecl type) {
     ASTNode$State state = state();
@@ -233,7 +233,7 @@ public class ElementConstantValue extends ElementValue implements Cloneable {
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:527
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:527
    */
   public TypeDecl type() {
     ASTNode$State state = state();
@@ -244,7 +244,7 @@ public class ElementConstantValue extends ElementValue implements Cloneable {
   /**
    * @attribute inh
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:185
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:185
    */
   public ElementValue lookupElementTypeValue(String name) {
     ASTNode$State state = state();
@@ -253,7 +253,7 @@ public class ElementConstantValue extends ElementValue implements Cloneable {
     return lookupElementTypeValue_String_value;
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:567
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:567
    * @apilevel internal
    */
   public NameType Define_NameType_nameType(ASTNode caller, ASTNode child) {
@@ -265,7 +265,7 @@ public class ElementConstantValue extends ElementValue implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:572
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:572
    * @apilevel internal
    */
   public String Define_String_methodHost(ASTNode caller, ASTNode child) {

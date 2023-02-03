@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:138
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:138
  * @production MinusExpr : {@link Unary};
 
  */
 public class MinusExpr extends Unary implements Cloneable {
   /**
    * @aspect TypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:274
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:274
    */
   public void typeCheck() {
     if(!getOperand().type().isNumericType())
@@ -158,7 +158,7 @@ public class MinusExpr extends Unary implements Cloneable {
   /**
    * @attribute syn
    * @aspect ConstantExpression
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:11
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:11
    */
   public Constant constant() {
     ASTNode$State state = state();
@@ -169,7 +169,7 @@ public class MinusExpr extends Unary implements Cloneable {
   /**
    * @attribute syn
    * @aspect ConstantExpression
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:227
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:227
    */
   public boolean isConstant() {
     ASTNode$State state = state();
@@ -180,7 +180,7 @@ public class MinusExpr extends Unary implements Cloneable {
   /**
    * @attribute syn
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:395
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:395
    */
   public String printPreOp() {
     ASTNode$State state = state();
@@ -199,7 +199,7 @@ public class MinusExpr extends Unary implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:315
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:315
    */
   public TypeDecl type() {
     if(type_computed) {
@@ -223,13 +223,13 @@ public class MinusExpr extends Unary implements Cloneable {
   /**
    * @apilevel internal
    */
-  public ASTNode rewriteTo() {    // Declared at @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:123
+  public ASTNode rewriteTo() {    // Declared at @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:123
     if (getOperand() instanceof IntegerLiteral && ((IntegerLiteral)getOperand()).isDecimal() && getOperand().isPositive()) {
       state().duringLiterals++;
       ASTNode result = rewriteRule0();
       state().duringLiterals--;
       return result;
-    }    // Declared at @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:128
+    }    // Declared at @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:128
     if (getOperand() instanceof LongLiteral && ((LongLiteral)getOperand()).isDecimal() && getOperand().isPositive()) {
       state().duringLiterals++;
       ASTNode result = rewriteRule1();
@@ -237,13 +237,13 @@ public class MinusExpr extends Unary implements Cloneable {
       return result;
     }    return super.rewriteTo();
   }  /**
-   * @declaredat @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:123
+   * @declaredat @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:123
    * @apilevel internal
    */  private IntegerLiteral rewriteRule0() {
     return new IntegerLiteral("-" + ((IntegerLiteral)getOperand()).getLITERAL());
   }
   /**
-   * @declaredat @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:128
+   * @declaredat @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:128
    * @apilevel internal
    */  private LongLiteral rewriteRule1() {
     return new LongLiteral("-" + ((LongLiteral)getOperand()).getLITERAL());

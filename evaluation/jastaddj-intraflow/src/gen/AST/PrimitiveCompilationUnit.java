@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:6
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:6
  * @production PrimitiveCompilationUnit : {@link CompilationUnit};
 
  */
@@ -421,7 +421,7 @@ public class PrimitiveCompilationUnit extends CompilationUnit implements Cloneab
   /**
    * @attribute syn
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:13
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:13
    */
   public TypeDecl typeBoolean() {
     if(typeBoolean_computed) {
@@ -461,7 +461,7 @@ public class PrimitiveCompilationUnit extends CompilationUnit implements Cloneab
   /**
    * @attribute syn
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:20
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:20
    */
   public TypeDecl typeByte() {
     if(typeByte_computed) {
@@ -501,7 +501,7 @@ public class PrimitiveCompilationUnit extends CompilationUnit implements Cloneab
   /**
    * @attribute syn
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:27
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:27
    */
   public TypeDecl typeShort() {
     if(typeShort_computed) {
@@ -541,7 +541,7 @@ public class PrimitiveCompilationUnit extends CompilationUnit implements Cloneab
   /**
    * @attribute syn
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:34
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:34
    */
   public TypeDecl typeChar() {
     if(typeChar_computed) {
@@ -581,7 +581,7 @@ public class PrimitiveCompilationUnit extends CompilationUnit implements Cloneab
   /**
    * @attribute syn
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:41
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:41
    */
   public TypeDecl typeInt() {
     if(typeInt_computed) {
@@ -621,7 +621,7 @@ public class PrimitiveCompilationUnit extends CompilationUnit implements Cloneab
   /**
    * @attribute syn
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:48
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:48
    */
   public TypeDecl typeLong() {
     if(typeLong_computed) {
@@ -662,7 +662,7 @@ public class PrimitiveCompilationUnit extends CompilationUnit implements Cloneab
   /**
    * @attribute syn
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:56
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:56
    */
   public TypeDecl typeFloat() {
     if(typeFloat_computed) {
@@ -702,7 +702,7 @@ public class PrimitiveCompilationUnit extends CompilationUnit implements Cloneab
   /**
    * @attribute syn
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:63
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:63
    */
   public TypeDecl typeDouble() {
     if(typeDouble_computed) {
@@ -742,7 +742,7 @@ public class PrimitiveCompilationUnit extends CompilationUnit implements Cloneab
   /**
    * @attribute syn
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:70
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:70
    */
   public TypeDecl typeVoid() {
     if(typeVoid_computed) {
@@ -781,7 +781,7 @@ public class PrimitiveCompilationUnit extends CompilationUnit implements Cloneab
   /**
    * @attribute syn
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:76
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:76
    */
   public TypeDecl typeNull() {
     if(typeNull_computed) {
@@ -820,7 +820,7 @@ public class PrimitiveCompilationUnit extends CompilationUnit implements Cloneab
   /**
    * @attribute syn
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:82
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:82
    */
   public TypeDecl unknownType() {
     if(unknownType_computed) {

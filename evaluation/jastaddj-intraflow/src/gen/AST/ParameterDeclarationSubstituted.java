@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:33
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:33
  * @production ParameterDeclarationSubstituted : {@link ParameterDeclaration} ::= <span class="component">&lt;Original:ParameterDeclaration&gt;</span>;
 
  */
@@ -243,7 +243,7 @@ public class ParameterDeclarationSubstituted extends ParameterDeclaration implem
   /**
    * @attribute syn
    * @aspect SourceDeclarations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1319
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1319
    */
   public Variable sourceVariableDecl() {
     if(sourceVariableDecl_computed) {

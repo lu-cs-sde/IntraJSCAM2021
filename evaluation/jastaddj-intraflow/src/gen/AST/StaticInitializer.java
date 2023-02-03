@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:73
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:73
  * @production StaticInitializer : {@link BodyDecl} ::= <span class="component">{@link Block}</span>;
 
  */
 public class StaticInitializer extends BodyDecl implements Cloneable {
   /**
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:179
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:179
    */
   public void checkModifiers() {
     super.checkModifiers();
@@ -33,7 +33,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:128
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:128
    */
   public void prettyPrint(StringBuffer sb) {
     if(getBlock().getNumStmt() == 0) return;
@@ -43,7 +43,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
   }
   /**
    * @aspect UnreachableStatements
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:18
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:18
    */
   void checkUnreachableStmt() {
     if(!getBlock().canCompleteNormally())
@@ -180,7 +180,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:306
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:306
    */
   public boolean isDAafter(Variable v) {
     Object _parameters = v;
@@ -207,7 +207,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:775
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:775
    */
   public boolean isDUafter(Variable v) {
     Object _parameters = v;
@@ -233,7 +233,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:65
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:65
    */
   public boolean visibleTypeParameters() {
     ASTNode$State state = state();
@@ -244,7 +244,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
   /**
    * @attribute inh
    * @aspect ExceptionHandling
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:53
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:53
    */
   public boolean handlesException(TypeDecl exceptionType) {
     Object _parameters = exceptionType;
@@ -265,7 +265,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
   }
   protected java.util.Map handlesException_TypeDecl_values;
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:452
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:452
    * @apilevel internal
    */
   public boolean Define_boolean_isDAbefore(ASTNode caller, ASTNode child, Variable v) {
@@ -277,7 +277,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:194
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:194
    * @apilevel internal
    */
   public boolean Define_boolean_handlesException(ASTNode caller, ASTNode child, TypeDecl exceptionType) {
@@ -289,7 +289,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:511
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:511
    * @apilevel internal
    */
   public TypeDecl Define_TypeDecl_enclosingInstance(ASTNode caller, ASTNode child) {
@@ -301,7 +301,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:166
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:166
    * @apilevel internal
    */
   public boolean Define_boolean_inStaticContext(ASTNode caller, ASTNode child) {
@@ -313,7 +313,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:34
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:34
    * @apilevel internal
    */
   public boolean Define_boolean_reachable(ASTNode caller, ASTNode child) {
@@ -325,7 +325,7 @@ public class StaticInitializer extends BodyDecl implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:104
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:104
    * @apilevel internal
    */
   public SmallSet<CFGNode> Define_SmallSet_CFGNode__following(ASTNode caller, ASTNode child) {

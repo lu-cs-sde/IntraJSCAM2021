@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:46
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:46
  * @production LUBType : {@link ReferenceType} ::= <span class="component">{@link Modifiers}</span> <span class="component">&lt;ID:String&gt;</span> <span class="component">{@link BodyDecl}*</span> <span class="component">TypeBound:{@link Access}*</span>;
 
  */
 public class LUBType extends ReferenceType implements Cloneable {
   /**
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:668
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:668
    */
   public static HashSet EC(ArrayList list) {
       HashSet result = new HashSet();
@@ -47,7 +47,7 @@ public class LUBType extends ReferenceType implements Cloneable {
    * is MEC = {V | V in EC, forall  W != V in EC, not W <: V}
    * @return minimal erased candidate set for Tj
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:690
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:690
    */
   public static HashSet MEC(ArrayList list) {
       HashSet EC = LUBType.EC(list);
@@ -72,7 +72,7 @@ public class LUBType extends ReferenceType implements Cloneable {
    * Inv(G) = {V | 1 <= i <= k, V in ST(Ui), V = G<...>}
    * @return set of relevant invocations of G, Inv(G)
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:714
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:714
    */
   public static HashSet Inv(TypeDecl G, ArrayList Us) {
       HashSet result = new HashSet();
@@ -89,7 +89,7 @@ public class LUBType extends ReferenceType implements Cloneable {
   /**
    * @return least containing invocation (lci)
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:730
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:730
    */
   public TypeDecl lci(HashSet set, TypeDecl G) {
       ArrayList list = new ArrayList();
@@ -111,7 +111,7 @@ public class LUBType extends ReferenceType implements Cloneable {
   /**
    * least containing type arguments
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:751
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:751
    */
   public TypeDecl lcta(TypeDecl X, TypeDecl Y) {
       //System.err.println("Computing lcta for " + X.typeName() + " and " + Y.typeName());
@@ -174,7 +174,7 @@ public class LUBType extends ReferenceType implements Cloneable {
     }
   /**
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:811
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:811
    */
   public TypeDecl lub(TypeDecl X, TypeDecl Y) {
       ArrayList list = new ArrayList(2);
@@ -184,14 +184,14 @@ public class LUBType extends ReferenceType implements Cloneable {
     }
   /**
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:818
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:818
    */
   public TypeDecl lub(ArrayList list) {
       return lookupLUBType(list);
     }
   /**
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:823
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:823
    */
   public static HashSet EST(TypeDecl t) {
       HashSet result = new HashSet();
@@ -207,7 +207,7 @@ public class LUBType extends ReferenceType implements Cloneable {
   /**
    * @return supertype set of T
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:838
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:838
    */
   public static HashSet ST(TypeDecl t) {
       HashSet result = new HashSet();
@@ -216,7 +216,7 @@ public class LUBType extends ReferenceType implements Cloneable {
     }
   /**
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:844
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:844
    */
   public static void addSupertypes(HashSet set, TypeDecl t) {
       set.add(t);
@@ -258,7 +258,7 @@ public class LUBType extends ReferenceType implements Cloneable {
     }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1238
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1238
    */
   public HashSet implementedInterfaces(){
        HashSet ret = new HashSet();
@@ -655,7 +655,7 @@ public class LUBType extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:650
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:650
    */
   public TypeDecl lub() {
     if(lub_computed) {
@@ -692,7 +692,7 @@ public class LUBType extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1226
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1226
    */
   public String typeName() {
     ASTNode$State state = state();
@@ -714,7 +714,7 @@ public class LUBType extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:346
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:346
    */
   public boolean subtype(TypeDecl type) {
     Object _parameters = type;
@@ -782,7 +782,7 @@ public class LUBType extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:421
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:421
    */
   public boolean supertypeClassDecl(ClassDecl type) {
     ASTNode$State state = state();
@@ -793,7 +793,7 @@ public class LUBType extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:439
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:439
    */
   public boolean supertypeInterfaceDecl(InterfaceDecl type) {
     ASTNode$State state = state();
@@ -804,7 +804,7 @@ public class LUBType extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:366
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:366
    */
   public boolean supertypeGLBType(GLBType type) {
     ASTNode$State state = state();

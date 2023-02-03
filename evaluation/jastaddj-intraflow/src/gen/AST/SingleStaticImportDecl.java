@@ -21,14 +21,14 @@ import java.util.Iterator;
  * under their simple name in the class and interface declarations of the
  * compilation unit in which the single-static import declaration appears.
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/StaticImports.ast:12
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/StaticImports.ast:12
  * @production SingleStaticImportDecl : {@link StaticImportDecl} ::= <span class="component">&lt;ID:String&gt;</span>;
 
  */
 public class SingleStaticImportDecl extends StaticImportDecl implements Cloneable {
   /**
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:75
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:75
    */
   public void typeCheck() {
     if(!getAccess().type().typeName().equals(typeName()) && !getAccess().type().isUnknown())
@@ -36,7 +36,7 @@ public class SingleStaticImportDecl extends StaticImportDecl implements Cloneabl
   }
   /**
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:107
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:107
    */
   public void nameCheck() {
     if(importedFields(name()).isEmpty() && importedMethods(name()).isEmpty() && importedTypes(name()).isEmpty() &&
@@ -46,7 +46,7 @@ public class SingleStaticImportDecl extends StaticImportDecl implements Cloneabl
   }
   /**
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:221
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:221
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append("import static ");
@@ -229,7 +229,7 @@ public class SingleStaticImportDecl extends StaticImportDecl implements Cloneabl
   /**
    * @attribute syn
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:41
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:41
    */
   public SimpleSet importedFields(String name) {
     Object _parameters = name;
@@ -262,7 +262,7 @@ public class SingleStaticImportDecl extends StaticImportDecl implements Cloneabl
   /**
    * @attribute syn
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:59
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:59
    */
   public Collection importedMethods(String name) {
     Object _parameters = name;
@@ -294,7 +294,7 @@ public class SingleStaticImportDecl extends StaticImportDecl implements Cloneabl
   /**
    * @attribute syn
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:67
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:67
    */
   public TypeDecl type() {
     ASTNode$State state = state();
@@ -305,7 +305,7 @@ public class SingleStaticImportDecl extends StaticImportDecl implements Cloneabl
   /**
    * @attribute syn
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:113
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:113
    */
   public String name() {
     ASTNode$State state = state();
@@ -314,7 +314,7 @@ public class SingleStaticImportDecl extends StaticImportDecl implements Cloneabl
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:217
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:217
    * @apilevel internal
    */
   public NameType Define_NameType_nameType(ASTNode caller, ASTNode child) {

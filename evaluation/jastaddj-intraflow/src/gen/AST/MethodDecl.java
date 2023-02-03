@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:94
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:94
  * @production MethodDecl : {@link MemberDecl} ::= <span class="component">{@link Modifiers}</span> <span class="component">TypeAccess:{@link Access}</span> <span class="component">&lt;ID:String&gt;</span> <span class="component">Parameter:{@link ParameterDeclaration}*</span> <span class="component">Exception:{@link Access}*</span> <span class="component">[{@link Block}]</span>;
 
  */
 public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iterator {
   /**
    * @aspect BoundNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:77
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:77
    */
   public Access createBoundAccess(List args) {
     if(isStatic()) {
@@ -36,49 +36,49 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:153
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:153
    */
   public SimpleSet add(Object o) {
     return new SimpleSetImpl().add(this).add(o);
   }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:157
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:157
    */
   public boolean isSingleton() { return true; }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:158
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:158
    */
   public boolean isSingleton(Object o) { return contains(o); }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:161
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:161
    */
   private MethodDecl iterElem;
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:162
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:162
    */
   public Iterator iterator() { iterElem = this; return this; }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:163
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:163
    */
   public boolean hasNext() { return iterElem != null; }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:164
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:164
    */
   public Object next() { Object o = iterElem; iterElem = null; return o; }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:165
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:165
    */
   public void remove() { throw new UnsupportedOperationException(); }
   /**
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:125
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:125
    */
   public void nameCheck() {
     // 8.4
@@ -97,7 +97,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:192
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:192
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(indent());
@@ -130,7 +130,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   }
   /**
    * @aspect TypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:389
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:389
    */
   public void typeCheck() {
     // Thrown vs super class method see MethodDecl.nameCheck
@@ -149,7 +149,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1038
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1038
    */
   public BodyDecl substitutedBodyDecl(Parameterization parTypeDecl) {
     //System.out.println("Begin substituting " + signature() + " in " + hostType().typeName() + " with " + parTypeDecl.typeSignature());
@@ -167,7 +167,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1053
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1053
    */
   public Opt substituteBody(Parameterization parTypeDecl) {
     return new Opt();
@@ -663,7 +663,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   }
   /**
    * @aspect Enums
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:720
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:720
    */
    
   public void checkModifiers() {
@@ -716,13 +716,13 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   }
   /**
    * @aspect MethodDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:190
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:190
    */
   private boolean refined_MethodDecl_MethodDecl_sameSignature_MethodDecl(MethodDecl other)
 { return signature().equals(other.signature()); }
   /**
    * @aspect MethodDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:193
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:193
    */
   private boolean refined_MethodDecl_MethodDecl_moreSpecificThan_MethodDecl(MethodDecl m)
 {
@@ -738,7 +738,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect AccessControl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AccessControl.jrag:77
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AccessControl.jrag:77
    */
   public boolean accessibleFrom(TypeDecl type) {
     Object _parameters = type;
@@ -779,7 +779,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:151
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:151
    */
   public int size() {
     ASTNode$State state = state();
@@ -790,7 +790,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:152
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:152
    */
   public boolean isEmpty() {
     ASTNode$State state = state();
@@ -801,7 +801,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:156
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:156
    */
   public boolean contains(Object o) {
     ASTNode$State state = state();
@@ -812,7 +812,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:23
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:23
    */
   public int lineNumber() {
     ASTNode$State state = state();
@@ -823,7 +823,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:68
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:68
    */
   public int columnNumber() {
     ASTNode$State state = state();
@@ -835,7 +835,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect ExceptionHandling
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:147
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:147
    */
   public boolean throwsException(TypeDecl exceptionType) {
     Object _parameters = exceptionType;
@@ -866,7 +866,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect MethodDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:151
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:151
    */
   public String name() {
     ASTNode$State state = state();
@@ -885,7 +885,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect MethodSignature15
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:356
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:356
    */
   public String signature() {
     if(signature_computed) {
@@ -921,7 +921,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
    * @return Method signature, including generic parameters.
    * @attribute syn
    * @aspect MethodDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:170
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:170
    */
   public String fullSignature() {
     ASTNode$State state = state();
@@ -947,7 +947,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
    * the signature of the argument method
    * @attribute syn
    * @aspect MethodDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:190
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:190
    */
   public boolean sameSignature(MethodDecl other) {
     ASTNode$State state = state();
@@ -972,7 +972,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect MethodSignature15
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:155
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:155
    */
   public boolean moreSpecificThan(MethodDecl m) {
     Object _parameters = m;
@@ -1010,7 +1010,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect MethodDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:245
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:245
    */
   public boolean overrides(MethodDecl m) {
     Object _parameters = m;
@@ -1038,7 +1038,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect MethodDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:249
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:249
    */
   public boolean hides(MethodDecl m) {
     Object _parameters = m;
@@ -1066,7 +1066,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect VariableScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:99
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:99
    */
   public SimpleSet parameterDeclaration(String name) {
     Object _parameters = name;
@@ -1097,7 +1097,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:214
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:214
    */
   public boolean isSynthetic() {
     ASTNode$State state = state();
@@ -1108,7 +1108,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:224
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:224
    */
   public boolean isPublic() {
     ASTNode$State state = state();
@@ -1119,7 +1119,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:225
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:225
    */
   public boolean isPrivate() {
     ASTNode$State state = state();
@@ -1130,7 +1130,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:226
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:226
    */
   public boolean isProtected() {
     ASTNode$State state = state();
@@ -1141,7 +1141,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:227
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:227
    */
   public boolean isAbstract() {
     ASTNode$State state = state();
@@ -1152,7 +1152,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:228
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:228
    */
   public boolean isStatic() {
     ASTNode$State state = state();
@@ -1163,7 +1163,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:230
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:230
    */
   public boolean isFinal() {
     ASTNode$State state = state();
@@ -1174,7 +1174,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:231
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:231
    */
   public boolean isSynchronized() {
     ASTNode$State state = state();
@@ -1185,7 +1185,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:232
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:232
    */
   public boolean isNative() {
     ASTNode$State state = state();
@@ -1196,7 +1196,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:233
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:233
    */
   public boolean isStrictfp() {
     ASTNode$State state = state();
@@ -1207,7 +1207,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:821
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:821
    */
   public String dumpString() {
     ASTNode$State state = state();
@@ -1226,7 +1226,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:269
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:269
    */
   public TypeDecl type() {
     if(type_computed) {
@@ -1250,7 +1250,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:271
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:271
    */
   public boolean isVoid() {
     ASTNode$State state = state();
@@ -1261,7 +1261,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect TypeHierarchyCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:296
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:296
    */
   public boolean mayOverride(MethodDecl m) {
     ASTNode$State state = state();
@@ -1274,7 +1274,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:147
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:147
    */
   public boolean annotationMethodOverride() {
     ASTNode$State state = state();
@@ -1285,7 +1285,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:292
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:292
    */
   public boolean hasAnnotationSuppressWarnings(String annot) {
     ASTNode$State state = state();
@@ -1296,7 +1296,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:332
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:332
    */
   public boolean isDeprecated() {
     ASTNode$State state = state();
@@ -1315,7 +1315,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:929
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:929
    */
   public boolean usesTypeVariable() {
     if(usesTypeVariable_computed) {
@@ -1348,7 +1348,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect SourceDeclarations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1306
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1306
    */
   public MethodDecl sourceMethodDecl() {
     if(sourceMethodDecl_computed) {
@@ -1372,7 +1372,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect GenericsParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:65
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:65
    */
   public boolean visibleTypeParameters() {
     ASTNode$State state = state();
@@ -1383,7 +1383,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect MethodSignature15
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:284
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:284
    */
   public int arity() {
     ASTNode$State state = state();
@@ -1394,7 +1394,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect VariableArityParameters
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/VariableArityParameters.jrag:33
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/VariableArityParameters.jrag:33
    */
   public boolean isVariableArity() {
     ASTNode$State state = state();
@@ -1405,7 +1405,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute syn
    * @aspect VariableArityParameters
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/VariableArityParameters.jrag:38
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/VariableArityParameters.jrag:38
    */
   public ParameterDeclaration lastParameter() {
     ASTNode$State state = state();
@@ -1416,7 +1416,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute inh
    * @aspect ExceptionHandling
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:57
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:57
    */
   public boolean handlesException(TypeDecl exceptionType) {
     Object _parameters = exceptionType;
@@ -1439,7 +1439,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
   /**
    * @attribute inh
    * @aspect LookupMethod
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:34
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:34
    */
   public MethodDecl unknownMethod() {
     ASTNode$State state = state();
@@ -1448,7 +1448,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     return unknownMethod_value;
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:450
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:450
    * @apilevel internal
    */
   public boolean Define_boolean_isDAbefore(ASTNode caller, ASTNode child, Variable v) {
@@ -1460,7 +1460,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:911
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:911
    * @apilevel internal
    */
   public boolean Define_boolean_isDUbefore(ASTNode caller, ASTNode child, Variable v) {
@@ -1472,7 +1472,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:144
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:144
    * @apilevel internal
    */
   public boolean Define_boolean_handlesException(ASTNode caller, ASTNode child, TypeDecl exceptionType) {
@@ -1484,7 +1484,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:46
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:46
    * @apilevel internal
    */
   public SimpleSet Define_SimpleSet_lookupVariable(ASTNode caller, ASTNode child, String name) {
@@ -1504,7 +1504,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:271
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:271
    * @apilevel internal
    */
   public boolean Define_boolean_mayBePublic(ASTNode caller, ASTNode child) {
@@ -1516,7 +1516,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:272
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:272
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeProtected(ASTNode caller, ASTNode child) {
@@ -1528,7 +1528,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:273
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:273
    * @apilevel internal
    */
   public boolean Define_boolean_mayBePrivate(ASTNode caller, ASTNode child) {
@@ -1540,7 +1540,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:274
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:274
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeAbstract(ASTNode caller, ASTNode child) {
@@ -1552,7 +1552,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:275
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:275
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeStatic(ASTNode caller, ASTNode child) {
@@ -1564,7 +1564,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:276
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:276
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeFinal(ASTNode caller, ASTNode child) {
@@ -1576,7 +1576,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:277
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:277
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeSynchronized(ASTNode caller, ASTNode child) {
@@ -1588,7 +1588,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:278
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:278
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeNative(ASTNode caller, ASTNode child) {
@@ -1600,7 +1600,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:279
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:279
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeStrictfp(ASTNode caller, ASTNode child) {
@@ -1612,7 +1612,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:272
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:272
    * @apilevel internal
    */
   public ASTNode Define_ASTNode_enclosingBlock(ASTNode caller, ASTNode child) {
@@ -1624,7 +1624,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:82
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:82
    * @apilevel internal
    */
   public NameType Define_NameType_nameType(ASTNode caller, ASTNode child) {
@@ -1644,7 +1644,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:408
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:408
    * @apilevel internal
    */
   public TypeDecl Define_TypeDecl_returnType(ASTNode caller, ASTNode child) {
@@ -1656,7 +1656,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:169
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:169
    * @apilevel internal
    */
   public boolean Define_boolean_inStaticContext(ASTNode caller, ASTNode child) {
@@ -1668,7 +1668,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:33
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:33
    * @apilevel internal
    */
   public boolean Define_boolean_reachable(ASTNode caller, ASTNode child) {
@@ -1680,7 +1680,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:61
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:61
    * @apilevel internal
    */
   public boolean Define_boolean_isMethodParameter(ASTNode caller, ASTNode child) {
@@ -1693,7 +1693,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:62
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:62
    * @apilevel internal
    */
   public boolean Define_boolean_isConstructorParameter(ASTNode caller, ASTNode child) {
@@ -1706,7 +1706,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:63
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:63
    * @apilevel internal
    */
   public boolean Define_boolean_isExceptionHandlerParameter(ASTNode caller, ASTNode child) {
@@ -1719,7 +1719,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:86
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:86
    * @apilevel internal
    */
   public boolean Define_boolean_mayUseAnnotationTarget(ASTNode caller, ASTNode child, String name) {
@@ -1731,7 +1731,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/VariableArityParameters.jrag:22
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/VariableArityParameters.jrag:22
    * @apilevel internal
    */
   public boolean Define_boolean_variableArityValid(ASTNode caller, ASTNode child) {
@@ -1744,7 +1744,7 @@ public class MethodDecl extends MemberDecl implements Cloneable, SimpleSet, Iter
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:99
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:99
    * @apilevel internal
    */
   public SmallSet<CFGNode> Define_SmallSet_CFGNode__following(ASTNode caller, ASTNode child) {

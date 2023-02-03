@@ -23,7 +23,7 @@ import java.util.Iterator;
 public class List<T extends ASTNode> extends ASTNode<T> implements Cloneable {
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:848
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:848
    */
   public List substitute(Parameterization parTypeDecl) {
     List list = new List();

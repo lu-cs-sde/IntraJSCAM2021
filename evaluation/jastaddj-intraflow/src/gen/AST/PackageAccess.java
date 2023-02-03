@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:28
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:28
  * @production PackageAccess : {@link Access} ::= <span class="component">&lt;Package:String&gt;</span>;
 
  */
 public class PackageAccess extends Access implements Cloneable {
   /**
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:73
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:73
    */
   public void nameCheck() {
     if (!hasPackage(packageName())) {
@@ -33,7 +33,7 @@ public class PackageAccess extends Access implements Cloneable {
   }
   /**
    * @aspect NodeConstructors
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:18
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:18
    */
   public PackageAccess(String name, int start, int end) {
     this(name);
@@ -42,7 +42,7 @@ public class PackageAccess extends Access implements Cloneable {
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:529
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:529
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(getPackage());
@@ -189,7 +189,7 @@ public class PackageAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect LookupFullyQualifiedTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:86
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:86
    */
   public boolean hasQualifiedPackage(String packageName) {
     ASTNode$State state = state();
@@ -200,7 +200,7 @@ public class PackageAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:402
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:402
    */
   public SimpleSet qualifiedLookupType(String name) {
     ASTNode$State state = state();
@@ -228,7 +228,7 @@ public class PackageAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect VariableScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:148
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:148
    */
   public SimpleSet qualifiedLookupVariable(String name) {
     ASTNode$State state = state();
@@ -239,7 +239,7 @@ public class PackageAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:821
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:821
    */
   public String dumpString() {
     ASTNode$State state = state();
@@ -250,7 +250,7 @@ public class PackageAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect Names
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:23
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:23
    */
   public String name() {
     ASTNode$State state = state();
@@ -261,7 +261,7 @@ public class PackageAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect Names
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:25
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:25
    */
   public String packageName() {
     ASTNode$State state = state();
@@ -280,7 +280,7 @@ public class PackageAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect AccessTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:37
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:37
    */
   public boolean isPackageAccess() {
     ASTNode$State state = state();
@@ -291,7 +291,7 @@ public class PackageAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect SyntacticClassification
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:56
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:56
    */
   public NameType predNameType() {
     ASTNode$State state = state();
@@ -302,7 +302,7 @@ public class PackageAccess extends Access implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeHierarchyCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:20
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:20
    */
   public boolean isUnknown() {
     ASTNode$State state = state();
@@ -313,7 +313,7 @@ public class PackageAccess extends Access implements Cloneable {
   /**
    * @attribute inh
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:269
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:269
    */
   public boolean hasPackage(String packageName) {
     ASTNode$State state = state();

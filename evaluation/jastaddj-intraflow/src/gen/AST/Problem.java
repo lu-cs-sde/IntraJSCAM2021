@@ -17,7 +17,7 @@ import java.util.Iterator;
 /**
  * @ast class
  * @aspect ErrorCheck
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:92
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:92
  */
 public class Problem extends java.lang.Object implements Comparable {
 

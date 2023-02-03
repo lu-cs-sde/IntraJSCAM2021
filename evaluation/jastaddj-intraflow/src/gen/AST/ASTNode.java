@@ -23,13 +23,13 @@ import java.util.Iterator;
 public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Cloneable, Iterable<T> {
   /**
    * @aspect AccessControl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AccessControl.jrag:125
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AccessControl.jrag:125
    */
   public void accessControl() {
   }
   /**
    * @aspect AnonymousClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:96
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:96
    */
   protected void collectExceptions(Collection c, ASTNode target) {
     for(int i = 0; i < getNumChild(); i++)
@@ -37,7 +37,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect BranchTarget
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:69
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:69
    */
   public void collectBranches(Collection<Stmt> c) {
     for (int i = 0; i < getNumChild(); i++) {
@@ -46,7 +46,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect DeclareBeforeUse
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DeclareBeforeUse.jrag:13
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DeclareBeforeUse.jrag:13
    */
   public int varChildIndex(Block b) {
     ASTNode node = this;
@@ -57,7 +57,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect DeclareBeforeUse
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DeclareBeforeUse.jrag:31
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DeclareBeforeUse.jrag:31
    */
   public int varChildIndex(TypeDecl t) {
     ASTNode node = this;
@@ -70,13 +70,13 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect DefiniteAssignment
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:12
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:12
    */
   public void definiteAssignment() {
   }
   /**
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:463
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:463
    */
   protected boolean checkDUeverywhere(Variable v) {
     for(int i = 0; i < getNumChild(); i++)
@@ -86,7 +86,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:573
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:573
    */
   protected boolean isDescendantTo(ASTNode node) {
     if(this == node)
@@ -97,7 +97,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:12
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:12
    */
   protected
   String sourceFile() {
@@ -111,7 +111,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:35
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:35
    */
   public
   ASTNode setLocation(ASTNode node) {
@@ -121,7 +121,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:42
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:42
    */
   public
   ASTNode setStart(int i) {
@@ -130,13 +130,13 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:47
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:47
    */
   public
   int start() { return start; }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:49
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:49
    */
   public
   ASTNode setEnd(int i) {
@@ -145,19 +145,19 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:54
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:54
    */
   public
   int end() { return end; }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:57
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:57
    */
   public
   String location() { return "" + lineNumber() + "," + columnNumber(); }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:59
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:59
    */
   public
   String errorPrefix() {
@@ -165,7 +165,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:63
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:63
    */
   public
   String warningPrefix() {
@@ -173,7 +173,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:229
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:229
    */
   public void error(String s) {
     ASTNode node = this;
@@ -194,7 +194,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:247
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:247
    */
   public
   void warning(String s) {
@@ -207,7 +207,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:257
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:257
    */
   public
   void collectErrors() {
@@ -224,13 +224,13 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect ExceptionHandling
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:60
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:60
    */
   public void exceptionHandling() {
   }
   /**
    * @aspect ExceptionHandling
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:225
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:225
    */
   protected boolean reachedException(TypeDecl type) {
     for(int i = 0; i < getNumChild(); i++)
@@ -240,7 +240,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect LookupMethod
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:74
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:74
    */
   public static Collection removeInstanceMethods(Collection c) {
     c = new LinkedList(c);
@@ -254,7 +254,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * Utility method to put a SimpleSet-item in a signature map.
    * @aspect MemberMethods
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:444
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:444
    */
   protected static void putSimpleSetElement(Map<String,SimpleSet> map, String key, SimpleSet value) {
     SimpleSet set = map.get(key);
@@ -265,7 +265,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect VariableScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:182
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:182
    */
   public SimpleSet removeInstanceVariables(SimpleSet oldSet) {
     SimpleSet newSet = SimpleSet.emptySet;
@@ -278,14 +278,14 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:11
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:11
    */
   void checkModifiers() {
   }
   /**
    * @return a copy of the block as an NTAFinallyBlock
    * @aspect NTAFinally
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NTAFinally.jrag:33
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NTAFinally.jrag:33
    */
   protected static NTAFinallyBlock ntaFinallyBlock(FinallyHost origin, Stmt branch, Block block) {
     NTAFinallyBlock ntaBlock = new NTAFinallyBlock(origin);
@@ -306,13 +306,13 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:31
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:31
    */
   public void nameCheck() {
   }
   /**
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:34
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:34
    */
   public TypeDecl extractSingleType(SimpleSet c) {
     if(c.size() != 1)
@@ -321,7 +321,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect AddOptionsToProgram
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Options.jadd:14
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Options.jadd:14
    */
   public Options options() {
     return state().options;
@@ -330,7 +330,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
    * Pretty-print this ASTNode.
    * @return pretty-printed representation of this AST node
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:16
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:16
    */
   public String prettyPrint() {
     StringBuffer sb = new StringBuffer();
@@ -341,28 +341,28 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
    * Pretty print this AST node to the StringBuffer.
    * @param sb target for pretty printing
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:26
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:26
    */
   public void prettyPrint(StringBuffer sb) {
     throw new Error("Operation prettyPrint(StringBuffer) not implemented for " + getClass().getName());
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:31
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:31
    */
   public String toString() {
     return getClass().getName();
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:35
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:35
    */
   public void toString(StringBuffer sb) {
     prettyPrint(sb);
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:789
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:789
    */
   public String dumpTree() {
     StringBuffer sb = new StringBuffer();
@@ -371,7 +371,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:795
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:795
    */
   public void dumpTree(StringBuffer sb, int j) {
     for (int i = 0; i < j; i++) {
@@ -384,7 +384,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:805
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:805
    */
   public String dumpTreeNoRewrite() {
     StringBuffer sb = new StringBuffer();
@@ -393,7 +393,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:810
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:810
    */
   protected void dumpTreeNoRewrite(StringBuffer sb, int indent) {
     for (int i = 0; i < indent; i++) {
@@ -407,24 +407,24 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect PrimitiveTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:11
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrimitiveTypes.jrag:11
    */
   protected static final String PRIMITIVE_PACKAGE_NAME = "@primitive";
   /**
    * @aspect TypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:12
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:12
    */
   public void typeCheck() {
   }
   /**
    * @aspect UnreachableStatements
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:12
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:12
    */
   void checkUnreachableStmt() {
   }
   /**
    * @aspect VariableDeclarationTransformation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:134
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:134
    */
   public void clearLocations() {
     setStart(0);
@@ -434,7 +434,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect Enums
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:134
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:134
    */
   protected void transformEnumConstructors() {
     for(int i = 0; i < getNumChildNoTransform(); i++) {
@@ -445,7 +445,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect Enums
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:447
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:447
    */
   protected void checkEnum(EnumDecl enumDecl) {
     for(int i = 0; i < getNumChild(); i++)
@@ -453,7 +453,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:2
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:2
    */
   public String dotGraphAST() {
 		StringBuffer s = new StringBuffer();
@@ -466,19 +466,19 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 	}
   /**
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:32
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:32
    */
   protected int dotId = -1;
   /**
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:34
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:34
    */
   public void setDotId(int id) {
 		dotId = id;
 	}
   /**
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:43
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:43
    */
   public int dotGraphAST(StringBuffer s, int lastId) {
 		s.append("    ").append(nodeName()).append(" [");
@@ -491,7 +491,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 	}
   /**
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:62
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:62
    */
   public void appendTreeEdge(StringBuffer s, int childIndex, int childId) {
 		s.append("    ").append(nodeName()).append(" -> ");
@@ -500,7 +500,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 	}
   /**
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:68
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:68
    */
   public void appendNodeId(StringBuffer s, int childId) {
 		dotId = childId;
@@ -508,7 +508,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 	}
   /**
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:74
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:74
    */
   public String subGraphs() {
 		ArrayList<Set<String>> list = new ArrayList<Set<String>>();
@@ -526,7 +526,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 	}
   /**
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:92
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:92
    */
   public void subGraphs(ArrayList<Set<String>> list, int level) {
 		if (level >= list.size())
@@ -1047,7 +1047,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   }
   /**
    * @aspect <NoAspect>
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Candidates.jrag:4
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Candidates.jrag:4
    */
     protected void collect_contributors_CompilationUnit_candidates() {
     for(int i = 0; i < getNumChild(); i++) {
@@ -1059,7 +1059,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 
   /**
    * @aspect <NoAspect>
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/CollectAssigns.jrag:4
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/CollectAssigns.jrag:4
    */
     protected void collect_contributors_CompilationUnit_allAssigns() {
     for(int i = 0; i < getNumChild(); i++) {
@@ -1071,7 +1071,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 
   /**
    * @aspect <NoAspect>
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/CollectAssigns.jrag:32
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/CollectAssigns.jrag:32
    */
     protected void collect_contributors_CompilationUnit_descendingBodyDecls() {
     for(int i = 0; i < getNumChild(); i++) {
@@ -1083,7 +1083,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 
   /**
    * @aspect <NoAspect>
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:63
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:63
    */
     protected void collect_contributors_CompilationUnit_methods() {
     for(int i = 0; i < getNumChild(); i++) {
@@ -1095,7 +1095,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 
   /**
    * @aspect <NoAspect>
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:15
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:15
    */
     protected void collect_contributors_CompilationUnit_deadAssignments() {
     for(int i = 0; i < getNumChild(); i++) {
@@ -1107,7 +1107,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 
   /**
    * @aspect <NoAspect>
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:50
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:50
    */
     protected void collect_contributors_ClassInstanceExpr_anonymousUses() {
     for(int i = 0; i < getNumChild(); i++) {
@@ -1119,7 +1119,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 
   /**
    * @aspect <NoAspect>
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:19
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:19
    */
     protected void collect_contributors_CFGNode_collPred() {
     for(int i = 0; i < getNumChild(); i++) {
@@ -1131,7 +1131,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 
   /**
    * @aspect <NoAspect>
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:9
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:9
    */
     protected void collect_contributors_CFGNode_def() {
     for(int i = 0; i < getNumChild(); i++) {
@@ -1143,7 +1143,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 
   /**
    * @aspect <NoAspect>
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:17
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:17
    */
     protected void collect_contributors_CFGNode_coll_liveness_out() {
     for(int i = 0; i < getNumChild(); i++) {
@@ -1155,7 +1155,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
 
   /**
    * @aspect <NoAspect>
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:164
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:164
    */
     protected void collect_contributors_SwitchStmt_childCases() {
     for(int i = 0; i < getNumChild(); i++) {
@@ -1168,7 +1168,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1254
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1254
    */
   public boolean unassignedEverywhere(Variable v, TryStmt stmt) {
     ASTNode$State state = state();
@@ -1185,7 +1185,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * @attribute syn
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:23
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:23
    */
   public int lineNumber() {
     ASTNode$State state = state();
@@ -1202,7 +1202,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * @attribute syn
    * @aspect ErrorCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:68
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ErrorCheck.jrag:68
    */
   public int columnNumber() {
     ASTNode$State state = state();
@@ -1219,7 +1219,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * @attribute syn
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:763
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:763
    */
   public String indent() {
     ASTNode$State state = state();
@@ -1233,7 +1233,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * @attribute syn
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:768
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:768
    */
   public String extractIndent() {
     ASTNode$State state = state();
@@ -1251,7 +1251,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * @attribute syn
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:777
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:777
    */
   public boolean addsIndentationLevel() {
     ASTNode$State state = state();
@@ -1262,7 +1262,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * @attribute syn
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:821
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:821
    */
   public String dumpString() {
     ASTNode$State state = state();
@@ -1273,7 +1273,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:923
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:923
    */
   public boolean usesTypeVariable() {
     ASTNode$State state = state();
@@ -1289,7 +1289,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * @attribute syn
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:53
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:53
    */
   public String nodeName() {
     ASTNode$State state = state();
@@ -1300,7 +1300,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * @attribute syn
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:54
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:54
    */
   public String dotAttributes() {
     ASTNode$State state = state();
@@ -1319,7 +1319,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
   /**
    * @attribute syn
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:89
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:89
    */
   public String entryExitRank() {
     if(entryExitRank_computed) {
@@ -1365,7 +1365,7 @@ public class ASTNode<T extends ASTNode> extends beaver.Symbol  implements Clonea
    * catch clauses.
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:633
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:633
    */
   public SmallSet<CFGNode> interceptedAbruptStmts() {
     ASTNode$State state = state();

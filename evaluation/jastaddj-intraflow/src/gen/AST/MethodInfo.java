@@ -17,7 +17,7 @@ import java.util.Iterator;
 /**
  * @ast class
  * @aspect BytecodeDescriptor
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/BytecodeDescriptor.jrag:130
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/BytecodeDescriptor.jrag:130
  */
  class MethodInfo extends java.lang.Object {
 

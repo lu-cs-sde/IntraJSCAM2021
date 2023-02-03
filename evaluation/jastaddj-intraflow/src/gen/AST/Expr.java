@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:103
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:103
  * @production Expr : {@link ASTNode};
 
  */
 public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNode {
   /**
    * @aspect TypeScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:433
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:433
    */
   public SimpleSet keepAccessibleTypes(SimpleSet oldSet) {
     SimpleSet newSet = SimpleSet.emptySet;
@@ -40,7 +40,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
    * Remove fields that are not accessible when using this Expr as qualifier
    * @return a set containing the accessible fields
    * @aspect VariableScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:169
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:169
    */
   public SimpleSet keepAccessibleFields(SimpleSet oldSet) {
     SimpleSet newSet = SimpleSet.emptySet;
@@ -58,7 +58,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
    * @see "JLS $6.6.2.1"
    * @return true if the expression may access the given field
    * @aspect VariableScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:196
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:196
    */
   public boolean mayAccess(FieldDeclaration f) {
     if(f.isPublic()) {
@@ -75,7 +75,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   }
   /**
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:106
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:106
    */
   public Dot qualifiesAccess(Access access) {
     Dot dot = new Dot(this, access);
@@ -85,7 +85,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   }
   /**
    * @aspect MethodSignature15
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:91
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:91
    */
   protected SimpleSet chooseConstructor(Collection constructors, List argList) {
     SimpleSet potentiallyApplicable = SimpleSet.emptySet;
@@ -124,7 +124,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   }
   /**
    * @aspect MethodSignature15
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:128
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:128
    */
   protected static SimpleSet mostSpecific(SimpleSet maxSpecific, ConstructorDecl decl) {
     if(maxSpecific.isEmpty())
@@ -139,12 +139,12 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   }
   /**
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:30
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:30
    */
   public SmallSet<CFGNode> pred() { return collPred(); }
   /**
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:16
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:16
    */
   public BitSet liveness_out() { return coll_liveness_out(); }
   /**
@@ -267,13 +267,13 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:276
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:276
    */
   public abstract TypeDecl type();
   /**
    * @attribute syn
    * @aspect ConstantExpression
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:11
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:11
    */
   public Constant constant() {
     ASTNode$State state = state();
@@ -287,7 +287,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect ConstantExpression
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:199
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:199
    */
   public boolean representableIn(TypeDecl t) {
     ASTNode$State state = state();
@@ -311,7 +311,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect ConstantExpression
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:227
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:227
    */
   public boolean isConstant() {
     ASTNode$State state = state();
@@ -322,7 +322,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect ConstantExpression
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:256
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:256
    */
   public boolean isTrue() {
     ASTNode$State state = state();
@@ -333,7 +333,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect ConstantExpression
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:257
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:257
    */
   public boolean isFalse() {
     ASTNode$State state = state();
@@ -344,7 +344,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect DefiniteAssignment
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:58
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:58
    */
   public Variable varDecl() {
     ASTNode$State state = state();
@@ -355,7 +355,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:346
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:346
    */
   public boolean isDAafterFalse(Variable v) {
     ASTNode$State state = state();
@@ -366,7 +366,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:345
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:345
    */
   public boolean isDAafterTrue(Variable v) {
     ASTNode$State state = state();
@@ -377,7 +377,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:235
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:235
    */
   public boolean isDAafter(Variable v) {
     ASTNode$State state = state();
@@ -388,7 +388,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:716
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:716
    */
   public boolean isDUafterFalse(Variable v) {
     ASTNode$State state = state();
@@ -403,7 +403,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:715
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:715
    */
   public boolean isDUafterTrue(Variable v) {
     ASTNode$State state = state();
@@ -418,7 +418,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:707
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:707
    */
   public boolean isDUafter(Variable v) {
     ASTNode$State state = state();
@@ -432,7 +432,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
    * the curent context (this) is used to evaluate the hostType for accessibility
    * @attribute syn
    * @aspect ConstructScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupConstructor.jrag:34
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupConstructor.jrag:34
    */
   public SimpleSet mostSpecificConstructor(Collection constructors) {
     ASTNode$State state = state();
@@ -459,7 +459,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect ConstructScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupConstructor.jrag:52
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupConstructor.jrag:52
    */
   public boolean applicableAndAccessible(ConstructorDecl decl) {
     ASTNode$State state = state();
@@ -470,7 +470,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect LookupFullyQualifiedTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:86
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:86
    */
   public boolean hasQualifiedPackage(String packageName) {
     ASTNode$State state = state();
@@ -481,7 +481,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect TypeScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:402
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:402
    */
   public SimpleSet qualifiedLookupType(String name) {
     ASTNode$State state = state();
@@ -492,7 +492,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect VariableScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:148
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:148
    */
   public SimpleSet qualifiedLookupVariable(String name) {
     ASTNode$State state = state();
@@ -507,7 +507,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect PositiveLiterals
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PositiveLiterals.jrag:15
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PositiveLiterals.jrag:15
    */
   public boolean isPositive() {
     ASTNode$State state = state();
@@ -518,7 +518,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect Names
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:25
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:25
    */
   public String packageName() {
     ASTNode$State state = state();
@@ -529,7 +529,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect Names
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:63
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:63
    */
   public String typeName() {
     ASTNode$State state = state();
@@ -540,7 +540,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect AccessTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:13
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:13
    */
   public boolean isTypeAccess() {
     ASTNode$State state = state();
@@ -551,7 +551,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect AccessTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:17
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:17
    */
   public boolean isMethodAccess() {
     ASTNode$State state = state();
@@ -562,7 +562,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect AccessTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:21
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:21
    */
   public boolean isFieldAccess() {
     ASTNode$State state = state();
@@ -573,7 +573,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect AccessTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:25
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:25
    */
   public boolean isSuperAccess() {
     ASTNode$State state = state();
@@ -584,7 +584,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect AccessTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:31
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:31
    */
   public boolean isThisAccess() {
     ASTNode$State state = state();
@@ -595,7 +595,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect AccessTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:37
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:37
    */
   public boolean isPackageAccess() {
     ASTNode$State state = state();
@@ -606,7 +606,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect AccessTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:41
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:41
    */
   public boolean isArrayAccess() {
     ASTNode$State state = state();
@@ -617,7 +617,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect AccessTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:45
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:45
    */
   public boolean isClassAccess() {
     ASTNode$State state = state();
@@ -628,7 +628,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect AccessTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:49
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:49
    */
   public boolean isSuperConstructorAccess() {
     ASTNode$State state = state();
@@ -639,7 +639,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:55
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:55
    */
   public boolean isLeftChildOfDot() {
     ASTNode$State state = state();
@@ -650,7 +650,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:56
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:56
    */
   public boolean isRightChildOfDot() {
     ASTNode$State state = state();
@@ -661,7 +661,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:69
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:69
    */
   public AbstractDot parentDot() {
     ASTNode$State state = state();
@@ -672,7 +672,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:70
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:70
    */
   public boolean hasParentDot() {
     ASTNode$State state = state();
@@ -683,7 +683,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:72
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:72
    */
   public Access nextAccess() {
     ASTNode$State state = state();
@@ -694,7 +694,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:73
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:73
    */
   public boolean hasNextAccess() {
     ASTNode$State state = state();
@@ -705,7 +705,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect NestedTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:511
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:511
    */
   public Stmt enclosingStmt() {
     ASTNode$State state = state();
@@ -721,7 +721,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect TypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:15
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:15
    */
   public boolean isVariable() {
     ASTNode$State state = state();
@@ -732,7 +732,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect TypeHierarchyCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:20
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:20
    */
   public boolean isUnknown() {
     ASTNode$State state = state();
@@ -743,7 +743,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect TypeHierarchyCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:177
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:177
    */
   public boolean staticContextQualifier() {
     ASTNode$State state = state();
@@ -754,7 +754,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect Enums
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:503
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Enums.jrag:503
    */
   public boolean isEnumConstant() {
     ASTNode$State state = state();
@@ -765,7 +765,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:39
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:39
    */
   public int getDotId() {
     ASTNode$State state = state();
@@ -776,7 +776,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:56
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:56
    */
   public String dotAttributes() {
     ASTNode$State state = state();
@@ -787,7 +787,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect Helpers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:43
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:43
    */
   public boolean isLocalStore() {
     ASTNode$State state = state();
@@ -798,7 +798,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:29
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:29
    */
   public BitSet liveness_def() {
     ASTNode$State state = state();
@@ -817,7 +817,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:110
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:110
    */
   public SmallSet<CFGNode> exceptionalSucc() {
     if(exceptionalSucc_computed) {
@@ -849,7 +849,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:113
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:113
    */
   public SmallSet<CFGNode> succ() {
     if(succ_computed) {
@@ -881,7 +881,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:24
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:24
    */
   public boolean includeInDeadAssignAnalysis() {
     if(includeInDeadAssignAnalysis_computed) {
@@ -913,7 +913,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:38
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:38
    */
   public boolean isDeadAssign() {
     if(isDeadAssign_computed) {
@@ -945,7 +945,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:9
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:9
    */
   public boolean isDead() {
     if(isDead_computed) {
@@ -985,7 +985,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:13
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:13
    */
   public BitSet liveness_in() {
     if(liveness_in_computed) {
@@ -1048,7 +1048,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute syn
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:39
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:39
    */
   public BitSet liveness_use() {
     ASTNode$State state = state();
@@ -1059,7 +1059,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect DefiniteAssignment
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:15
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:15
    */
   public boolean isDest() {
     ASTNode$State state = state();
@@ -1070,7 +1070,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect DefiniteAssignment
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:25
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:25
    */
   public boolean isSource() {
     ASTNode$State state = state();
@@ -1081,7 +1081,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect DefiniteAssignment
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:49
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:49
    */
   public boolean isIncOrDec() {
     ASTNode$State state = state();
@@ -1092,7 +1092,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:234
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:234
    */
   public boolean isDAbefore(Variable v) {
     ASTNode$State state = state();
@@ -1103,7 +1103,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:706
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:706
    */
   public boolean isDUbefore(Variable v) {
     ASTNode$State state = state();
@@ -1114,7 +1114,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect LookupMethod
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:43
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:43
    */
   public Collection lookupMethod(String name) {
     ASTNode$State state = state();
@@ -1125,7 +1125,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:49
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:49
    */
   public TypeDecl typeBoolean() {
     ASTNode$State state = state();
@@ -1136,7 +1136,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:50
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:50
    */
   public TypeDecl typeByte() {
     ASTNode$State state = state();
@@ -1147,7 +1147,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:51
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:51
    */
   public TypeDecl typeShort() {
     ASTNode$State state = state();
@@ -1158,7 +1158,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:52
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:52
    */
   public TypeDecl typeChar() {
     ASTNode$State state = state();
@@ -1169,7 +1169,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:53
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:53
    */
   public TypeDecl typeInt() {
     ASTNode$State state = state();
@@ -1180,7 +1180,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:54
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:54
    */
   public TypeDecl typeLong() {
     ASTNode$State state = state();
@@ -1191,7 +1191,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:55
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:55
    */
   public TypeDecl typeFloat() {
     ASTNode$State state = state();
@@ -1202,7 +1202,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:56
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:56
    */
   public TypeDecl typeDouble() {
     ASTNode$State state = state();
@@ -1213,7 +1213,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:57
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:57
    */
   public TypeDecl typeString() {
     ASTNode$State state = state();
@@ -1224,7 +1224,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:58
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:58
    */
   public TypeDecl typeVoid() {
     ASTNode$State state = state();
@@ -1235,7 +1235,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:59
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:59
    */
   public TypeDecl typeNull() {
     ASTNode$State state = state();
@@ -1246,7 +1246,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:72
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:72
    */
   public TypeDecl unknownType() {
     ASTNode$State state = state();
@@ -1257,7 +1257,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect LookupFullyQualifiedTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:89
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:89
    */
   public boolean hasPackage(String packageName) {
     ASTNode$State state = state();
@@ -1268,7 +1268,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect LookupFullyQualifiedTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:98
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:98
    */
   public TypeDecl lookupType(String packageName, String typeName) {
     ASTNode$State state = state();
@@ -1279,7 +1279,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect TypeScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:230
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:230
    */
   public SimpleSet lookupType(String name) {
     ASTNode$State state = state();
@@ -1290,7 +1290,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect VariableScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:19
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:19
    */
   public SimpleSet lookupVariable(String name) {
     ASTNode$State state = state();
@@ -1301,7 +1301,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect SyntacticClassification
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:20
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:20
    */
   public NameType nameType() {
     ASTNode$State state = state();
@@ -1312,7 +1312,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect NestedTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:518
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:518
    */
   public BodyDecl enclosingBodyDecl() {
     ASTNode$State state = state();
@@ -1323,7 +1323,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect NestedTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:575
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:575
    */
   public String hostPackage() {
     ASTNode$State state = state();
@@ -1334,7 +1334,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect NestedTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:591
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:591
    */
   public TypeDecl hostType() {
     ASTNode$State state = state();
@@ -1345,7 +1345,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect TypeHierarchyCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:11
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:11
    */
   public String methodHost() {
     ASTNode$State state = state();
@@ -1356,7 +1356,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect TypeHierarchyCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:161
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:161
    */
   public boolean inStaticContext() {
     ASTNode$State state = state();
@@ -1367,7 +1367,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:33
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:33
    */
   public TypeDecl assignConvertedType() {
     ASTNode$State state = state();
@@ -1378,7 +1378,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect GenericsTypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:285
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:285
    */
   public boolean inExtendsOrImplements() {
     ASTNode$State state = state();
@@ -1389,7 +1389,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:431
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:431
    */
   public SmallSet<CFGNode> throwTarget(TypeDecl type) {
     ASTNode$State state = state();
@@ -1400,7 +1400,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:516
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:516
    */
   public SmallSet<CFGNode> followingWhenTrue() {
     ASTNode$State state = state();
@@ -1411,7 +1411,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:517
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:517
    */
   public SmallSet<CFGNode> followingWhenFalse() {
     ASTNode$State state = state();
@@ -1422,7 +1422,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:707
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:707
    */
   public SmallSet<CFGNode> uncheckedExceptionTarget() {
     if(uncheckedExceptionTarget_computed) {
@@ -1450,7 +1450,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:13
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:13
    */
   public SmallSet emptySmallSet() {
     if(emptySmallSet_computed) {
@@ -1478,7 +1478,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:35
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:35
    */
   public SmallSet<CFGNode> following() {
     if(following_computed) {
@@ -1506,7 +1506,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:5
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:5
    */
   public CompilationUnit enclosingCompilationUnit() {
     if(enclosingCompilationUnit_computed) {
@@ -1534,7 +1534,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute inh
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:5
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:5
    */
   public BitSet emptyBitSet() {
     if(emptyBitSet_computed) {
@@ -1566,7 +1566,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   }  /**
    * @attribute coll
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:19
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:19
    */
   public SmallSet<CFGNode> collPred() {
     if(CFGNode_collPred_computed) {
@@ -1626,7 +1626,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute coll
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:9
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:9
    */
   public BitSet def() {
     if(CFGNode_def_computed) {
@@ -1706,7 +1706,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute coll
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:17
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:17
    */
   public BitSet coll_liveness_out() {
     if(CFGNode_coll_liveness_out_computed) {
@@ -1800,7 +1800,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute coll
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:21
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:21
    */
       for(java.util.Iterator iter = (succ()).iterator(); iter.hasNext(); ) {
         CFGNode ref = (CFGNode) iter.next();
@@ -1814,7 +1814,7 @@ public abstract class Expr extends ASTNode<ASTNode> implements Cloneable, CFGNod
   /**
    * @attribute coll
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:19
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:19
    */
       for(java.util.Iterator iter = (pred()).iterator(); iter.hasNext(); ) {
         CFGNode ref = (CFGNode) iter.next();

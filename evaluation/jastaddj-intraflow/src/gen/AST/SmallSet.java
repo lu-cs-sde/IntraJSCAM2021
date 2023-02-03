@@ -17,7 +17,7 @@ import java.util.Iterator;
 /**
  * @ast class
  * @aspect Sets
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Sets.jrag:246
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Sets.jrag:246
  */
 public class SmallSet<T> extends java.lang.Object implements Iterable<T> {
 

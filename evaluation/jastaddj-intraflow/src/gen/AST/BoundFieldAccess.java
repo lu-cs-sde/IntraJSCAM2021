@@ -17,21 +17,21 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/BoundNames.ast:6
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/BoundNames.ast:6
  * @production BoundFieldAccess : {@link VarAccess} ::= <span class="component">&lt;FieldDeclaration:FieldDeclaration&gt;</span>;
 
  */
 public class BoundFieldAccess extends VarAccess implements Cloneable {
   /**
    * @aspect BoundNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:68
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:68
    */
   public BoundFieldAccess(FieldDeclaration f) {
     this(f.name(), f);
   }
   /**
    * @aspect BoundNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:73
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:73
    */
   public boolean isExactVarAccess() {
     return false;
@@ -202,7 +202,7 @@ public class BoundFieldAccess extends VarAccess implements Cloneable {
   /**
    * @attribute syn
    * @aspect BoundNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:72
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:72
    */
   public Variable decl() {
     if(decl_computed) {

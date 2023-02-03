@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:31
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:31
  * @production ConstructorDeclSubstituted : {@link ConstructorDecl} ::= <span class="component">&lt;Original:ConstructorDecl&gt;</span>;
 
  */
@@ -510,7 +510,7 @@ public class ConstructorDeclSubstituted extends ConstructorDecl implements Clone
   /**
    * @attribute syn
    * @aspect SourceDeclarations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1312
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1312
    */
   public ConstructorDecl sourceConstructorDecl() {
     if(sourceConstructorDecl_computed) {

@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:26
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:26
  * @production WildcardType : {@link AbstractWildcardType};
 
  */
@@ -295,7 +295,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:584
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:584
    */
   public boolean sameSignature(Access a) {
     ASTNode$State state = state();
@@ -311,7 +311,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:45
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:45
    */
   public boolean subtype(TypeDecl type) {
     Object _parameters = type;
@@ -379,7 +379,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:46
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:46
    */
   public boolean supertypeWildcard(WildcardType type) {
     ASTNode$State state = state();
@@ -390,7 +390,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:57
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:57
    */
   public boolean supertypeWildcardExtends(WildcardExtendsType type) {
     ASTNode$State state = state();
@@ -401,7 +401,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:66
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:66
    */
   public boolean supertypeWildcardSuper(WildcardSuperType type) {
     ASTNode$State state = state();
@@ -412,7 +412,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:421
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:421
    */
   public boolean supertypeClassDecl(ClassDecl type) {
     ASTNode$State state = state();
@@ -423,7 +423,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:439
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:439
    */
   public boolean supertypeInterfaceDecl(InterfaceDecl type) {
     ASTNode$State state = state();
@@ -434,7 +434,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:125
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:125
    */
   public boolean supertypeParClassDecl(ParClassDecl type) {
     ASTNode$State state = state();
@@ -445,7 +445,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:129
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:129
    */
   public boolean supertypeParInterfaceDecl(ParInterfaceDecl type) {
     ASTNode$State state = state();
@@ -456,7 +456,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:26
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:26
    */
   public boolean supertypeRawClassDecl(RawClassDecl type) {
     ASTNode$State state = state();
@@ -467,7 +467,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:30
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:30
    */
   public boolean supertypeRawInterfaceDecl(RawInterfaceDecl type) {
     ASTNode$State state = state();
@@ -478,7 +478,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:291
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:291
    */
   public boolean supertypeTypeVariable(TypeVariable type) {
     ASTNode$State state = state();
@@ -489,7 +489,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:454
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:454
    */
   public boolean supertypeArrayDecl(ArrayDecl type) {
     ASTNode$State state = state();
@@ -501,7 +501,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:169
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:169
    */
   public boolean containedIn(TypeDecl type) {
     Object _parameters = type;
@@ -577,7 +577,7 @@ public class WildcardType extends AbstractWildcardType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:401
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:401
    */
   public boolean instanceOf(TypeDecl type) {
     Object _parameters = type;

@@ -19,7 +19,7 @@ import java.util.Iterator;
  * files.
  * @ast class
  * @aspect PathPart
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PathPart.jadd:355
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PathPart.jadd:355
  */
 public abstract class FolderPath extends PathPart {
 

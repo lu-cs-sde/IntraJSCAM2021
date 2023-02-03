@@ -17,21 +17,21 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:44
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:44
  * @production PrimitiveType : {@link TypeDecl} ::= <span class="component">{@link Modifiers}</span> <span class="component">&lt;ID:String&gt;</span> <span class="component">[SuperClass:{@link Access}]</span> <span class="component">{@link BodyDecl}*</span>;
 
  */
 public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @aspect CreateQualifiedAccesses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:109
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:109
    */
   public Access createQualifiedAccess() {
     return new PrimitiveTypeAccess(name());
   }
   /**
    * @aspect SuperClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:614
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:614
    */
   public boolean hasSuperclass() {
     return !isObject();
@@ -362,7 +362,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeConversion
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:17
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:17
    */
   public boolean wideningConversionTo(TypeDecl type) {
     ASTNode$State state = state();
@@ -374,7 +374,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeConversion
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:27
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:27
    */
   public boolean narrowingConversionTo(TypeDecl type) {
     Object _parameters = type;
@@ -400,7 +400,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:168
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:168
    */
   public boolean isPrimitiveType() {
     ASTNode$State state = state();
@@ -411,7 +411,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:221
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:221
    */
   public boolean isPrimitive() {
     ASTNode$State state = state();
@@ -423,7 +423,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:390
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:390
    */
   public boolean instanceOf(TypeDecl type) {
     Object _parameters = type;
@@ -449,7 +449,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeWideningAndIdentity
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:480
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:480
    */
   public boolean isSupertypeOfPrimitiveType(PrimitiveType type) {
     ASTNode$State state = state();
@@ -464,7 +464,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect SuperClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:618
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:618
    */
   public TypeDecl superclass() {
     ASTNode$State state = state();
@@ -475,7 +475,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:121
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:121
    */
   public boolean isValidAnnotationMethodReturnType() {
     ASTNode$State state = state();
@@ -486,7 +486,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect AutoBoxing
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/AutoBoxing.jrag:31
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/AutoBoxing.jrag:31
    */
   public boolean boxingConversionTo(TypeDecl typeDecl) {
     ASTNode$State state = state();
@@ -498,7 +498,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:410
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:410
    */
   public boolean subtype(TypeDecl type) {
     Object _parameters = type;
@@ -566,7 +566,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:478
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:478
    */
   public boolean supertypePrimitiveType(PrimitiveType type) {
     ASTNode$State state = state();
@@ -579,7 +579,7 @@ public class PrimitiveType extends TypeDecl implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:582
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:582
    * @apilevel internal
    */
   public TypeDecl Define_TypeDecl_hostType(ASTNode caller, ASTNode child) {

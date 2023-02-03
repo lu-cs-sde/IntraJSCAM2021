@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/cfg.ast:4
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/cfg.ast:4
  * @production CFGEntry : {@link EmptyStmt};
 
  */
@@ -114,7 +114,7 @@ public class CFGEntry extends EmptyStmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:59
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:59
    */
   public String dotAttributes() {
     ASTNode$State state = state();
@@ -125,7 +125,7 @@ public class CFGEntry extends EmptyStmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:124
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:124
    */
   public String toString() {
     ASTNode$State state = state();

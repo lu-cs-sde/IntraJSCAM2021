@@ -19,19 +19,19 @@ import java.util.Iterator;
  * Used in code generation to represent the implicit monitor exit
  * call at the end of a synchronized block.
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:221
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:221
  * @production MonitorExit : {@link Block};
 
  */
 public class MonitorExit extends Block implements Cloneable {
   /**
    * @aspect MonitorExit
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/MonitorExit.jrag:14
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/MonitorExit.jrag:14
    */
   protected SynchronizedStmt monitor = null;
   /**
    * @aspect MonitorExit
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/MonitorExit.jrag:16
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/MonitorExit.jrag:16
    */
   public MonitorExit(SynchronizedStmt sync) {
     monitor = sync;

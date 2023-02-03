@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:9
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:9
  * @production ImportDecl : {@link ASTNode} ::= <span class="component">{@link Access}</span>;
 
  */
@@ -117,7 +117,7 @@ public abstract class ImportDecl extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:288
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:288
    */
   public SimpleSet importedTypes(String name) {
     Object _parameters = name;
@@ -143,7 +143,7 @@ public abstract class ImportDecl extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:317
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:317
    */
   public boolean isOnDemand() {
     ASTNode$State state = state();
@@ -154,7 +154,7 @@ public abstract class ImportDecl extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Names
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:52
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:52
    */
   public String typeName() {
     ASTNode$State state = state();
@@ -176,7 +176,7 @@ public abstract class ImportDecl extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:30
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:30
    */
   public SimpleSet importedFields(String name) {
     Object _parameters = name;
@@ -203,7 +203,7 @@ public abstract class ImportDecl extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:48
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:48
    */
   public Collection importedMethods(String name) {
     Object _parameters = name;
@@ -229,7 +229,7 @@ public abstract class ImportDecl extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect TypeScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:315
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:315
    */
   public String packageName() {
     ASTNode$State state = state();
@@ -238,7 +238,7 @@ public abstract class ImportDecl extends ASTNode<ASTNode> implements Cloneable {
     return packageName_value;
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:23
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:23
    * @apilevel internal
    */
   public boolean Define_boolean_isDest(ASTNode caller, ASTNode child) {
@@ -250,7 +250,7 @@ public abstract class ImportDecl extends ASTNode<ASTNode> implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:32
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:32
    * @apilevel internal
    */
   public boolean Define_boolean_isSource(ASTNode caller, ASTNode child) {

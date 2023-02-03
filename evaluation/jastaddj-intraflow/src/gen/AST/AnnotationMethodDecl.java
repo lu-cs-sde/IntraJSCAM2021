@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Annotations.ast:3
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Annotations.ast:3
  * @production AnnotationMethodDecl : {@link MethodDecl} ::= <span class="component">[DefaultValue:{@link ElementValue}]</span>;
 
  */
 public class AnnotationMethodDecl extends MethodDecl implements Cloneable {
   /**
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:168
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:168
    */
   public void typeCheck() {
     super.typeCheck();
@@ -33,7 +33,7 @@ public class AnnotationMethodDecl extends MethodDecl implements Cloneable {
   }
   /**
    * @aspect AnnotationPrettyPrinting
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:593
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:593
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(indent());
@@ -551,7 +551,7 @@ public class AnnotationMethodDecl extends MethodDecl implements Cloneable {
     return (Opt<ElementValue>) getChildNoTransform(5);
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:525
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:525
    * @apilevel internal
    */
   public TypeDecl Define_TypeDecl_declType(ASTNode caller, ASTNode child) {

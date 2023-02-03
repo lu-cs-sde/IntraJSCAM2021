@@ -20,14 +20,14 @@ import java.util.Iterator;
  * members declared in the type named by a canonical name to be imported as
  * needed.
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/StaticImports.ast:19
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/StaticImports.ast:19
  * @production StaticImportOnDemandDecl : {@link StaticImportDecl};
 
  */
 public class StaticImportOnDemandDecl extends StaticImportDecl implements Cloneable {
   /**
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:228
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:228
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append("import static ");
@@ -158,7 +158,7 @@ public class StaticImportOnDemandDecl extends StaticImportDecl implements Clonea
   /**
    * @attribute syn
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:67
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:67
    */
   public TypeDecl type() {
     ASTNode$State state = state();
@@ -169,7 +169,7 @@ public class StaticImportOnDemandDecl extends StaticImportDecl implements Clonea
   /**
    * @attribute syn
    * @aspect TypeScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:317
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:317
    */
   public boolean isOnDemand() {
     ASTNode$State state = state();
@@ -178,7 +178,7 @@ public class StaticImportOnDemandDecl extends StaticImportDecl implements Clonea
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:218
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:218
    * @apilevel internal
    */
   public NameType Define_NameType_nameType(ASTNode caller, ASTNode child) {

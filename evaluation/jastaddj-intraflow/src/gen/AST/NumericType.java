@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:52
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:52
  * @production NumericType : {@link PrimitiveType};
 
  */
@@ -311,7 +311,7 @@ public abstract class NumericType extends PrimitiveType implements Cloneable {
   }
   /**
    * @aspect NumericPromotion
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:155
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:155
    */
   private TypeDecl refined_NumericPromotion_NumericType_binaryNumericPromotion_TypeDecl(TypeDecl type)
 {
@@ -330,7 +330,7 @@ public abstract class NumericType extends PrimitiveType implements Cloneable {
   /**
    * @attribute syn
    * @aspect NumericPromotion
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:148
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:148
    */
   public TypeDecl unaryNumericPromotion() {
     if(unaryNumericPromotion_computed) {
@@ -355,7 +355,7 @@ public abstract class NumericType extends PrimitiveType implements Cloneable {
   /**
    * @attribute syn
    * @aspect AutoBoxing
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/AutoBoxing.jrag:175
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/AutoBoxing.jrag:175
    */
   public TypeDecl binaryNumericPromotion(TypeDecl type) {
     Object _parameters = type;
@@ -385,7 +385,7 @@ public abstract class NumericType extends PrimitiveType implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:173
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:173
    */
   public boolean isNumericType() {
     ASTNode$State state = state();

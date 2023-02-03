@@ -18,7 +18,7 @@ import java.util.Iterator;
 /**
  * 7.5 Import Declarations
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/StaticImports.ast:4
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/StaticImports.ast:4
  * @production StaticImportDecl : {@link ImportDecl};
 
  */
@@ -117,14 +117,14 @@ public abstract class StaticImportDecl extends ImportDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:67
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:67
    */
   public abstract TypeDecl type();
   protected java.util.Map importedTypes_String_values;
   /**
    * @attribute syn
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:21
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:21
    */
   public SimpleSet importedTypes(String name) {
     Object _parameters = name;
@@ -159,7 +159,7 @@ public abstract class StaticImportDecl extends ImportDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:31
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:31
    */
   public SimpleSet importedFields(String name) {
     Object _parameters = name;
@@ -195,7 +195,7 @@ public abstract class StaticImportDecl extends ImportDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect StaticImports
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:49
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/StaticImports.jrag:49
    */
   public Collection importedMethods(String name) {
     Object _parameters = name;

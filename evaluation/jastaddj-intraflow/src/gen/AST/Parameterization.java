@@ -17,7 +17,7 @@ import java.util.Iterator;
 /**
  * @ast interface
  * @aspect LookupParTypeDecl
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:687
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:687
  */
  interface Parameterization {
 

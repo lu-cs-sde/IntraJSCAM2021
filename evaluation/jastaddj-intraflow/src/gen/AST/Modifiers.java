@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:188
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:188
  * @production Modifiers : {@link ASTNode} ::= <span class="component">{@link Modifier}*</span>;
 
  */
 public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:314
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:314
    */
   public void checkModifiers() {
     super.checkModifiers();
@@ -71,7 +71,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:454
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:454
    */
   public void prettyPrint(StringBuffer sb) {
     for(int i = 0; i < getNumModifier(); i++) {
@@ -317,7 +317,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:372
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:372
    */
   public boolean isPublic() {
     if(isPublic_computed) {
@@ -349,7 +349,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:373
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:373
    */
   public boolean isPrivate() {
     if(isPrivate_computed) {
@@ -381,7 +381,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:374
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:374
    */
   public boolean isProtected() {
     if(isProtected_computed) {
@@ -413,7 +413,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:375
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:375
    */
   public boolean isStatic() {
     if(isStatic_computed) {
@@ -445,7 +445,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:376
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:376
    */
   public boolean isFinal() {
     if(isFinal_computed) {
@@ -477,7 +477,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:377
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:377
    */
   public boolean isAbstract() {
     if(isAbstract_computed) {
@@ -509,7 +509,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:378
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:378
    */
   public boolean isVolatile() {
     if(isVolatile_computed) {
@@ -541,7 +541,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:379
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:379
    */
   public boolean isTransient() {
     if(isTransient_computed) {
@@ -573,7 +573,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:380
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:380
    */
   public boolean isStrictfp() {
     if(isStrictfp_computed) {
@@ -605,7 +605,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:381
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:381
    */
   public boolean isSynchronized() {
     if(isSynchronized_computed) {
@@ -637,7 +637,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:382
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:382
    */
   public boolean isNative() {
     if(isNative_computed) {
@@ -669,7 +669,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:384
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:384
    */
   public boolean isSynthetic() {
     if(isSynthetic_computed) {
@@ -693,7 +693,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:386
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:386
    */
   public int numProtectionModifiers() {
     ASTNode$State state = state();
@@ -704,7 +704,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:389
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:389
    */
   public int numCompletenessModifiers() {
     ASTNode$State state = state();
@@ -716,7 +716,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:392
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:392
    */
   public int numModifier(String name) {
     Object _parameters = name;
@@ -750,7 +750,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:222
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:222
    */
   public Annotation annotation(TypeDecl typeDecl) {
     ASTNode$State state = state();
@@ -770,7 +770,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:298
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:298
    */
   public boolean hasAnnotationSuppressWarnings(String annot) {
     ASTNode$State state = state();
@@ -786,7 +786,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:328
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:328
    */
   public boolean hasDeprecatedAnnotation() {
     ASTNode$State state = state();
@@ -797,7 +797,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:358
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:358
    */
   public TypeDecl hostType() {
     ASTNode$State state = state();
@@ -808,7 +808,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:360
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:360
    */
   public boolean mayBePublic() {
     ASTNode$State state = state();
@@ -819,7 +819,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:361
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:361
    */
   public boolean mayBePrivate() {
     ASTNode$State state = state();
@@ -830,7 +830,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:362
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:362
    */
   public boolean mayBeProtected() {
     ASTNode$State state = state();
@@ -841,7 +841,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:363
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:363
    */
   public boolean mayBeStatic() {
     ASTNode$State state = state();
@@ -852,7 +852,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:364
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:364
    */
   public boolean mayBeFinal() {
     ASTNode$State state = state();
@@ -863,7 +863,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:365
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:365
    */
   public boolean mayBeAbstract() {
     ASTNode$State state = state();
@@ -874,7 +874,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:366
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:366
    */
   public boolean mayBeVolatile() {
     ASTNode$State state = state();
@@ -885,7 +885,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:367
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:367
    */
   public boolean mayBeTransient() {
     ASTNode$State state = state();
@@ -896,7 +896,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:368
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:368
    */
   public boolean mayBeStrictfp() {
     ASTNode$State state = state();
@@ -907,7 +907,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:369
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:369
    */
   public boolean mayBeSynchronized() {
     ASTNode$State state = state();
@@ -918,7 +918,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:370
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:370
    */
   public boolean mayBeNative() {
     ASTNode$State state = state();
@@ -929,7 +929,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute inh
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:56
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:56
    */
   public TypeDecl lookupType(String packageName, String typeName) {
     ASTNode$State state = state();
@@ -938,7 +938,7 @@ public class Modifiers extends ASTNode<ASTNode> implements Cloneable {
     return lookupType_String_String_value;
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:434
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:434
    * @apilevel internal
    */
   public Annotation Define_Annotation_lookupAnnotation(ASTNode caller, ASTNode child, TypeDecl typeDecl) {

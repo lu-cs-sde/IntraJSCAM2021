@@ -18,7 +18,7 @@ import java.util.Iterator;
  * Abstract Java compiler frontend.
  * @ast class
  * @aspect FrontendMain
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/FrontendMain.jrag:43
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/FrontendMain.jrag:43
  */
 abstract public class Frontend extends java.lang.Object {
 

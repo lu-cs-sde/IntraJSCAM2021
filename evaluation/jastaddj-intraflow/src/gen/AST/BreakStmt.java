@@ -17,21 +17,21 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:210
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:210
  * @production BreakStmt : {@link Stmt} ::= <span class="component">&lt;Label:String&gt;</span> <span class="component">[Finally:{@link Block}]</span>;
 
  */
 public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @aspect BranchTarget
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:79
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:79
    */
   public void collectBranches(Collection<Stmt> c) {
     c.add(this);
   }
   /**
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:406
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:406
    */
   public void nameCheck() {
     if(!hasLabel() && !insideLoop() && !insideSwitch())
@@ -44,7 +44,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:686
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:686
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(indent());
@@ -276,7 +276,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect BranchTarget
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:96
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:96
    */
   public boolean hasLabel() {
     ASTNode$State state = state();
@@ -289,7 +289,7 @@ public class BreakStmt extends Stmt implements Cloneable {
    * the target statement.
    * @attribute syn
    * @aspect BranchTarget
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:166
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:166
    */
   public boolean canBranchTo(BranchTargetStmt target) {
     ASTNode$State state = state();
@@ -300,7 +300,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect BranchTarget
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:167
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:167
    */
   public boolean canBranchTo(LabeledStmt target) {
     ASTNode$State state = state();
@@ -311,7 +311,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect BranchTarget
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:168
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:168
    */
   public boolean canBranchTo(SwitchStmt target) {
     ASTNode$State state = state();
@@ -330,7 +330,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect BranchTarget
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:189
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:189
    */
   public Stmt targetStmt() {
     if(targetStmt_computed) {
@@ -355,7 +355,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:660
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:660
    */
   public boolean isDAafter(Variable v) {
     Object _parameters = v;
@@ -382,7 +382,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:973
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:973
    */
   public boolean isDUafterReachedFinallyBlocks(Variable v) {
     Object _parameters = v;
@@ -419,7 +419,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1008
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1008
    */
   public boolean isDAafterReachedFinallyBlocks(Variable v) {
     Object _parameters = v;
@@ -458,7 +458,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1228
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:1228
    */
   public boolean isDUafter(Variable v) {
     Object _parameters = v;
@@ -492,7 +492,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn nta
    * @aspect NTAFinally
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NTAFinally.jrag:51
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NTAFinally.jrag:51
    */
   public Opt getFinallyOpt() {
     if(getFinallyOpt_computed) {
@@ -531,7 +531,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect UnreachableStatements
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:105
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:105
    */
   public boolean canCompleteNormally() {
     if(canCompleteNormally_computed) {
@@ -555,7 +555,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect Helpers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:23
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/Helpers.jrag:23
    */
   public boolean isBreakStmt() {
     ASTNode$State state = state();
@@ -574,7 +574,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:259
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:259
    */
   public SmallSet<CFGNode> succ() {
     if(succ_computed) {
@@ -598,7 +598,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:349
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:349
    */
   public SmallSet<CFGNode> targetAt(TryStmt s) {
     ASTNode$State state = state();
@@ -631,7 +631,7 @@ public class BreakStmt extends Stmt implements Cloneable {
    * catch clauses.
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:633
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:633
    */
   public SmallSet<CFGNode> interceptedAbruptStmts() {
     ASTNode$State state = state();
@@ -642,7 +642,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute inh
    * @aspect BranchTarget
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:229
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BranchTarget.jrag:229
    */
   public LabeledStmt lookupLabel(String name) {
     Object _parameters = name;
@@ -665,7 +665,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute inh
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:392
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:392
    */
   public boolean insideLoop() {
     ASTNode$State state = state();
@@ -676,7 +676,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute inh
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:401
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:401
    */
   public boolean insideSwitch() {
     ASTNode$State state = state();
@@ -687,7 +687,7 @@ public class BreakStmt extends Stmt implements Cloneable {
   /**
    * @attribute inh
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:261
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:261
    */
   public SmallSet<CFGNode> breakTarget(BreakStmt stmt) {
     ASTNode$State state = state();

@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:43
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:43
  * @production GenericClassDeclSubstituted : {@link GenericClassDecl} ::= <span class="component">&lt;Original:TypeDecl&gt;</span> <span class="component">{@link BodyDecl}*</span>;
 
  */
@@ -657,7 +657,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn
    * @aspect NestedTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:577
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:577
    */
   public TypeDecl hostType() {
     ASTNode$State state = state();
@@ -676,7 +676,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn nta
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:919
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:919
    */
   public List getBodyDeclList() {
     if(getBodyDeclList_computed) {
@@ -705,7 +705,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1102
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1102
    */
   public TypeDecl original() {
     ASTNode$State state = state();
@@ -724,7 +724,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn
    * @aspect SourceDeclarations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1303
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1303
    */
   public TypeDecl sourceTypeDecl() {
     if(sourceTypeDecl_computed) {
@@ -749,7 +749,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:494
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:494
    */
   public boolean instanceOf(TypeDecl type) {
     Object _parameters = type;
@@ -776,7 +776,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:517
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:517
    */
   public boolean subtype(TypeDecl type) {
     Object _parameters = type;
@@ -844,7 +844,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:519
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:519
    */
   public boolean supertypeGenericClassDeclSubstituted(GenericClassDeclSubstituted type) {
     ASTNode$State state = state();
@@ -855,7 +855,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:14
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:14
    */
   public boolean supertypeGenericClassDecl(GenericClassDecl type) {
     ASTNode$State state = state();
@@ -874,7 +874,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:951
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:951
    */
   public HashMap localMethodsSignatureMap() {
     if(localMethodsSignatureMap_computed) {
@@ -912,7 +912,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:970
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:970
    */
   public SimpleSet localFields(String name) {
     Object _parameters = name;
@@ -952,7 +952,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:990
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:990
    */
   public SimpleSet localTypeDecls(String name) {
     Object _parameters = name;
@@ -1044,7 +1044,7 @@ public class GenericClassDeclSubstituted extends GenericClassDecl implements Clo
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1018
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1018
    */
   public Collection constructors() {
     if(constructors_computed) {

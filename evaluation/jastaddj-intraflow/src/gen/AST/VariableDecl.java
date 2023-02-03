@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:84
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:84
  * @production VariableDecl : {@link ASTNode} ::= <span class="component">&lt;ID:String&gt;</span> <span class="component">{@link Dims}*</span> <span class="component">[Init:{@link Expr}]</span>;
 
  */
 public class VariableDecl extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @aspect VariableDeclarationTransformation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:182
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:182
    */
   public VariableDeclaration createVariableDeclarationFrom(Modifiers modifiers, Access type) {
     VariableDeclaration decl = new VariableDeclaration(
@@ -41,7 +41,7 @@ public class VariableDecl extends ASTNode<ASTNode> implements Cloneable {
   }
   /**
    * @aspect VariableDeclarationTransformation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:196
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:196
    */
   public FieldDeclaration createFieldDeclarationFrom(Modifiers modifiers, Access type) {
     FieldDeclaration decl = new FieldDeclaration(
@@ -359,7 +359,7 @@ public class VariableDecl extends ASTNode<ASTNode> implements Cloneable {
   /**
    * @attribute syn
    * @aspect Variables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:84
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:84
    */
   public String name() {
     ASTNode$State state = state();
@@ -368,7 +368,7 @@ public class VariableDecl extends ASTNode<ASTNode> implements Cloneable {
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:41
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:41
    * @apilevel internal
    */
   public boolean Define_boolean_isSource(ASTNode caller, ASTNode child) {

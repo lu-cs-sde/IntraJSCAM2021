@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:3
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:3
  * @production GenericInterfaceDecl : {@link InterfaceDecl} ::= <span class="component">{@link Modifiers}</span> <span class="component">&lt;ID:String&gt;</span> <span class="component">SuperInterface:{@link Access}*</span> <span class="component">{@link BodyDecl}*</span> <span class="component">TypeParameter:{@link TypeVariable}*</span>;
 
  */
 public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, GenericTypeDecl {
   /**
    * @aspect GenericsTypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:442
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:442
    */
   public void typeCheck() {
     super.typeCheck();
@@ -33,7 +33,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1139
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1139
    */
   public InterfaceDecl substitutedInterfaceDecl(Parameterization parTypeDecl) {
     GenericInterfaceDecl c = new GenericInterfaceDeclSubstituted(
@@ -47,7 +47,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   }
   /**
    * @aspect GenericsPrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsPrettyPrint.jrag:94
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsPrettyPrint.jrag:94
    */
   public void prettyPrint(StringBuffer sb) {
     getModifiers().prettyPrint(sb);
@@ -74,14 +74,14 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   }
   /**
    * @aspect Generics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:249
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:249
    */
   public TypeDecl makeGeneric(Signatures.ClassSignature s) {
     return (TypeDecl)this;
   }
   /**
    * @aspect GenericsNameBinding
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:502
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:502
    */
   public SimpleSet addTypeVariables(SimpleSet c, String name) {
     GenericTypeDecl original = (GenericTypeDecl)original();
@@ -94,7 +94,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:670
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:670
    */
   public List createArgumentList(ArrayList params) {
     GenericTypeDecl original = (GenericTypeDecl)original();
@@ -618,7 +618,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   /**
    * @attribute syn
    * @aspect Generics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:191
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:191
    */
   public TypeDecl rawType() {
     if(rawType_computed) {
@@ -650,7 +650,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:655
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:655
    */
   public TypeDecl lookupParTypeDecl(ArrayList list) {
     Object _parameters = list;
@@ -711,7 +711,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:945
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:945
    */
   public boolean usesTypeVariable() {
     if(usesTypeVariable_computed) {
@@ -775,7 +775,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:19
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:19
    */
   public boolean subtype(TypeDecl type) {
     Object _parameters = type;
@@ -843,7 +843,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:125
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:125
    */
   public boolean supertypeParClassDecl(ParClassDecl type) {
     ASTNode$State state = state();
@@ -854,7 +854,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:129
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:129
    */
   public boolean supertypeParInterfaceDecl(ParInterfaceDecl type) {
     ASTNode$State state = state();
@@ -866,7 +866,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:395
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:395
    */
   public boolean instanceOf(TypeDecl type) {
     Object _parameters = type;
@@ -892,7 +892,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   /**
    * @attribute syn
    * @aspect Generics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:178
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:178
    */
   public boolean isGenericType() {
     ASTNode$State state = state();
@@ -904,7 +904,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:635
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:635
    */
   public TypeDecl lookupParTypeDecl(ParTypeAccess p) {
     Object _parameters = p;
@@ -935,7 +935,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
   /**
    * @attribute inh
    * @aspect GenericsTypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:449
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:449
    */
   public TypeDecl typeThrowable() {
     ASTNode$State state = state();
@@ -944,7 +944,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
     return typeThrowable_value;
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:499
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:499
    * @apilevel internal
    */
   public boolean Define_boolean_isNestedType(ASTNode caller, ASTNode child) {
@@ -957,7 +957,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:500
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:500
    * @apilevel internal
    */
   public TypeDecl Define_TypeDecl_enclosingType(ASTNode caller, ASTNode child) {
@@ -970,7 +970,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:544
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:544
    * @apilevel internal
    */
   public SimpleSet Define_SimpleSet_lookupType(ASTNode caller, ASTNode child, String name) {
@@ -1033,7 +1033,7 @@ public class GenericInterfaceDecl extends InterfaceDecl implements Cloneable, Ge
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:49
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:49
    * @apilevel internal
    */
   public TypeDecl Define_TypeDecl_genericDecl(ASTNode caller, ASTNode child) {

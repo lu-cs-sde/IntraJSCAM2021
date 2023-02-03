@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast class
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Options.jadd:19
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Options.jadd:19
  */
 public class Options extends java.lang.Object {
 static  class Option {

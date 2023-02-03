@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:18
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:18
  * @production TypeVariable : {@link ReferenceType} ::= <span class="component">{@link Modifiers}</span> <span class="component">&lt;ID:String&gt;</span> <span class="component">{@link BodyDecl}*</span> <span class="component">TypeBound:{@link Access}*</span>;
 
  */
 public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @aspect GenericTypeVariables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:28
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:28
    */
   public void nameCheck() {
     if(extractSingleType(lookupType(name())) != this)
@@ -32,7 +32,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   }
   /**
    * @aspect GenricTypeVariablesTypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:66
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:66
    */
   public void typeCheck() {
     if(!getTypeBound(0).type().isTypeVariable() && !getTypeBound(0).type().isClassDecl() && !getTypeBound(0).type().isInterfaceDecl()) {
@@ -81,7 +81,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:754
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:754
    */
   public Access substitute(Parameterization parTypeDecl) {
     if(parTypeDecl.isRawType())
@@ -90,7 +90,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:799
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:799
    */
   public Access substituteReturnType(Parameterization parTypeDecl) {
     if(parTypeDecl.isRawType())
@@ -120,7 +120,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:833
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:833
    */
   public Access substituteParameterType(Parameterization parTypeDecl) {
     if(parTypeDecl.isRawType())
@@ -136,14 +136,14 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   }
   /**
    * @aspect NewGenerics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1290
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1290
    */
   public Access createQualifiedAccess() {
     return createBoundAccess();
   }
   /**
    * @aspect GenericsPrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsPrettyPrint.jrag:11
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsPrettyPrint.jrag:11
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(name());
@@ -584,7 +584,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GreatestLowerBoundFactory
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GLBTypeFactory.jadd:12
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GLBTypeFactory.jadd:12
    */
   public TypeDecl toInterface() {
     if(toInterface_computed) {
@@ -654,7 +654,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:16
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:16
    */
   public boolean involvesTypeParameters() {
     if(involvesTypeParameters_computed) {
@@ -717,7 +717,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericTypeVariables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:33
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:33
    */
   public TypeDecl lowerBound() {
     ASTNode$State state = state();
@@ -728,7 +728,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect MemberMethods
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:255
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:255
    */
   public Collection<MethodDecl> memberMethods(String name) {
     ASTNode$State state = state();
@@ -750,7 +750,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericTypeVariablesMembers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:50
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:50
    */
   public SimpleSet memberFields(String name) {
     Object _parameters = name;
@@ -787,7 +787,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect Generics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:106
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:106
    */
   public boolean castingConversionTo(TypeDecl type) {
     Object _parameters = type;
@@ -821,7 +821,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect Generics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:168
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:168
    */
   public boolean isNestedType() {
     ASTNode$State state = state();
@@ -840,7 +840,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsErasure
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:366
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:366
    */
   public TypeDecl erasure() {
     if(erasure_computed) {
@@ -872,7 +872,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:576
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:576
    */
   public String fullName() {
     if(fullName_computed) {
@@ -902,7 +902,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:584
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:584
    */
   public boolean sameSignature(Access a) {
     ASTNode$State state = state();
@@ -921,7 +921,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:792
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:792
    */
   public TypeDecl lubType() {
     if(lubType_computed) {
@@ -966,7 +966,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:946
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:946
    */
   public boolean usesTypeVariable() {
     if(usesTypeVariable_computed) {
@@ -1030,7 +1030,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect NewGenerics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1294
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1294
    */
   public boolean accessibleFrom(TypeDecl type) {
     Object _parameters = type;
@@ -1064,7 +1064,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect NewGenerics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1296
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1296
    */
   public String typeName() {
     if(typeName_computed) {
@@ -1088,7 +1088,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:71
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:71
    */
   public boolean isTypeVariable() {
     ASTNode$State state = state();
@@ -1099,7 +1099,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:46
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:46
    */
   public boolean supertypeWildcard(WildcardType type) {
     ASTNode$State state = state();
@@ -1110,7 +1110,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:57
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:57
    */
   public boolean supertypeWildcardExtends(WildcardExtendsType type) {
     ASTNode$State state = state();
@@ -1121,7 +1121,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:66
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:66
    */
   public boolean supertypeWildcardSuper(WildcardSuperType type) {
     ASTNode$State state = state();
@@ -1133,7 +1133,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:215
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:215
    */
   public boolean sameStructure(TypeDecl t) {
     Object _parameters = t;
@@ -1218,7 +1218,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:454
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:454
    */
   public boolean supertypeArrayDecl(ArrayDecl type) {
     ASTNode$State state = state();
@@ -1236,7 +1236,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:290
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:290
    */
   public boolean subtype(TypeDecl type) {
     Object _parameters = type;
@@ -1304,7 +1304,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:291
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:291
    */
   public boolean supertypeTypeVariable(TypeVariable type) {
     ASTNode$State state = state();
@@ -1329,7 +1329,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:314
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:314
    */
   public Access getSubstitutedTypeBound(int i, TypeDecl type) {
     java.util.List _parameters = new java.util.ArrayList(2);
@@ -1374,7 +1374,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:421
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:421
    */
   public boolean supertypeClassDecl(ClassDecl type) {
     ASTNode$State state = state();
@@ -1390,7 +1390,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:439
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:439
    */
   public boolean supertypeInterfaceDecl(InterfaceDecl type) {
     ASTNode$State state = state();
@@ -1407,7 +1407,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:400
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:400
    */
   public boolean instanceOf(TypeDecl type) {
     Object _parameters = type;
@@ -1433,7 +1433,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute inh
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:790
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:790
    */
   public TypeDecl typeObject() {
     ASTNode$State state = state();
@@ -1444,7 +1444,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @attribute inh
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:832
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:832
    */
   public TypeDecl typeNull() {
     ASTNode$State state = state();
@@ -1453,7 +1453,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
     return typeNull_value;
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:13
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:13
    * @apilevel internal
    */
   public NameType Define_NameType_nameType(ASTNode caller, ASTNode child) {
@@ -1468,7 +1468,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
   /**
    * @apilevel internal
    */
-  public ASTNode rewriteTo() {    // Declared at @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:16
+  public ASTNode rewriteTo() {    // Declared at @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:16
     if (getNumTypeBound() == 0) {
       state().duringGenericTypeVariables++;
       ASTNode result = rewriteRule0();
@@ -1476,7 +1476,7 @@ public class TypeVariable extends ReferenceType implements Cloneable {
       return result;
     }    return super.rewriteTo();
   }  /**
-   * @declaredat @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:16
+   * @declaredat @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericTypeVariables.jrag:16
    * @apilevel internal
    */  private TypeVariable rewriteRule0() {
 {

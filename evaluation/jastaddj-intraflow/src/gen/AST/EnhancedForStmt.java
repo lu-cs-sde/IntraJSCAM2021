@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/EnhancedFor.ast:1
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/EnhancedFor.ast:1
  * @production EnhancedForStmt : {@link BranchTargetStmt} ::= <span class="component">{@link VariableDeclaration}</span> <span class="component">{@link Expr}</span> <span class="component">{@link Stmt}</span>;
 
  */
 public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, VariableScope {
   /**
    * @aspect EnhancedFor
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:20
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:20
    */
   public void typeCheck() {
     if (!getExpr().type().isArrayDecl() && !getExpr().type().isIterable()) {
@@ -43,7 +43,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
   }
   /**
    * @aspect EnhancedFor
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:63
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:63
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(indent());
@@ -242,7 +242,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
   /**
    * @attribute syn
    * @aspect EnhancedFor
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:55
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:55
    */
   public SimpleSet localLookupVariable(String name) {
     ASTNode$State state = state();
@@ -266,7 +266,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
   /**
    * @attribute syn
    * @aspect EnhancedFor
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:81
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:81
    */
   public boolean canCompleteNormally() {
     if(canCompleteNormally_computed) {
@@ -291,7 +291,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
   /**
    * @attribute syn
    * @aspect EnhancedFor
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:85
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:85
    */
   public boolean isDAafter(Variable v) {
     Object _parameters = v;
@@ -329,7 +329,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
   /**
    * @attribute syn
    * @aspect EnhancedFor
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:101
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:101
    */
   public boolean isDUafter(Variable v) {
     Object _parameters = v;
@@ -364,7 +364,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
   /**
    * @attribute syn
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:428
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:428
    */
   public boolean continueLabel() {
     ASTNode$State state = state();
@@ -383,7 +383,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
   /**
    * @attribute syn
    * @aspect Java_CFG_1_5
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.5.jrag:21
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.5.jrag:21
    */
   public SmallSet<CFGNode> succ() {
     if(succ_computed) {
@@ -407,7 +407,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
   /**
    * @attribute inh
    * @aspect EnhancedFor
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:43
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:43
    */
   public SimpleSet lookupVariable(String name) {
     ASTNode$State state = state();
@@ -416,7 +416,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     return lookupVariable_String_value;
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:16
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:16
    * @apilevel internal
    */
   public Stmt Define_Stmt_branchTarget(ASTNode caller, ASTNode child, Stmt branch) {
@@ -426,7 +426,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:46
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:46
    * @apilevel internal
    */
   public SimpleSet Define_SimpleSet_lookupVariable(ASTNode caller, ASTNode child, String name) {
@@ -444,7 +444,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:48
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:48
    * @apilevel internal
    */
   public NameType Define_NameType_nameType(ASTNode caller, ASTNode child) {
@@ -456,7 +456,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:53
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:53
    * @apilevel internal
    */
   public VariableScope Define_VariableScope_outerScope(ASTNode caller, ASTNode child) {
@@ -474,7 +474,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:76
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:76
    * @apilevel internal
    */
   public boolean Define_boolean_isMethodParameter(ASTNode caller, ASTNode child) {
@@ -486,7 +486,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:77
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:77
    * @apilevel internal
    */
   public boolean Define_boolean_isConstructorParameter(ASTNode caller, ASTNode child) {
@@ -498,7 +498,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:78
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:78
    * @apilevel internal
    */
   public boolean Define_boolean_isExceptionHandlerParameter(ASTNode caller, ASTNode child) {
@@ -510,7 +510,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:82
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:82
    * @apilevel internal
    */
   public boolean Define_boolean_reachable(ASTNode caller, ASTNode child) {
@@ -522,7 +522,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:99
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:99
    * @apilevel internal
    */
   public boolean Define_boolean_isDAbefore(ASTNode caller, ASTNode child, Variable v) {
@@ -537,7 +537,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:113
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:113
    * @apilevel internal
    */
   public boolean Define_boolean_isDUbefore(ASTNode caller, ASTNode child, Variable v) {
@@ -552,7 +552,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:115
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/EnhancedFor.jrag:115
    * @apilevel internal
    */
   public boolean Define_boolean_insideLoop(ASTNode caller, ASTNode child) {
@@ -564,7 +564,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.5.jrag:22
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.5.jrag:22
    * @apilevel internal
    */
   public SmallSet<CFGNode> Define_SmallSet_CFGNode__followingWhenTrue(ASTNode caller, ASTNode child) {
@@ -576,7 +576,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.5.jrag:24
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.5.jrag:24
    * @apilevel internal
    */
   public SmallSet<CFGNode> Define_SmallSet_CFGNode__followingWhenFalse(ASTNode caller, ASTNode child) {
@@ -588,7 +588,7 @@ public class EnhancedForStmt extends BranchTargetStmt implements Cloneable, Vari
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.5.jrag:29
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.5.jrag:29
    * @apilevel internal
    */
   public SmallSet<CFGNode> Define_SmallSet_CFGNode__following(ASTNode caller, ASTNode child) {

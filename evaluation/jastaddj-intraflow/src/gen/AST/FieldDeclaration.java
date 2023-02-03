@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:79
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:79
  * @production FieldDeclaration : {@link MemberDecl} ::= <span class="component">{@link Modifiers}</span> <span class="component">TypeAccess:{@link Access}</span> <span class="component">&lt;ID:String&gt;</span> <span class="component">[Init:{@link Expr}]</span>;
 
  */
 public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet, Iterator, Variable, CFGNode {
   /**
    * @aspect BoundNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:11
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:11
    */
   public Access createQualifiedBoundAccess() {
     if(isStatic())
@@ -35,56 +35,56 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   }
   /**
    * @aspect BoundNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:86
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/BoundNames.jrag:86
    */
   public Access createBoundFieldAccess() {
     return createQualifiedBoundAccess();
   }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:81
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:81
    */
   public SimpleSet add(Object o) {
     return new SimpleSetImpl().add(this).add(o);
   }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:85
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:85
    */
   public boolean isSingleton() { return true; }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:86
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:86
    */
   public boolean isSingleton(Object o) { return contains(o); }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:89
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:89
    */
   private FieldDeclaration iterElem;
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:90
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:90
    */
   public Iterator iterator() { iterElem = this; return this; }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:91
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:91
    */
   public boolean hasNext() { return iterElem != null; }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:92
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:92
    */
   public Object next() { Object o = iterElem; iterElem = null; return o; }
   /**
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:93
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:93
    */
   public void remove() { throw new UnsupportedOperationException(); }
   /**
    * @aspect DefiniteAssignment
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:177
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:177
    */
   public void definiteAssignment() {
     super.definiteAssignment();
@@ -138,7 +138,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   }
   /**
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:114
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:114
    */
   public void checkModifiers() {
     super.checkModifiers();
@@ -155,7 +155,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   }
   /**
    * @aspect NameCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:308
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NameCheck.jrag:308
    */
   public void nameCheck() {
     super.nameCheck();
@@ -169,21 +169,21 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   }
   /**
    * @aspect NodeConstructors
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:86
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:86
    */
   public FieldDeclaration(Modifiers m, Access type, String name) {
     this(m, type, name, new Opt());
   }
   /**
    * @aspect NodeConstructors
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:90
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/NodeConstructors.jrag:90
    */
   public FieldDeclaration(Modifiers m, Access type, String name, Expr init) {
     this(m, type, name, new Opt(init));
   }
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:168
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:168
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(indent());
@@ -198,7 +198,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   }
   /**
    * @aspect TypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:34
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:34
    */
   public void typeCheck() {
     if(hasInit()) {
@@ -211,26 +211,26 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   }
   /**
    * @aspect VariableDeclarationTransformation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:91
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:91
    */
   private FieldDecl fieldDecl = null;
   /**
    * @aspect VariableDeclarationTransformation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:92
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:92
    */
   public FieldDecl getFieldDecl() {
     return fieldDecl;
   }
   /**
    * @aspect VariableDeclarationTransformation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:95
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:95
    */
   public void setFieldDecl(FieldDecl fieldDecl) {
     this.fieldDecl = fieldDecl;
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1091
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1091
    */
   public BodyDecl substitutedBodyDecl(Parameterization parTypeDecl) {
     FieldDeclaration f = new FieldDeclarationSubstituted(
@@ -244,12 +244,12 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   }
   /**
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:30
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:30
    */
   public SmallSet<CFGNode> pred() { return collPred(); }
   /**
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:16
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:16
    */
   public BitSet liveness_out() { return coll_liveness_out(); }
   /**
@@ -583,7 +583,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect AccessControl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AccessControl.jrag:109
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AccessControl.jrag:109
    */
   public boolean accessibleFrom(TypeDecl type) {
     Object _parameters = type;
@@ -631,7 +631,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect AnonymousClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:72
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:72
    */
   public Collection exceptions() {
     if(exceptions_computed) {
@@ -666,7 +666,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect ConstantExpression
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:223
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ConstantExpression.jrag:223
    */
   public boolean isConstant() {
     ASTNode$State state = state();
@@ -677,7 +677,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:79
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:79
    */
   public int size() {
     ASTNode$State state = state();
@@ -688,7 +688,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:80
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:80
    */
   public boolean isEmpty() {
     ASTNode$State state = state();
@@ -699,7 +699,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect DataStructures
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:84
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DataStructures.jrag:84
    */
   public boolean contains(Object o) {
     ASTNode$State state = state();
@@ -711,7 +711,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect DA
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:327
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:327
    */
   public boolean isDAafter(Variable v) {
     Object _parameters = v;
@@ -742,7 +742,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect DU
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:796
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:796
    */
   public boolean isDUafter(Variable v) {
     Object _parameters = v;
@@ -772,7 +772,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:214
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:214
    */
   public boolean isSynthetic() {
     ASTNode$State state = state();
@@ -783,7 +783,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:239
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:239
    */
   public boolean isPublic() {
     ASTNode$State state = state();
@@ -794,7 +794,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:240
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:240
    */
   public boolean isPrivate() {
     ASTNode$State state = state();
@@ -805,7 +805,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:241
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:241
    */
   public boolean isProtected() {
     ASTNode$State state = state();
@@ -816,7 +816,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:242
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:242
    */
   public boolean isStatic() {
     ASTNode$State state = state();
@@ -827,7 +827,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:244
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:244
    */
   public boolean isFinal() {
     ASTNode$State state = state();
@@ -838,7 +838,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:245
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:245
    */
   public boolean isTransient() {
     ASTNode$State state = state();
@@ -849,7 +849,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Modifiers
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:246
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:246
    */
   public boolean isVolatile() {
     ASTNode$State state = state();
@@ -860,7 +860,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:821
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:821
    */
   public String dumpString() {
     ASTNode$State state = state();
@@ -871,7 +871,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:251
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:251
    */
   public TypeDecl type() {
     ASTNode$State state = state();
@@ -882,7 +882,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:271
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:271
    */
   public boolean isVoid() {
     ASTNode$State state = state();
@@ -893,7 +893,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Variables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:32
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:32
    */
   public boolean isParameter() {
     ASTNode$State state = state();
@@ -904,7 +904,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Variables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:34
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:34
    */
   public boolean isClassVariable() {
     ASTNode$State state = state();
@@ -915,7 +915,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Variables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:35
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:35
    */
   public boolean isInstanceVariable() {
     ASTNode$State state = state();
@@ -926,7 +926,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Variables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:36
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:36
    */
   public boolean isMethodParameter() {
     ASTNode$State state = state();
@@ -937,7 +937,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Variables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:37
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:37
    */
   public boolean isConstructorParameter() {
     ASTNode$State state = state();
@@ -948,7 +948,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Variables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:38
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:38
    */
   public boolean isExceptionHandlerParameter() {
     ASTNode$State state = state();
@@ -959,7 +959,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Variables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:39
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:39
    */
   public boolean isLocalVariable() {
     ASTNode$State state = state();
@@ -970,7 +970,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Variables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:41
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:41
    */
   public boolean isBlank() {
     ASTNode$State state = state();
@@ -981,7 +981,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Variables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:43
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:43
    */
   public String name() {
     ASTNode$State state = state();
@@ -1000,7 +1000,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Variables
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:44
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/VariableDeclaration.jrag:44
    */
   public Constant constant() {
     if(constant_computed) {
@@ -1024,7 +1024,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:292
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:292
    */
   public boolean hasAnnotationSuppressWarnings(String annot) {
     ASTNode$State state = state();
@@ -1035,7 +1035,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:334
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:334
    */
   public boolean isDeprecated() {
     ASTNode$State state = state();
@@ -1054,7 +1054,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:932
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:932
    */
   public boolean usesTypeVariable() {
     if(usesTypeVariable_computed) {
@@ -1086,7 +1086,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect SourceDeclarations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1316
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1316
    */
   public Variable sourceVariableDecl() {
     if(sourceVariableDecl_computed) {
@@ -1110,7 +1110,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect GenericsParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:65
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:65
    */
   public boolean visibleTypeParameters() {
     ASTNode$State state = state();
@@ -1121,7 +1121,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:41
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:41
    */
   public int getDotId() {
     ASTNode$State state = state();
@@ -1132,7 +1132,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect DotGraphSpec
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:58
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/DotGraphSpec.jrag:58
    */
   public String dotAttributes() {
     ASTNode$State state = state();
@@ -1143,7 +1143,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:29
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:29
    */
   public BitSet liveness_def() {
     ASTNode$State state = state();
@@ -1162,7 +1162,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:110
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:110
    */
   public SmallSet<CFGNode> exceptionalSucc() {
     if(exceptionalSucc_computed) {
@@ -1194,7 +1194,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:113
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:113
    */
   public SmallSet<CFGNode> succ() {
     if(succ_computed) {
@@ -1226,7 +1226,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:24
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:24
    */
   public boolean includeInDeadAssignAnalysis() {
     if(includeInDeadAssignAnalysis_computed) {
@@ -1258,7 +1258,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:38
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:38
    */
   public boolean isDeadAssign() {
     if(isDeadAssign_computed) {
@@ -1290,7 +1290,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:9
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:9
    */
   public boolean isDead() {
     if(isDead_computed) {
@@ -1330,7 +1330,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:13
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:13
    */
   public BitSet liveness_in() {
     if(liveness_in_computed) {
@@ -1393,7 +1393,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute syn
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:39
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:39
    */
   public BitSet liveness_use() {
     ASTNode$State state = state();
@@ -1404,7 +1404,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute inh
    * @aspect ExceptionHandling
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:54
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:54
    */
   public boolean handlesException(TypeDecl exceptionType) {
     ASTNode$State state = state();
@@ -1415,7 +1415,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute inh
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:13
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:13
    */
   public SmallSet emptySmallSet() {
     if(emptySmallSet_computed) {
@@ -1443,7 +1443,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute inh
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:35
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:35
    */
   public SmallSet<CFGNode> following() {
     if(following_computed) {
@@ -1471,7 +1471,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute inh
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:5
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:5
    */
   public CompilationUnit enclosingCompilationUnit() {
     if(enclosingCompilationUnit_computed) {
@@ -1499,7 +1499,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute inh
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:5
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:5
    */
   public BitSet emptyBitSet() {
     if(emptyBitSet_computed) {
@@ -1525,7 +1525,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
    */
   protected BitSet emptyBitSet_value;
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:39
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:39
    * @apilevel internal
    */
   public boolean Define_boolean_isSource(ASTNode caller, ASTNode child) {
@@ -1537,7 +1537,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:333
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/DefiniteAssignment.jrag:333
    * @apilevel internal
    */
   public boolean Define_boolean_isDAbefore(ASTNode caller, ASTNode child, Variable v) {
@@ -1549,7 +1549,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:167
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:167
    * @apilevel internal
    */
   public boolean Define_boolean_handlesException(ASTNode caller, ASTNode child, TypeDecl exceptionType) {
@@ -1570,7 +1570,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:262
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:262
    * @apilevel internal
    */
   public boolean Define_boolean_mayBePublic(ASTNode caller, ASTNode child) {
@@ -1582,7 +1582,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:263
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:263
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeProtected(ASTNode caller, ASTNode child) {
@@ -1594,7 +1594,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:264
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:264
    * @apilevel internal
    */
   public boolean Define_boolean_mayBePrivate(ASTNode caller, ASTNode child) {
@@ -1606,7 +1606,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:265
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:265
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeStatic(ASTNode caller, ASTNode child) {
@@ -1618,7 +1618,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:266
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:266
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeFinal(ASTNode caller, ASTNode child) {
@@ -1630,7 +1630,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:267
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:267
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeTransient(ASTNode caller, ASTNode child) {
@@ -1642,7 +1642,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:268
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Modifiers.jrag:268
    * @apilevel internal
    */
   public boolean Define_boolean_mayBeVolatile(ASTNode caller, ASTNode child) {
@@ -1654,7 +1654,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:78
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:78
    * @apilevel internal
    */
   public NameType Define_NameType_nameType(ASTNode caller, ASTNode child) {
@@ -1666,7 +1666,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:260
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:260
    * @apilevel internal
    */
   public TypeDecl Define_TypeDecl_declType(ASTNode caller, ASTNode child) {
@@ -1678,7 +1678,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:168
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeHierarchyCheck.jrag:168
    * @apilevel internal
    */
   public boolean Define_boolean_inStaticContext(ASTNode caller, ASTNode child) {
@@ -1690,7 +1690,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:80
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:80
    * @apilevel internal
    */
   public boolean Define_boolean_mayUseAnnotationTarget(ASTNode caller, ASTNode child, String name) {
@@ -1702,7 +1702,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:35
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:35
    * @apilevel internal
    */
   public TypeDecl Define_TypeDecl_assignConvertedType(ASTNode caller, ASTNode child) {
@@ -1714,7 +1714,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:91
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:91
    * @apilevel internal
    */
   public SmallSet<CFGNode> Define_SmallSet_CFGNode__following(ASTNode caller, ASTNode child) {
@@ -1738,7 +1738,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   }  /**
    * @attribute coll
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:19
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:19
    */
   public SmallSet<CFGNode> collPred() {
     if(CFGNode_collPred_computed) {
@@ -1798,7 +1798,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute coll
    * @aspect JavaDeadAssigns
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:9
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaDeadAssigns.jrag:9
    */
   public BitSet def() {
     if(CFGNode_def_computed) {
@@ -1878,7 +1878,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute coll
    * @aspect JavaLiveness14
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:17
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaLiveness1.4.jrag:17
    */
   public BitSet coll_liveness_out() {
     if(CFGNode_coll_liveness_out_computed) {
@@ -1972,7 +1972,7 @@ public class FieldDeclaration extends MemberDecl implements Cloneable, SimpleSet
   /**
    * @attribute coll
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:23
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:23
    */
       for(java.util.Iterator iter = (succ()).iterator(); iter.hasNext(); ) {
         CFGNode ref = (CFGNode) iter.next();

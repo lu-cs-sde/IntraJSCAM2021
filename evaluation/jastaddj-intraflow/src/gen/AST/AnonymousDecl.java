@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:69
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:69
  * @production AnonymousDecl : {@link ClassDecl} ::= <span class="component">{@link Modifiers}</span> <span class="component">&lt;ID:String&gt;</span> <span class="component">[SuperClass:{@link Access}]</span> <span class="component">Implements:{@link Access}*</span> <span class="component">{@link BodyDecl}*</span>;
 
  */
@@ -520,7 +520,7 @@ public class AnonymousDecl extends ClassDecl implements Cloneable {
   }
   /**
    * @aspect VariableArityParameters
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/VariableArityParameters.jrag:107
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/VariableArityParameters.jrag:107
    */
    
   protected List constructorParameterList(ConstructorDecl decl) {
@@ -564,7 +564,7 @@ public class AnonymousDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect AnonymousClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:31
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:31
    */
   public boolean isCircular() {
     if(isCircular_computed) {
@@ -635,7 +635,7 @@ public class AnonymousDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn nta
    * @aspect AnonymousClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:33
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:33
    */
   public Opt getSuperClassOpt() {
     if(getSuperClassOpt_computed) {
@@ -677,7 +677,7 @@ public class AnonymousDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn nta
    * @aspect AnonymousClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:39
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:39
    */
   public List getImplementsList() {
     if(getImplementsList_computed) {
@@ -719,7 +719,7 @@ public class AnonymousDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn nta
    * @aspect ImplicitConstructor
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupConstructor.jrag:227
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupConstructor.jrag:227
    */
   public Opt<ConstructorDecl> getImplicitConstructorOpt() {
     if(getImplicitConstructorOpt_computed) {
@@ -803,7 +803,7 @@ public class AnonymousDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute inh
    * @aspect AnonymousClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:12
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:12
    */
   public TypeDecl superType() {
     ASTNode$State state = state();
@@ -814,7 +814,7 @@ public class AnonymousDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute inh
    * @aspect AnonymousClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:16
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:16
    */
   public ConstructorDecl constructorDecl() {
     ASTNode$State state = state();
@@ -825,7 +825,7 @@ public class AnonymousDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute inh
    * @aspect AnonymousClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:70
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AnonymousClasses.jrag:70
    */
   public TypeDecl typeNullPointerException() {
     ASTNode$State state = state();

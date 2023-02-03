@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:13
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:13
  * @production Access : {@link Expr};
 
  */
 public abstract class Access extends Expr implements Cloneable {
   /**
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:148
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:148
    */
   public Access addArrayDims(List list) {
     Access a = this;
@@ -106,7 +106,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute syn
    * @aspect LookupMethod
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:37
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:37
    */
   public Expr unqualifiedScope() {
     ASTNode$State state = state();
@@ -117,7 +117,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute syn
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:58
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:58
    */
   public boolean isQualified() {
     ASTNode$State state = state();
@@ -128,7 +128,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute syn
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:61
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:61
    */
   public Expr qualifier() {
     ASTNode$State state = state();
@@ -139,7 +139,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute syn
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:66
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:66
    */
   public Access lastAccess() {
     ASTNode$State state = state();
@@ -158,7 +158,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute syn
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:78
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:78
    */
   public Expr prevExpr() {
     if(prevExpr_computed) {
@@ -198,7 +198,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute syn
    * @aspect QualifiedNames
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:89
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ResolveAmbiguousNames.jrag:89
    */
   public boolean hasPrevExpr() {
     if(hasPrevExpr_computed) {
@@ -230,7 +230,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute syn
    * @aspect SyntacticClassification
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:56
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/SyntacticClassification.jrag:56
    */
   public NameType predNameType() {
     ASTNode$State state = state();
@@ -249,7 +249,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:278
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:278
    */
   public TypeDecl type() {
     if(type_computed) {
@@ -273,7 +273,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute inh
    * @aspect LookupMethod
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:38
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupMethod.jrag:38
    */
   public Expr nestedScope() {
     ASTNode$State state = state();
@@ -284,7 +284,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute inh
    * @aspect TypeScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:179
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:179
    */
   public TypeDecl unknownType() {
     ASTNode$State state = state();
@@ -295,7 +295,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute inh
    * @aspect VariableScopePropagation
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:239
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:239
    */
   public Variable unknownField() {
     ASTNode$State state = state();
@@ -306,7 +306,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute inh
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:276
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:276
    */
   public boolean withinSuppressWarnings(String annot) {
     ASTNode$State state = state();
@@ -317,7 +317,7 @@ public abstract class Access extends Expr implements Cloneable {
   /**
    * @attribute inh
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:381
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:381
    */
   public boolean withinDeprecatedAnnotation() {
     ASTNode$State state = state();

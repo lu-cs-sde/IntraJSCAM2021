@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:44
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:44
  * @production GenericInterfaceDeclSubstituted : {@link GenericInterfaceDecl} ::= <span class="component">&lt;Original:TypeDecl&gt;</span> <span class="component">{@link BodyDecl}*</span>;
 
  */
@@ -550,7 +550,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn
    * @aspect NestedTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:577
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:577
    */
   public TypeDecl hostType() {
     ASTNode$State state = state();
@@ -569,7 +569,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn nta
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:920
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:920
    */
   public List getBodyDeclList() {
     if(getBodyDeclList_computed) {
@@ -598,7 +598,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1102
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1102
    */
   public TypeDecl original() {
     ASTNode$State state = state();
@@ -617,7 +617,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn
    * @aspect SourceDeclarations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1304
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1304
    */
   public TypeDecl sourceTypeDecl() {
     if(sourceTypeDecl_computed) {
@@ -642,7 +642,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:495
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:495
    */
   public boolean instanceOf(TypeDecl type) {
     Object _parameters = type;
@@ -669,7 +669,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:527
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:527
    */
   public boolean subtype(TypeDecl type) {
     Object _parameters = type;
@@ -737,7 +737,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:529
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:529
    */
   public boolean supertypeGenericInterfaceDeclSubstituted(GenericInterfaceDeclSubstituted type) {
     ASTNode$State state = state();
@@ -748,7 +748,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:20
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:20
    */
   public boolean supertypeGenericInterfaceDecl(GenericInterfaceDecl type) {
     ASTNode$State state = state();
@@ -767,7 +767,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:951
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:951
    */
   public HashMap localMethodsSignatureMap() {
     if(localMethodsSignatureMap_computed) {
@@ -805,7 +805,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:970
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:970
    */
   public SimpleSet localFields(String name) {
     Object _parameters = name;
@@ -845,7 +845,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:990
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:990
    */
   public SimpleSet localTypeDecls(String name) {
     Object _parameters = name;
@@ -937,7 +937,7 @@ public class GenericInterfaceDeclSubstituted extends GenericInterfaceDecl implem
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1018
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1018
    */
   public Collection constructors() {
     if(constructors_computed) {

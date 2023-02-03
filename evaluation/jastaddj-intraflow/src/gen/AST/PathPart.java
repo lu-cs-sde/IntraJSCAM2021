@@ -18,7 +18,7 @@ import java.util.Iterator;
  * Abstract representation of a collection of class sources.
  * @ast class
  * @aspect PathPart
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PathPart.jadd:272
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PathPart.jadd:272
  */
 public abstract class PathPart extends java.lang.Object {
 

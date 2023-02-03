@@ -19,14 +19,14 @@ import java.util.Iterator;
  * Java long integer literal. Can store any number that fits in 64 bits
  * of data, or less.
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Literals.ast:40
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Literals.ast:40
  * @production LongLiteral : {@link Literal};
 
  */
 public class LongLiteral extends Literal implements Cloneable {
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:291
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:291
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(getLITERAL());
@@ -34,7 +34,7 @@ public class LongLiteral extends Literal implements Cloneable {
   }
   /**
    * @aspect TypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:579
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:579
    */
   public void typeCheck() {
     if (constant().error)
@@ -180,7 +180,7 @@ public class LongLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect Literals
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:118
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:118
    */
   public boolean isHex() {
     ASTNode$State state = state();
@@ -191,7 +191,7 @@ public class LongLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect Literals
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:119
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:119
    */
   public boolean isOctal() {
     ASTNode$State state = state();
@@ -202,7 +202,7 @@ public class LongLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect Literals
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:120
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:120
    */
   public boolean isDecimal() {
     ASTNode$State state = state();
@@ -221,7 +221,7 @@ public class LongLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect Literals
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:150
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:150
    */
   public Constant constant() {
     if(constant_computed) {
@@ -253,7 +253,7 @@ public class LongLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect PositiveLiterals
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PositiveLiterals.jrag:15
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PositiveLiterals.jrag:15
    */
   public boolean isPositive() {
     ASTNode$State state = state();
@@ -272,7 +272,7 @@ public class LongLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:300
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:300
    */
   public TypeDecl type() {
     if(type_computed) {

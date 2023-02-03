@@ -20,14 +20,14 @@ import java.util.Iterator;
  * Can store any value representable as an
  * IEEE 754 64-bit double-precision floating point number.
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Literals.ast:53
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Literals.ast:53
  * @production DoubleLiteral : {@link Literal};
 
  */
 public class DoubleLiteral extends Literal implements Cloneable {
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:301
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:301
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(getLITERAL());
@@ -35,7 +35,7 @@ public class DoubleLiteral extends Literal implements Cloneable {
   }
   /**
    * @aspect TypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:591
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:591
    */
   public void typeCheck() {
     if (!isZero() && constant().doubleValue() == 0.0f)
@@ -193,7 +193,7 @@ public class DoubleLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect Literals
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:28
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:28
    */
   public boolean isZero() {
     if(isZero_computed) {
@@ -236,7 +236,7 @@ public class DoubleLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect Literals
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:169
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:169
    */
   public Constant constant() {
     if(constant_computed) {
@@ -277,7 +277,7 @@ public class DoubleLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:302
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:302
    */
   public TypeDecl type() {
     if(type_computed) {

@@ -19,7 +19,7 @@ import java.util.Iterator;
  * to parse a compilation unit containing the class.
  * @ast class
  * @aspect PathPart
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PathPart.jadd:15
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PathPart.jadd:15
  */
 public abstract class ClassSource extends java.lang.Object {
 

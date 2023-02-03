@@ -17,28 +17,28 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:67
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Java.ast:67
  * @production ArrayDecl : {@link ClassDecl};
 
  */
 public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @aspect Arrays
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Arrays.jrag:59
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Arrays.jrag:59
    */
   public Access createQualifiedAccess() {
     return new ArrayTypeAccess(componentType().createQualifiedAccess());
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:751
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:751
    */
   public Access substitute(Parameterization parTypeDecl) {
     return new ArrayTypeAccess(componentType().substitute(parTypeDecl));
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:787
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:787
    */
   public Access substituteReturnType(Parameterization parTypeDecl) {
     return new ArrayTypeAccess(componentType().substituteReturnType(parTypeDecl));
@@ -563,7 +563,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   }
   /**
    * @aspect TypeConversion
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:120
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:120
    */
   private boolean refined_TypeConversion_ArrayDecl_castingConversionTo_TypeDecl(TypeDecl type)
 {
@@ -589,7 +589,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect AccessControl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AccessControl.jrag:13
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/AccessControl.jrag:13
    */
   public boolean accessibleFrom(TypeDecl type) {
     Object _parameters = type;
@@ -623,7 +623,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect Arrays
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Arrays.jrag:12
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Arrays.jrag:12
    */
   public int dimension() {
     if(dimension_computed) {
@@ -655,7 +655,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect Arrays
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Arrays.jrag:16
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Arrays.jrag:16
    */
   public TypeDecl elementType() {
     if(elementType_computed) {
@@ -679,7 +679,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeName
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:69
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:69
    */
   public String name() {
     ASTNode$State state = state();
@@ -698,7 +698,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect Arrays
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Arrays.jrag:54
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Arrays.jrag:54
    */
   public String fullName() {
     if(fullName_computed) {
@@ -730,7 +730,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeName
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:88
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/QualifiedNames.jrag:88
    */
   public String typeName() {
     if(typeName_computed) {
@@ -755,7 +755,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect Generics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:116
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:116
    */
   public boolean castingConversionTo(TypeDecl type) {
     Object _parameters = type;
@@ -802,7 +802,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:213
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:213
    */
   public boolean isArrayDecl() {
     ASTNode$State state = state();
@@ -814,7 +814,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:389
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:389
    */
   public boolean instanceOf(TypeDecl type) {
     Object _parameters = type;
@@ -840,7 +840,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeWideningAndIdentity
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:456
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:456
    */
   public boolean isSupertypeOfArrayDecl(ArrayDecl type) {
     ASTNode$State state = state();
@@ -855,7 +855,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:121
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:121
    */
   public boolean isValidAnnotationMethodReturnType() {
     ASTNode$State state = state();
@@ -867,7 +867,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:484
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:484
    */
   public boolean commensurateWith(ElementValue value) {
     ASTNode$State state = state();
@@ -894,7 +894,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:17
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:17
    */
   public boolean involvesTypeParameters() {
     if(involvesTypeParameters_computed) {
@@ -965,7 +965,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsErasure
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:367
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:367
    */
   public TypeDecl erasure() {
     if(erasure_computed) {
@@ -1005,7 +1005,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:949
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:949
    */
   public boolean usesTypeVariable() {
     if(usesTypeVariable_computed) {
@@ -1069,7 +1069,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:409
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:409
    */
   public boolean subtype(TypeDecl type) {
     Object _parameters = type;
@@ -1137,7 +1137,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:454
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:454
    */
   public boolean supertypeArrayDecl(ArrayDecl type) {
     ASTNode$State state = state();
@@ -1152,7 +1152,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute inh
    * @aspect TypeConversion
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:140
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:140
    */
   public TypeDecl typeSerializable() {
     ASTNode$State state = state();
@@ -1163,7 +1163,7 @@ public class ArrayDecl extends ClassDecl implements Cloneable {
   /**
    * @attribute inh
    * @aspect TypeConversion
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:141
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:141
    */
   public TypeDecl typeCloneable() {
     ASTNode$State state = state();

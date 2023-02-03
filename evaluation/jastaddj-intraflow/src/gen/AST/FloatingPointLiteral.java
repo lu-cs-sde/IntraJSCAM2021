@@ -19,14 +19,14 @@ import java.util.Iterator;
  * Java floating point literal. Can store any value representable as an
  * IEEE 754 32-bit single-precision floating point number.
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Literals.ast:46
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/Literals.ast:46
  * @production FloatingPointLiteral : {@link Literal};
 
  */
 public class FloatingPointLiteral extends Literal implements Cloneable {
   /**
    * @aspect PrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:296
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/PrettyPrint.jadd:296
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(getLITERAL());
@@ -34,7 +34,7 @@ public class FloatingPointLiteral extends Literal implements Cloneable {
   }
   /**
    * @aspect TypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:584
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeCheck.jrag:584
    */
   public void typeCheck() {
     if (!isZero() && constant().floatValue() == 0.0f)
@@ -192,7 +192,7 @@ public class FloatingPointLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect Literals
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:16
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:16
    */
   public boolean isZero() {
     if(isZero_computed) {
@@ -235,7 +235,7 @@ public class FloatingPointLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect Literals
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:159
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/Literals.jrag:159
    */
   public Constant constant() {
     if(constant_computed) {
@@ -276,7 +276,7 @@ public class FloatingPointLiteral extends Literal implements Cloneable {
   /**
    * @attribute syn
    * @aspect TypeAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:301
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:301
    */
   public TypeDecl type() {
     if(type_computed) {

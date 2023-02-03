@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/GenericMethods.ast:10
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/GenericMethods.ast:10
  * @production ParConstructorDecl : {@link ConstructorDecl} ::= <span class="component">TypeArgument:{@link Access}*</span>;
 
  */
@@ -599,7 +599,7 @@ public class ParConstructorDecl extends ConstructorDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect GenericMethods
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:52
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:52
    */
   public GenericConstructorDecl genericConstructorDecl() {
     if(genericConstructorDecl_computed) {
@@ -635,7 +635,7 @@ public class ParConstructorDecl extends ConstructorDecl implements Cloneable {
   /**
    * @attribute syn
    * @aspect SourceDeclarations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1311
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1311
    */
   public ConstructorDecl sourceConstructorDecl() {
     if(sourceConstructorDecl_computed) {

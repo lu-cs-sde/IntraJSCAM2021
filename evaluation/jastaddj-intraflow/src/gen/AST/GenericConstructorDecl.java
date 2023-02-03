@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/GenericMethods.ast:4
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/GenericMethods.ast:4
  * @production GenericConstructorDecl : {@link ConstructorDecl} ::= <span class="component">TypeParameter:{@link TypeVariable}*</span>;
 
  */
 public class GenericConstructorDecl extends ConstructorDecl implements Cloneable {
   /**
    * @aspect GenericMethodsPrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:259
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:259
    */
   public void prettyPrint(StringBuffer sb) {
     sb.append(indent());
@@ -69,7 +69,7 @@ public class GenericConstructorDecl extends ConstructorDecl implements Cloneable
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1076
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1076
    */
   public GenericConstructorDecl original;
   /**
@@ -633,7 +633,7 @@ public class GenericConstructorDecl extends ConstructorDecl implements Cloneable
   /**
    * @attribute syn
    * @aspect GenericMethodsNameAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:160
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:160
    */
   public SimpleSet localLookupType(String name) {
     ASTNode$State state = state();
@@ -650,7 +650,7 @@ public class GenericConstructorDecl extends ConstructorDecl implements Cloneable
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1075
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1075
    */
   public GenericConstructorDecl original() {
     ASTNode$State state = state();
@@ -661,7 +661,7 @@ public class GenericConstructorDecl extends ConstructorDecl implements Cloneable
   /**
    * @attribute inh
    * @aspect GenericMethodsNameAnalysis
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:159
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:159
    */
   public SimpleSet lookupType(String name) {
     ASTNode$State state = state();
@@ -670,7 +670,7 @@ public class GenericConstructorDecl extends ConstructorDecl implements Cloneable
     return lookupType_String_value;
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:157
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:157
    * @apilevel internal
    */
   public NameType Define_NameType_nameType(ASTNode caller, ASTNode child) {
@@ -683,7 +683,7 @@ public class GenericConstructorDecl extends ConstructorDecl implements Cloneable
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:167
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethods.jrag:167
    * @apilevel internal
    */
   public SimpleSet Define_SimpleSet_lookupType(ASTNode caller, ASTNode child, String name) {

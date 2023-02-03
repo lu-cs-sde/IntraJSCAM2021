@@ -17,14 +17,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:2
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:2
  * @production GenericClassDecl : {@link ClassDecl} ::= <span class="component">{@link Modifiers}</span> <span class="component">&lt;ID:String&gt;</span> <span class="component">[SuperClass:{@link Access}]</span> <span class="component">Implements:{@link Access}*</span> <span class="component">{@link BodyDecl}*</span> <span class="component">TypeParameter:{@link TypeVariable}*</span>;
 
  */
 public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTypeDecl {
   /**
    * @aspect GenericsTypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:436
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:436
    */
   public void typeCheck() {
     super.typeCheck();
@@ -33,7 +33,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1119
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1119
    */
   public ClassDecl substitutedClassDecl(Parameterization parTypeDecl) {
     GenericClassDecl c = new GenericClassDeclSubstituted(
@@ -48,7 +48,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   }
   /**
    * @aspect GenericsPrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsPrettyPrint.jrag:62
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsPrettyPrint.jrag:62
    */
   private void ppTypeParameters(StringBuffer sb) {
     sb.append('<');
@@ -63,7 +63,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   }
   /**
    * @aspect GenericsPrettyPrint
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsPrettyPrint.jrag:74
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsPrettyPrint.jrag:74
    */
   public void prettyPrint(StringBuffer sb) {
     getModifiers().prettyPrint(sb);
@@ -86,14 +86,14 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   }
   /**
    * @aspect Generics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:249
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:249
    */
   public TypeDecl makeGeneric(Signatures.ClassSignature s) {
     return (TypeDecl)this;
   }
   /**
    * @aspect GenericsNameBinding
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:502
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:502
    */
   public SimpleSet addTypeVariables(SimpleSet c, String name) {
     GenericTypeDecl original = (GenericTypeDecl)original();
@@ -106,7 +106,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:670
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:670
    */
   public List createArgumentList(ArrayList params) {
     GenericTypeDecl original = (GenericTypeDecl)original();
@@ -739,7 +739,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   /**
    * @attribute syn
    * @aspect Generics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:190
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:190
    */
   public TypeDecl rawType() {
     if(rawType_computed) {
@@ -771,7 +771,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:644
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:644
    */
   public TypeDecl lookupParTypeDecl(ArrayList list) {
     Object _parameters = list;
@@ -832,7 +832,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:944
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:944
    */
   public boolean usesTypeVariable() {
     if(usesTypeVariable_computed) {
@@ -896,7 +896,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:13
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:13
    */
   public boolean subtype(TypeDecl type) {
     Object _parameters = type;
@@ -964,7 +964,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:125
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:125
    */
   public boolean supertypeParClassDecl(ParClassDecl type) {
     ASTNode$State state = state();
@@ -975,7 +975,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:129
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:129
    */
   public boolean supertypeParInterfaceDecl(ParInterfaceDecl type) {
     ASTNode$State state = state();
@@ -987,7 +987,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:394
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:394
    */
   public boolean instanceOf(TypeDecl type) {
     Object _parameters = type;
@@ -1013,7 +1013,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   /**
    * @attribute syn
    * @aspect Generics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:178
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:178
    */
   public boolean isGenericType() {
     ASTNode$State state = state();
@@ -1025,7 +1025,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:635
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:635
    */
   public TypeDecl lookupParTypeDecl(ParTypeAccess p) {
     Object _parameters = p;
@@ -1056,7 +1056,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
   /**
    * @attribute inh
    * @aspect GenericsTypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:448
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:448
    */
   public TypeDecl typeThrowable() {
     ASTNode$State state = state();
@@ -1065,7 +1065,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
     return typeThrowable_value;
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:494
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:494
    * @apilevel internal
    */
   public boolean Define_boolean_isNestedType(ASTNode caller, ASTNode child) {
@@ -1078,7 +1078,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:495
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:495
    * @apilevel internal
    */
   public TypeDecl Define_TypeDecl_enclosingType(ASTNode caller, ASTNode child) {
@@ -1091,7 +1091,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:544
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:544
    * @apilevel internal
    */
   public SimpleSet Define_SimpleSet_lookupType(ASTNode caller, ASTNode child, String name) {
@@ -1158,7 +1158,7 @@ public class GenericClassDecl extends ClassDecl implements Cloneable, GenericTyp
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:48
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:48
    * @apilevel internal
    */
   public TypeDecl Define_TypeDecl_genericDecl(ASTNode caller, ASTNode child) {

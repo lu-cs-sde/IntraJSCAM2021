@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Annotations.ast:10
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Annotations.ast:10
  * @production ElementValue : {@link ASTNode};
 
  */
@@ -78,7 +78,7 @@ public abstract class ElementValue extends ASTNode<ASTNode> implements Cloneable
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:57
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:57
    */
   public boolean validTarget(Annotation a) {
     ASTNode$State state = state();
@@ -89,7 +89,7 @@ public abstract class ElementValue extends ASTNode<ASTNode> implements Cloneable
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:189
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:189
    */
   public ElementValue definesElementTypeValue(String name) {
     ASTNode$State state = state();
@@ -100,7 +100,7 @@ public abstract class ElementValue extends ASTNode<ASTNode> implements Cloneable
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:304
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:304
    */
   public boolean hasValue(String annot) {
     ASTNode$State state = state();
@@ -111,7 +111,7 @@ public abstract class ElementValue extends ASTNode<ASTNode> implements Cloneable
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:485
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:485
    */
   public boolean commensurateWithTypeDecl(TypeDecl type) {
     ASTNode$State state = state();
@@ -122,7 +122,7 @@ public abstract class ElementValue extends ASTNode<ASTNode> implements Cloneable
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:505
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:505
    */
   public boolean commensurateWithArrayDecl(ArrayDecl type) {
     ASTNode$State state = state();
@@ -133,7 +133,7 @@ public abstract class ElementValue extends ASTNode<ASTNode> implements Cloneable
   /**
    * @attribute syn
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:527
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:527
    */
   public TypeDecl type() {
     ASTNode$State state = state();
@@ -144,7 +144,7 @@ public abstract class ElementValue extends ASTNode<ASTNode> implements Cloneable
   /**
    * @attribute inh
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:471
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:471
    */
   public TypeDecl enclosingAnnotationDecl() {
     ASTNode$State state = state();
@@ -155,7 +155,7 @@ public abstract class ElementValue extends ASTNode<ASTNode> implements Cloneable
   /**
    * @attribute inh
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:521
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:521
    */
   public TypeDecl declType() {
     ASTNode$State state = state();
@@ -166,7 +166,7 @@ public abstract class ElementValue extends ASTNode<ASTNode> implements Cloneable
   /**
    * @attribute inh
    * @aspect Annotations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:532
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Annotations.jrag:532
    */
   public TypeDecl unknownType() {
     ASTNode$State state = state();

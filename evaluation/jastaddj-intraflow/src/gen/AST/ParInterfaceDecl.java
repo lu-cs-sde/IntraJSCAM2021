@@ -17,21 +17,21 @@ import java.util.HashMap;
 import java.util.Iterator;
 /**
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:9
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/grammar/Generics.ast:9
  * @production ParInterfaceDecl : {@link InterfaceDecl} ::= <span class="component">Argument:{@link Access}*</span> <span class="component">SuperInterface:{@link Access}*</span> <span class="component">{@link BodyDecl}*</span>;
 
  */
 public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTypeDecl, MemberSubstitutor {
   /**
    * @aspect GenericsNameBinding
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:570
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:570
    */
   public void collectErrors() {
     // Disable error check for ParInterfaceDecl which is an instanciated GenericInterfaceDecl
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:711
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:711
    */
   public TypeDecl substitute(TypeVariable typeVariable) {
     for(int i = 0; i < numTypeParameter(); i++)
@@ -41,21 +41,21 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:724
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:724
    */
   public int numTypeParameter() {
     return ((GenericTypeDecl)original()).getNumTypeParameter();
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:727
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:727
    */
   public TypeVariable typeParameter(int index) {
     return ((GenericTypeDecl)original()).getTypeParameter(index);
   }
   /**
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:759
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:759
    */
   public Access substitute(Parameterization parTypeDecl) {
     // TODO: include nesting as well....
@@ -70,7 +70,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   }
   /**
    * @aspect GenericsParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:74
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:74
    */
   public Access createQualifiedAccess() {
     List typeArgumentList = new List();
@@ -657,7 +657,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericMethodsInference
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:24
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericMethodsInference.jrag:24
    */
   public boolean involvesTypeParameters() {
     if(involvesTypeParameters_computed) {
@@ -725,7 +725,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect NestedTypes
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:577
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/TypeAnalysis.jrag:577
    */
   public TypeDecl hostType() {
     ASTNode$State state = state();
@@ -736,7 +736,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect Generics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:259
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:259
    */
   public boolean isRawType() {
     ASTNode$State state = state();
@@ -755,7 +755,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsErasure
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:365
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:365
    */
   public TypeDecl erasure() {
     if(erasure_computed) {
@@ -787,7 +787,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn nta
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:907
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:907
    */
   public List getSuperInterfaceList() {
     if(getSuperInterfaceList_computed) {
@@ -830,7 +830,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn nta
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:915
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:915
    */
   public List getBodyDeclList() {
     if(getBodyDeclList_computed) {
@@ -859,7 +859,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:14
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:14
    */
   public boolean supertypeGenericClassDecl(GenericClassDecl type) {
     ASTNode$State state = state();
@@ -870,7 +870,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:20
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:20
    */
   public boolean supertypeGenericInterfaceDecl(GenericInterfaceDecl type) {
     ASTNode$State state = state();
@@ -881,7 +881,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:421
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:421
    */
   public boolean supertypeClassDecl(ClassDecl type) {
     ASTNode$State state = state();
@@ -893,7 +893,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:128
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:128
    */
   public boolean subtype(TypeDecl type) {
     Object _parameters = type;
@@ -961,7 +961,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:26
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:26
    */
   public boolean supertypeRawClassDecl(RawClassDecl type) {
     ASTNode$State state = state();
@@ -972,7 +972,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:30
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:30
    */
   public boolean supertypeRawInterfaceDecl(RawInterfaceDecl type) {
     ASTNode$State state = state();
@@ -984,7 +984,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:194
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:194
    */
   public boolean sameStructure(TypeDecl t) {
     Object _parameters = t;
@@ -1066,7 +1066,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:125
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:125
    */
   public boolean supertypeParClassDecl(ParClassDecl type) {
     ASTNode$State state = state();
@@ -1088,7 +1088,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:129
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:129
    */
   public boolean supertypeParInterfaceDecl(ParInterfaceDecl type) {
     ASTNode$State state = state();
@@ -1111,7 +1111,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsSubtype
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:398
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsSubtype.jrag:398
    */
   public boolean instanceOf(TypeDecl type) {
     Object _parameters = type;
@@ -1137,7 +1137,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect Generics
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:258
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:258
    */
   public boolean isParameterizedType() {
     ASTNode$State state = state();
@@ -1148,7 +1148,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsTypeCheck
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:394
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:394
    */
   public boolean sameArgument(ParTypeDecl decl) {
     ASTNode$State state = state();
@@ -1176,7 +1176,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:590
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:590
    */
   public boolean sameSignature(Access a) {
     ASTNode$State state = state();
@@ -1203,7 +1203,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:625
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:625
    */
   public boolean sameSignature(ArrayList list) {
     Object _parameters = list;
@@ -1294,7 +1294,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:936
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:936
    */
   public boolean usesTypeVariable() {
     if(usesTypeVariable_computed) {
@@ -1364,7 +1364,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1102
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1102
    */
   public TypeDecl original() {
     ASTNode$State state = state();
@@ -1383,7 +1383,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect SourceDeclarations
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1300
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1300
    */
   public TypeDecl sourceTypeDecl() {
     if(sourceTypeDecl_computed) {
@@ -1415,7 +1415,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:12
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:12
    */
   public String fullName() {
     if(fullName_computed) {
@@ -1454,7 +1454,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:21
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:21
    */
   public String typeName() {
     if(typeName_computed) {
@@ -1485,7 +1485,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect GenericsParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:30
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:30
    */
   public String nameWithArgs() {
     ASTNode$State state = state();
@@ -1516,7 +1516,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect MethodSignature15
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:420
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/MethodSignature.jrag:420
    */
   public Collection unimplementedMethods() {
     if(unimplementedMethods_computed) {
@@ -1562,7 +1562,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:951
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:951
    */
   public HashMap localMethodsSignatureMap() {
     if(localMethodsSignatureMap_computed) {
@@ -1600,7 +1600,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:970
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:970
    */
   public SimpleSet localFields(String name) {
     Object _parameters = name;
@@ -1640,7 +1640,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:990
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:990
    */
   public SimpleSet localTypeDecls(String name) {
     Object _parameters = name;
@@ -1732,7 +1732,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute syn
    * @aspect LookupParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1018
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:1018
    */
   public Collection constructors() {
     if(constructors_computed) {
@@ -1765,7 +1765,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
   /**
    * @attribute inh
    * @aspect GenericsParTypeDecl
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:46
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:46
    */
   public TypeDecl genericDecl() {
     if(genericDecl_computed) {
@@ -1791,7 +1791,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
    */
   protected TypeDecl genericDecl_value;
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:490
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/Generics.jrag:490
    * @apilevel internal
    */
   public NameType Define_NameType_nameType(ASTNode caller, ASTNode child) {
@@ -1804,7 +1804,7 @@ public class ParInterfaceDecl extends InterfaceDecl implements Cloneable, ParTyp
     }
   }
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:57
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java5/frontend/GenericsParTypeDecl.jrag:57
    * @apilevel internal
    */
   public TypeDecl Define_TypeDecl_genericDecl(ASTNode caller, ASTNode child) {

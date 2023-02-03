@@ -18,7 +18,7 @@ import java.util.Iterator;
 /**
  * Abstract superclass for catch clauses.
  * @ast node
- * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/CatchClause.ast:4
+ * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/grammar/CatchClause.ast:4
  * @production CatchClause : {@link ASTNode} ::= <span class="component">{@link Block}</span>;
 
  */
@@ -133,7 +133,7 @@ public abstract class CatchClause extends ASTNode<ASTNode> implements Cloneable,
   /**
    * @attribute syn
    * @aspect ExceptionHandling
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:213
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/ExceptionHandling.jrag:213
    */
   public boolean handles(TypeDecl exceptionType) {
     ASTNode$State state = state();
@@ -145,7 +145,7 @@ public abstract class CatchClause extends ASTNode<ASTNode> implements Cloneable,
   /**
    * @attribute syn
    * @aspect VariableScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:111
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:111
    */
   public SimpleSet parameterDeclaration(String name) {
     Object _parameters = name;
@@ -179,7 +179,7 @@ public abstract class CatchClause extends ASTNode<ASTNode> implements Cloneable,
   /**
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:730
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:730
    */
   public boolean handlesAllUncheckedExceptions() {
     if(handlesAllUncheckedExceptions_computed) {
@@ -211,7 +211,7 @@ public abstract class CatchClause extends ASTNode<ASTNode> implements Cloneable,
   /**
    * @attribute syn
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:736
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:736
    */
   public boolean handlesUncheckedException() {
     if(handlesUncheckedException_computed) {
@@ -235,7 +235,7 @@ public abstract class CatchClause extends ASTNode<ASTNode> implements Cloneable,
   /**
    * @attribute inh
    * @aspect SpecialClasses
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:68
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupType.jrag:68
    */
   public TypeDecl typeThrowable() {
     if(typeThrowable_computed) {
@@ -263,7 +263,7 @@ public abstract class CatchClause extends ASTNode<ASTNode> implements Cloneable,
   /**
    * @attribute inh
    * @aspect VariableScope
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:20
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:20
    */
   public SimpleSet lookupVariable(String name) {
     Object _parameters = name;
@@ -287,7 +287,7 @@ public abstract class CatchClause extends ASTNode<ASTNode> implements Cloneable,
    * @return true if an exception of type exceptionType is catchable by the catch clause
    * @attribute inh
    * @aspect UnreachableStatements
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:127
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/UnreachableStatements.jrag:127
    */
   public boolean reachableCatchClause(TypeDecl exceptionType) {
     Object _parameters = exceptionType;
@@ -310,7 +310,7 @@ public abstract class CatchClause extends ASTNode<ASTNode> implements Cloneable,
   /**
    * @attribute inh
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:727
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:727
    */
   public TypeDecl typeRuntimeException() {
     if(typeRuntimeException_computed) {
@@ -338,7 +338,7 @@ public abstract class CatchClause extends ASTNode<ASTNode> implements Cloneable,
   /**
    * @attribute inh
    * @aspect Java_CFG_1_4
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:728
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/src/jastadd/JavaCFG1.4.jrag:728
    */
   public TypeDecl typeError() {
     if(typeError_computed) {
@@ -364,7 +364,7 @@ public abstract class CatchClause extends ASTNode<ASTNode> implements Cloneable,
    */
   protected TypeDecl typeError_value;
   /**
-   * @declaredat /Users/idrissr/git/lund/research/artifacts/IntraJ/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:78
+   * @declaredat /Users/idrissr/phd/git/lund/research/artifacts/IntraJSCAM2021/evaluation/jastaddj-intraflow/jastaddj/java4/frontend/LookupVariable.jrag:78
    * @apilevel internal
    */
   public SimpleSet Define_SimpleSet_lookupVariable(ASTNode caller, ASTNode child, String name) {
