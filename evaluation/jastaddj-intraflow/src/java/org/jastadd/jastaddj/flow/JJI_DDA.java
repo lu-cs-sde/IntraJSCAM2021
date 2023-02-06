@@ -60,20 +60,9 @@ class JJI_DDA extends Frontend {
     return 0;
   }
 
-  void traverseCFG(CFGNode t, Set<CFGNode> nodes) {
-    if (nodes.contains(t))
-      return;
-    nodes.add(t);
-    for (CFGNode n : t.succ()) {
-      traverseCFG(n, nodes);
-    }
-  }
 
   protected void processNoErrors(CompilationUnit unit) {
     long startTime = System.currentTimeMillis();
-    for (BodyDecl t : unit.methods()) {
-      traverseCFG(t.entry(), new HashSet<CFGNode>());
-    }
     unit.deadAssignments();
     long dt = System.currentTimeMillis() - startTime;
     totalTime += dt;
